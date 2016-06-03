@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8cd04069-5fa9-ba44-a847-6ad3a2712f67++3948",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "8cd04069-5fa9-ba44-a847-6ad3a2712f67++3948" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8cd04069-5fa9-ba44-a847-6ad3a2712f67++3948" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "11D6C08A-83F6-4D9E-BB4D-242D91298280",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8cd04069-5fa9-ba44-a847-6ad3a2712f67++3948" : "cattle\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Cattle",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Cattle.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/192.168.0.200:444\/svn\/CATTLE_iOS",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8cd04069-5fa9-ba44-a847-6ad3a2712f67++3948"
+    }
+  ]
+}
