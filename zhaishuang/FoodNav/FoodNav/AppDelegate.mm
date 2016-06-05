@@ -6,6 +6,7 @@
 //
 #import "AppDelegate.h"
 #import "FNLoginViewController.h"
+//#import "FNavViewController.h"
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

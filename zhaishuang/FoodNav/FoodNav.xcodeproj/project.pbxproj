@@ -8,20 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		1D1421B0195AA97B0011FCB7 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1421AF195AA97B0011FCB7 /* CoreTelephony.framework */; };
-		1D1DAD331B9D3ADB008CA047 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1DAD321B9D3ADB008CA047 /* JavaScriptCore.framework */; };
 		1D2167691951B02200B03DE3 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2167681951B02200B03DE3 /* libsqlite3.dylib */; };
 		1D3B94AE19505C5E000C0C47 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3B94AD19505C5E000C0C47 /* libz.dylib */; };
 		1D3B94B019505C80000C0C47 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3B94AF19505C80000C0C47 /* SystemConfiguration.framework */; };
 		1D5389881BF32AD700ABC5D3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5389871BF32AD700ABC5D3 /* libsqlite3.tbd */; };
 		1D6B87CA1BE73A2B00A7FEFB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6B87C91BE73A2B00A7FEFB /* CoreLocation.framework */; };
-		1D6B87CC1BE73A5000A7FEFB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6B87CB1BE73A5000A7FEFB /* AVFoundation.framework */; };
 		1D6B87CE1BE73A6F00A7FEFB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6B87CD1BE73A6F00A7FEFB /* CFNetwork.framework */; };
 		1DAF80F21BCCE667008C7F33 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DAF80F11BCCE667008C7F33 /* libz.tbd */; };
 		1DBE3BCD1C02A04800DAC62D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DBE3BCC1C02A04800DAC62D /* CoreGraphics.framework */; };
-		1DE0DF2F1BDDC78100B9F455 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE0DF2E1BDDC78100B9F455 /* AdSupport.framework */; };
 		1DE0DF311BDDC78C00B9F455 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE0DF301BDDC78C00B9F455 /* CoreMotion.framework */; };
-		6875CBAF1B881B5F0012BA9A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6875CBAE1B881B5F0012BA9A /* MessageUI.framework */; };
-		687638DB1A9FFD23002E936C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 687638DA1A9FFD23002E936C /* MapKit.framework */; };
+		6825DDA11D01CFDF00D8289F /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6825DD9F1D01CFDF00D8289F /* AMapFoundationKit.framework */; };
+		6825DDA21D01CFDF00D8289F /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6825DDA01D01CFDF00D8289F /* AMapSearchKit.framework */; };
+		6825DDA41D01CFED00D8289F /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6825DDA31D01CFED00D8289F /* AMap.bundle */; };
+		6825DDA61D01D05E00D8289F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6825DDA51D01D05E00D8289F /* OpenGLES.framework */; };
+		6825DDA81D01D08800D8289F /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6825DDA71D01D08800D8289F /* libstdc++.6.0.9.tbd */; };
+		6825DDAA1D01D09C00D8289F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6825DDA91D01D09C00D8289F /* libc++.tbd */; };
 		688ABA2A1D0153BF003F78CB /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 688ABA101D0153BF003F78CB /* AppDelegate.mm */; };
 		688ABA2B1D0153BF003F78CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 688ABA111D0153BF003F78CB /* Images.xcassets */; };
 		688ABA311D0153BF003F78CB /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 688ABA231D0153BF003F78CB /* Common.m */; };
@@ -29,10 +30,17 @@
 		688ABA371D0153F8003F78CB /* FNLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 688ABA351D0153F8003F78CB /* FNLoginViewController.xib */; };
 		688ABA441D015639003F78CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 688ABA401D015639003F78CB /* main.m */; };
 		688ABA461D015772003F78CB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 688ABA3B1D015639003F78CB /* InfoPlist.strings */; };
-		688ABA4D1D018A7C003F78CB /* AMapNaviKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688ABA481D018A7C003F78CB /* AMapNaviKit.framework */; };
 		688ABA4E1D018A7C003F78CB /* AMapLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688ABA4A1D018A7C003F78CB /* AMapLocationKit.framework */; };
 		688ABA4F1D018A7C003F78CB /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688ABA4C1D018A7C003F78CB /* MAMapKit.framework */; };
 		68BABDC819ECC87200B795A0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68BABDC719ECC87200B795A0 /* Security.framework */; };
+		68FFC97D1D01DA25001D76F5 /* AMapNaviKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688ABA481D018A7C003F78CB /* AMapNaviKit.framework */; };
+		68FFC9801D01DA34001D76F5 /* AMapNavi.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FFC97E1D01DA34001D76F5 /* AMapNavi.bundle */; };
+		68FFC9811D01DA34001D76F5 /* AMapNaviKit in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FFC97F1D01DA34001D76F5 /* AMapNaviKit */; };
+		68FFC9831D01DA4C001D76F5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FFC9821D01DA4C001D76F5 /* AudioToolbox.framework */; };
+		68FFC9841D01DA51001D76F5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6B87CB1BE73A5000A7FEFB /* AVFoundation.framework */; };
+		68FFC9861D01DA5A001D76F5 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FFC9851D01DA5A001D76F5 /* AddressBook.framework */; };
+		68FFC98A1D01DB2A001D76F5 /* FNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFC9881D01DB2A001D76F5 /* FNavViewController.m */; };
+		68FFC98B1D01DB2A001D76F5 /* FNavViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68FFC9891D01DB2A001D76F5 /* FNavViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +57,12 @@
 		1DBE3BCC1C02A04800DAC62D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1DE0DF2E1BDDC78100B9F455 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		1DE0DF301BDDC78C00B9F455 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		6825DD9F1D01CFDF00D8289F /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
+		6825DDA01D01CFDF00D8289F /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
+		6825DDA31D01CFED00D8289F /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = 3rd/Gaode_MAMapKit/MAMapKit.framework/AMap.bundle; sourceTree = "<group>"; };
+		6825DDA51D01D05E00D8289F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		6825DDA71D01D08800D8289F /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		6825DDA91D01D09C00D8289F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		6875CBAE1B881B5F0012BA9A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		687638DA1A9FFD23002E936C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		688ABA0F1D0153BF003F78CB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +85,13 @@
 		688ABA4A1D018A7C003F78CB /* AMapLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapLocationKit.framework; sourceTree = "<group>"; };
 		688ABA4C1D018A7C003F78CB /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
 		68BABDC719ECC87200B795A0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		68FFC97E1D01DA34001D76F5 /* AMapNavi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMapNavi.bundle; path = FoodNav/3rd/Gaode_AMapNaviKit/AMapNaviKit.framework/AMapNavi.bundle; sourceTree = "<group>"; };
+		68FFC97F1D01DA34001D76F5 /* AMapNaviKit */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = AMapNaviKit; path = FoodNav/3rd/Gaode_AMapNaviKit/AMapNaviKit.framework/AMapNaviKit; sourceTree = "<group>"; };
+		68FFC9821D01DA4C001D76F5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		68FFC9851D01DA5A001D76F5 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		68FFC9871D01DB2A001D76F5 /* FNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNavViewController.h; sourceTree = "<group>"; };
+		68FFC9881D01DB2A001D76F5 /* FNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNavViewController.m; sourceTree = "<group>"; };
+		68FFC9891D01DB2A001D76F5 /* FNavViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FNavViewController.xib; sourceTree = "<group>"; };
 		84131F1D176EACB400247373 /* FoodNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -79,22 +100,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68FFC9861D01DA5A001D76F5 /* AddressBook.framework in Frameworks */,
+				68FFC9841D01DA51001D76F5 /* AVFoundation.framework in Frameworks */,
+				68FFC9831D01DA4C001D76F5 /* AudioToolbox.framework in Frameworks */,
+				68FFC9801D01DA34001D76F5 /* AMapNavi.bundle in Frameworks */,
+				68FFC9811D01DA34001D76F5 /* AMapNaviKit in Frameworks */,
+				68FFC97D1D01DA25001D76F5 /* AMapNaviKit.framework in Frameworks */,
+				6825DDAA1D01D09C00D8289F /* libc++.tbd in Frameworks */,
+				6825DDA81D01D08800D8289F /* libstdc++.6.0.9.tbd in Frameworks */,
+				6825DDA61D01D05E00D8289F /* OpenGLES.framework in Frameworks */,
+				6825DDA11D01CFDF00D8289F /* AMapFoundationKit.framework in Frameworks */,
+				6825DDA21D01CFDF00D8289F /* AMapSearchKit.framework in Frameworks */,
+				688ABA4F1D018A7C003F78CB /* MAMapKit.framework in Frameworks */,
 				1DBE3BCD1C02A04800DAC62D /* CoreGraphics.framework in Frameworks */,
 				1D5389881BF32AD700ABC5D3 /* libsqlite3.tbd in Frameworks */,
 				1D6B87CE1BE73A6F00A7FEFB /* CFNetwork.framework in Frameworks */,
-				688ABA4D1D018A7C003F78CB /* AMapNaviKit.framework in Frameworks */,
-				1D6B87CC1BE73A5000A7FEFB /* AVFoundation.framework in Frameworks */,
 				1D6B87CA1BE73A2B00A7FEFB /* CoreLocation.framework in Frameworks */,
 				1DE0DF311BDDC78C00B9F455 /* CoreMotion.framework in Frameworks */,
-				1DE0DF2F1BDDC78100B9F455 /* AdSupport.framework in Frameworks */,
 				1DAF80F21BCCE667008C7F33 /* libz.tbd in Frameworks */,
-				1D1DAD331B9D3ADB008CA047 /* JavaScriptCore.framework in Frameworks */,
-				6875CBAF1B881B5F0012BA9A /* MessageUI.framework in Frameworks */,
 				68BABDC819ECC87200B795A0 /* Security.framework in Frameworks */,
 				1D1421B0195AA97B0011FCB7 /* CoreTelephony.framework in Frameworks */,
-				688ABA4F1D018A7C003F78CB /* MAMapKit.framework in Frameworks */,
 				1D2167691951B02200B03DE3 /* libsqlite3.dylib in Frameworks */,
-				687638DB1A9FFD23002E936C /* MapKit.framework in Frameworks */,
 				688ABA4E1D018A7C003F78CB /* AMapLocationKit.framework in Frameworks */,
 				1D3B94B019505C80000C0C47 /* SystemConfiguration.framework in Frameworks */,
 				1D3B94AE19505C5E000C0C47 /* libz.dylib in Frameworks */,
@@ -107,6 +133,13 @@
 		1D3B94B319505C98000C0C47 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68FFC9851D01DA5A001D76F5 /* AddressBook.framework */,
+				68FFC9821D01DA4C001D76F5 /* AudioToolbox.framework */,
+				68FFC97E1D01DA34001D76F5 /* AMapNavi.bundle */,
+				68FFC97F1D01DA34001D76F5 /* AMapNaviKit */,
+				6825DDA91D01D09C00D8289F /* libc++.tbd */,
+				6825DDA71D01D08800D8289F /* libstdc++.6.0.9.tbd */,
+				6825DDA51D01D05E00D8289F /* OpenGLES.framework */,
 				1DBE3BCC1C02A04800DAC62D /* CoreGraphics.framework */,
 				1D2167681951B02200B03DE3 /* libsqlite3.dylib */,
 				1D3B94AD19505C5E000C0C47 /* libz.dylib */,
@@ -143,6 +176,7 @@
 		688ABA0D1D0153BF003F78CB /* FoodNav */ = {
 			isa = PBXGroup;
 			children = (
+				6825DDA31D01CFED00D8289F /* AMap.bundle */,
 				688ABA0F1D0153BF003F78CB /* AppDelegate.h */,
 				688ABA101D0153BF003F78CB /* AppDelegate.mm */,
 				688ABA121D0153BF003F78CB /* Manager */,
@@ -183,6 +217,9 @@
 			isa = PBXGroup;
 			children = (
 				688ABA321D0153F8003F78CB /* Login */,
+				68FFC9871D01DB2A001D76F5 /* FNavViewController.h */,
+				68FFC9881D01DB2A001D76F5 /* FNavViewController.m */,
+				68FFC9891D01DB2A001D76F5 /* FNavViewController.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -286,6 +323,8 @@
 		688ABA4B1D018A7C003F78CB /* Gaode_MAMapKit */ = {
 			isa = PBXGroup;
 			children = (
+				6825DD9F1D01CFDF00D8289F /* AMapFoundationKit.framework */,
+				6825DDA01D01CFDF00D8289F /* AMapSearchKit.framework */,
 				688ABA4C1D018A7C003F78CB /* MAMapKit.framework */,
 			);
 			path = Gaode_MAMapKit;
@@ -378,7 +417,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				688ABA461D015772003F78CB /* InfoPlist.strings in Resources */,
+				68FFC98B1D01DB2A001D76F5 /* FNavViewController.xib in Resources */,
 				688ABA371D0153F8003F78CB /* FNLoginViewController.xib in Resources */,
+				6825DDA41D01CFED00D8289F /* AMap.bundle in Resources */,
 				688ABA2B1D0153BF003F78CB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,6 +435,7 @@
 				688ABA361D0153F8003F78CB /* FNLoginViewController.m in Sources */,
 				688ABA441D015639003F78CB /* main.m in Sources */,
 				688ABA311D0153BF003F78CB /* Common.m in Sources */,
+				68FFC98A1D01DB2A001D76F5 /* FNavViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,7 +533,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_MODULES_AUTOLINK = YES;
@@ -514,7 +555,10 @@
 				);
 				INFOPLIST_FILE = "FoodNav/SupportFiles/FoodNav-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FoodNav/3rd/Gaode_AMapNaviKit/AMapNaviKit.framework",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_BUNDLE_IDENTIFIER = com.foodnav.cn;
@@ -530,7 +574,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_MODULES_AUTOLINK = YES;
@@ -552,7 +595,10 @@
 				);
 				INFOPLIST_FILE = "FoodNav/SupportFiles/FoodNav-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FoodNav/3rd/Gaode_AMapNaviKit/AMapNaviKit.framework",
+				);
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_BUNDLE_IDENTIFIER = com.foodnav.cn;
 				PRODUCT_NAME = FoodNav;
