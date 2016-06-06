@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "LeveyTabBarController.h"
 @interface FNLoginViewController : UIViewController
-
+@property (retain, nonatomic) LeveyTabBarController *leveyTabBarController;
+- (IBAction)btnClick:(id)sender;
 @end

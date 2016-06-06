@@ -33,6 +33,18 @@
 		688ABA4E1D018A7C003F78CB /* AMapLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688ABA4A1D018A7C003F78CB /* AMapLocationKit.framework */; };
 		688ABA4F1D018A7C003F78CB /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688ABA4C1D018A7C003F78CB /* MAMapKit.framework */; };
 		68BABDC819ECC87200B795A0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68BABDC719ECC87200B795A0 /* Security.framework */; };
+		68F2059A1D050B9900BC1927 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 687638DA1A9FFD23002E936C /* MapKit.framework */; };
+		68F205A01D05130200BC1927 /* FNMainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F2059D1D05130200BC1927 /* FNMainNavigationController.m */; };
+		68F205A11D05130200BC1927 /* FNMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F2059F1D05130200BC1927 /* FNMainViewController.m */; };
+		68F205A51D0515BC00BC1927 /* FNHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F205A31D0515BC00BC1927 /* FNHomeViewController.m */; };
+		68F205A61D0515BC00BC1927 /* FNHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68F205A41D0515BC00BC1927 /* FNHomeViewController.xib */; };
+		68F205A91D0515E100BC1927 /* FNLoginViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F205A81D0515E100BC1927 /* FNLoginViewController+Navigation.m */; };
+		68F205AF1D05161F00BC1927 /* LeveyTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F205AC1D05161F00BC1927 /* LeveyTabBar.m */; };
+		68F205B01D05161F00BC1927 /* LeveyTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F205AE1D05161F00BC1927 /* LeveyTabBarController.m */; };
+		68F205B71D0517A700BC1927 /* BUIControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F205B41D0517A700BC1927 /* BUIControl.m */; };
+		68F205B81D0517A700BC1927 /* BUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F205B61D0517A700BC1927 /* BUIView.m */; };
+		68F205BC1D0519E700BC1927 /* FNMyCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F205BA1D0519E700BC1927 /* FNMyCenterViewController.m */; };
+		68F205BD1D0519E700BC1927 /* FNMyCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68F205BB1D0519E700BC1927 /* FNMyCenterViewController.xib */; };
 		68FFC97D1D01DA25001D76F5 /* AMapNaviKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688ABA481D018A7C003F78CB /* AMapNaviKit.framework */; };
 		68FFC9801D01DA34001D76F5 /* AMapNavi.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FFC97E1D01DA34001D76F5 /* AMapNavi.bundle */; };
 		68FFC9811D01DA34001D76F5 /* AMapNaviKit in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FFC97F1D01DA34001D76F5 /* AMapNaviKit */; };
@@ -85,6 +97,27 @@
 		688ABA4A1D018A7C003F78CB /* AMapLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapLocationKit.framework; sourceTree = "<group>"; };
 		688ABA4C1D018A7C003F78CB /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
 		68BABDC719ECC87200B795A0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		68F2059C1D05130200BC1927 /* FNMainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNMainNavigationController.h; sourceTree = "<group>"; };
+		68F2059D1D05130200BC1927 /* FNMainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNMainNavigationController.m; sourceTree = "<group>"; };
+		68F2059E1D05130200BC1927 /* FNMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNMainViewController.h; sourceTree = "<group>"; };
+		68F2059F1D05130200BC1927 /* FNMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNMainViewController.m; sourceTree = "<group>"; };
+		68F205A21D0515BC00BC1927 /* FNHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNHomeViewController.h; sourceTree = "<group>"; };
+		68F205A31D0515BC00BC1927 /* FNHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNHomeViewController.m; sourceTree = "<group>"; };
+		68F205A41D0515BC00BC1927 /* FNHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FNHomeViewController.xib; sourceTree = "<group>"; };
+		68F205A71D0515E100BC1927 /* FNLoginViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FNLoginViewController+Navigation.h"; sourceTree = "<group>"; };
+		68F205A81D0515E100BC1927 /* FNLoginViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FNLoginViewController+Navigation.m"; sourceTree = "<group>"; };
+		68F205AB1D05161F00BC1927 /* LeveyTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeveyTabBar.h; sourceTree = "<group>"; };
+		68F205AC1D05161F00BC1927 /* LeveyTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeveyTabBar.m; sourceTree = "<group>"; };
+		68F205AD1D05161F00BC1927 /* LeveyTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeveyTabBarController.h; sourceTree = "<group>"; };
+		68F205AE1D05161F00BC1927 /* LeveyTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeveyTabBarController.m; sourceTree = "<group>"; };
+		68F205B21D0517A700BC1927 /* BlockUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockUI.h; sourceTree = "<group>"; };
+		68F205B31D0517A700BC1927 /* BUIControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUIControl.h; sourceTree = "<group>"; };
+		68F205B41D0517A700BC1927 /* BUIControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUIControl.m; sourceTree = "<group>"; };
+		68F205B51D0517A700BC1927 /* BUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUIView.h; sourceTree = "<group>"; };
+		68F205B61D0517A700BC1927 /* BUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUIView.m; sourceTree = "<group>"; };
+		68F205B91D0519E700BC1927 /* FNMyCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNMyCenterViewController.h; sourceTree = "<group>"; };
+		68F205BA1D0519E700BC1927 /* FNMyCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNMyCenterViewController.m; sourceTree = "<group>"; };
+		68F205BB1D0519E700BC1927 /* FNMyCenterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FNMyCenterViewController.xib; sourceTree = "<group>"; };
 		68FFC97E1D01DA34001D76F5 /* AMapNavi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMapNavi.bundle; path = FoodNav/3rd/Gaode_AMapNaviKit/AMapNaviKit.framework/AMapNavi.bundle; sourceTree = "<group>"; };
 		68FFC97F1D01DA34001D76F5 /* AMapNaviKit */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = AMapNaviKit; path = FoodNav/3rd/Gaode_AMapNaviKit/AMapNaviKit.framework/AMapNaviKit; sourceTree = "<group>"; };
 		68FFC9821D01DA4C001D76F5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -117,6 +150,7 @@
 				1D6B87CE1BE73A6F00A7FEFB /* CFNetwork.framework in Frameworks */,
 				1D6B87CA1BE73A2B00A7FEFB /* CoreLocation.framework in Frameworks */,
 				1DE0DF311BDDC78C00B9F455 /* CoreMotion.framework in Frameworks */,
+				68F2059A1D050B9900BC1927 /* MapKit.framework in Frameworks */,
 				1DAF80F21BCCE667008C7F33 /* libz.tbd in Frameworks */,
 				68BABDC819ECC87200B795A0 /* Security.framework in Frameworks */,
 				1D1421B0195AA97B0011FCB7 /* CoreTelephony.framework in Frameworks */,
@@ -192,6 +226,8 @@
 		688ABA0E1D0153BF003F78CB /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				68F205B11D0517A700BC1927 /* BlockUI */,
+				68F205AA1D05161F00BC1927 /* LeveyTabBarController */,
 				688ABA471D018A7C003F78CB /* Gaode_AMapNaviKit */,
 				688ABA491D018A7C003F78CB /* Gaode_AMapLocationKit */,
 				688ABA4B1D018A7C003F78CB /* Gaode_MAMapKit */,
@@ -216,6 +252,9 @@
 		688ABA1B1D0153BF003F78CB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				68F2059B1D05130200BC1927 /* SuperClass */,
+				68F205951D050AC400BC1927 /* MyCenter */,
+				68F205961D050AC400BC1927 /* Home */,
 				688ABA321D0153F8003F78CB /* Login */,
 				68FFC9871D01DB2A001D76F5 /* FNavViewController.h */,
 				68FFC9881D01DB2A001D76F5 /* FNavViewController.m */,
@@ -282,6 +321,8 @@
 				688ABA331D0153F8003F78CB /* FNLoginViewController.h */,
 				688ABA341D0153F8003F78CB /* FNLoginViewController.m */,
 				688ABA351D0153F8003F78CB /* FNLoginViewController.xib */,
+				68F205A71D0515E100BC1927 /* FNLoginViewController+Navigation.h */,
+				68F205A81D0515E100BC1927 /* FNLoginViewController+Navigation.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -328,6 +369,60 @@
 				688ABA4C1D018A7C003F78CB /* MAMapKit.framework */,
 			);
 			path = Gaode_MAMapKit;
+			sourceTree = "<group>";
+		};
+		68F205951D050AC400BC1927 /* MyCenter */ = {
+			isa = PBXGroup;
+			children = (
+				68F205B91D0519E700BC1927 /* FNMyCenterViewController.h */,
+				68F205BA1D0519E700BC1927 /* FNMyCenterViewController.m */,
+				68F205BB1D0519E700BC1927 /* FNMyCenterViewController.xib */,
+			);
+			path = MyCenter;
+			sourceTree = "<group>";
+		};
+		68F205961D050AC400BC1927 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				68F205A21D0515BC00BC1927 /* FNHomeViewController.h */,
+				68F205A31D0515BC00BC1927 /* FNHomeViewController.m */,
+				68F205A41D0515BC00BC1927 /* FNHomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		68F2059B1D05130200BC1927 /* SuperClass */ = {
+			isa = PBXGroup;
+			children = (
+				68F2059C1D05130200BC1927 /* FNMainNavigationController.h */,
+				68F2059D1D05130200BC1927 /* FNMainNavigationController.m */,
+				68F2059E1D05130200BC1927 /* FNMainViewController.h */,
+				68F2059F1D05130200BC1927 /* FNMainViewController.m */,
+			);
+			path = SuperClass;
+			sourceTree = "<group>";
+		};
+		68F205AA1D05161F00BC1927 /* LeveyTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				68F205AB1D05161F00BC1927 /* LeveyTabBar.h */,
+				68F205AC1D05161F00BC1927 /* LeveyTabBar.m */,
+				68F205AD1D05161F00BC1927 /* LeveyTabBarController.h */,
+				68F205AE1D05161F00BC1927 /* LeveyTabBarController.m */,
+			);
+			path = LeveyTabBarController;
+			sourceTree = "<group>";
+		};
+		68F205B11D0517A700BC1927 /* BlockUI */ = {
+			isa = PBXGroup;
+			children = (
+				68F205B21D0517A700BC1927 /* BlockUI.h */,
+				68F205B31D0517A700BC1927 /* BUIControl.h */,
+				68F205B41D0517A700BC1927 /* BUIControl.m */,
+				68F205B51D0517A700BC1927 /* BUIView.h */,
+				68F205B61D0517A700BC1927 /* BUIView.m */,
+			);
+			path = BlockUI;
 			sourceTree = "<group>";
 		};
 		84131F14176EACB400247373 = {
@@ -416,9 +511,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68F205BD1D0519E700BC1927 /* FNMyCenterViewController.xib in Resources */,
 				688ABA461D015772003F78CB /* InfoPlist.strings in Resources */,
 				68FFC98B1D01DB2A001D76F5 /* FNavViewController.xib in Resources */,
 				688ABA371D0153F8003F78CB /* FNLoginViewController.xib in Resources */,
+				68F205A61D0515BC00BC1927 /* FNHomeViewController.xib in Resources */,
 				6825DDA41D01CFED00D8289F /* AMap.bundle in Resources */,
 				688ABA2B1D0153BF003F78CB /* Images.xcassets in Resources */,
 			);
@@ -432,10 +529,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				688ABA2A1D0153BF003F78CB /* AppDelegate.mm in Sources */,
+				68F205AF1D05161F00BC1927 /* LeveyTabBar.m in Sources */,
+				68F205A11D05130200BC1927 /* FNMainViewController.m in Sources */,
 				688ABA361D0153F8003F78CB /* FNLoginViewController.m in Sources */,
+				68F205B81D0517A700BC1927 /* BUIView.m in Sources */,
 				688ABA441D015639003F78CB /* main.m in Sources */,
+				68F205A01D05130200BC1927 /* FNMainNavigationController.m in Sources */,
+				68F205A91D0515E100BC1927 /* FNLoginViewController+Navigation.m in Sources */,
+				68F205A51D0515BC00BC1927 /* FNHomeViewController.m in Sources */,
+				68F205B71D0517A700BC1927 /* BUIControl.m in Sources */,
 				688ABA311D0153BF003F78CB /* Common.m in Sources */,
+				68F205BC1D0519E700BC1927 /* FNMyCenterViewController.m in Sources */,
 				68FFC98A1D01DB2A001D76F5 /* FNavViewController.m in Sources */,
+				68F205B01D05161F00BC1927 /* LeveyTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,11 +667,11 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-Objc";
-				PRODUCT_BUNDLE_IDENTIFIER = com.foodnav.cn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.foodnav.cn.cc;
 				PRODUCT_NAME = FoodNav;
 				PROVISIONING_PROFILE = "";
 				STRIP_INSTALLED_PRODUCT = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -600,11 +706,11 @@
 					"$(PROJECT_DIR)/FoodNav/3rd/Gaode_AMapNaviKit/AMapNaviKit.framework",
 				);
 				OTHER_LDFLAGS = "-Objc";
-				PRODUCT_BUNDLE_IDENTIFIER = com.foodnav.cn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.foodnav.cn.cc;
 				PRODUCT_NAME = FoodNav;
 				PROVISIONING_PROFILE = "";
 				STRIP_INSTALLED_PRODUCT = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
