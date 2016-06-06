@@ -7,5 +7,9 @@
 //
 
 @interface Common : NSObject
-
+//生成自己绘制的图片
++ (UIImage *)drawImageSize:(CGSize)size
+                     Color:(UIColor *)color;
++ (BOOL)isEmptyString:(NSString *)sourceStr;
++ (UIColor *)colorFromHexRGB:(NSString *)inColorString;
 @end
