@@ -66,10 +66,10 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self setupViews];
-    [self presentViewController:self.leveyTabBarController
-                       animated:NO
-                     completion:nil];
+//    [self setupViews];
+//    [self presentViewController:self.leveyTabBarController
+//                       animated:NO
+//                     completion:nil];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
