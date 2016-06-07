@@ -45,6 +45,7 @@
 		68F205B81D0517A700BC1927 /* BUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F205B61D0517A700BC1927 /* BUIView.m */; };
 		68F205BC1D0519E700BC1927 /* FNMyCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F205BA1D0519E700BC1927 /* FNMyCenterViewController.m */; };
 		68F205BD1D0519E700BC1927 /* FNMyCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68F205BB1D0519E700BC1927 /* FNMyCenterViewController.xib */; };
+		68F205C11D06572E00BC1927 /* HYCircleLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F205C01D06572E00BC1927 /* HYCircleLoadingView.m */; };
 		68FFC97D1D01DA25001D76F5 /* AMapNaviKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688ABA481D018A7C003F78CB /* AMapNaviKit.framework */; };
 		68FFC9801D01DA34001D76F5 /* AMapNavi.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FFC97E1D01DA34001D76F5 /* AMapNavi.bundle */; };
 		68FFC9811D01DA34001D76F5 /* AMapNaviKit in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FFC97F1D01DA34001D76F5 /* AMapNaviKit */; };
@@ -118,6 +119,8 @@
 		68F205B91D0519E700BC1927 /* FNMyCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNMyCenterViewController.h; sourceTree = "<group>"; };
 		68F205BA1D0519E700BC1927 /* FNMyCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNMyCenterViewController.m; sourceTree = "<group>"; };
 		68F205BB1D0519E700BC1927 /* FNMyCenterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FNMyCenterViewController.xib; sourceTree = "<group>"; };
+		68F205BF1D06572E00BC1927 /* HYCircleLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYCircleLoadingView.h; sourceTree = "<group>"; };
+		68F205C01D06572E00BC1927 /* HYCircleLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYCircleLoadingView.m; sourceTree = "<group>"; };
 		68FFC97E1D01DA34001D76F5 /* AMapNavi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMapNavi.bundle; path = FoodNav/3rd/Gaode_AMapNaviKit/AMapNaviKit.framework/AMapNavi.bundle; sourceTree = "<group>"; };
 		68FFC97F1D01DA34001D76F5 /* AMapNaviKit */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = AMapNaviKit; path = FoodNav/3rd/Gaode_AMapNaviKit/AMapNaviKit.framework/AMapNaviKit; sourceTree = "<group>"; };
 		68FFC9821D01DA4C001D76F5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -226,6 +229,7 @@
 		688ABA0E1D0153BF003F78CB /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				68F205BE1D06572E00BC1927 /* HYCircleLoadingView */,
 				68F205B11D0517A700BC1927 /* BlockUI */,
 				68F205AA1D05161F00BC1927 /* LeveyTabBarController */,
 				688ABA471D018A7C003F78CB /* Gaode_AMapNaviKit */,
@@ -425,6 +429,15 @@
 			path = BlockUI;
 			sourceTree = "<group>";
 		};
+		68F205BE1D06572E00BC1927 /* HYCircleLoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				68F205BF1D06572E00BC1927 /* HYCircleLoadingView.h */,
+				68F205C01D06572E00BC1927 /* HYCircleLoadingView.m */,
+			);
+			path = HYCircleLoadingView;
+			sourceTree = "<group>";
+		};
 		84131F14176EACB400247373 = {
 			isa = PBXGroup;
 			children = (
@@ -535,6 +548,7 @@
 				68F205B81D0517A700BC1927 /* BUIView.m in Sources */,
 				688ABA441D015639003F78CB /* main.m in Sources */,
 				68F205A01D05130200BC1927 /* FNMainNavigationController.m in Sources */,
+				68F205C11D06572E00BC1927 /* HYCircleLoadingView.m in Sources */,
 				68F205A91D0515E100BC1927 /* FNLoginViewController+Navigation.m in Sources */,
 				68F205A51D0515BC00BC1927 /* FNHomeViewController.m in Sources */,
 				68F205B71D0517A700BC1927 /* BUIControl.m in Sources */,
