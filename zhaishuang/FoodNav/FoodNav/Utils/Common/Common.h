@@ -12,4 +12,6 @@
                      Color:(UIColor *)color;
 + (BOOL)isEmptyString:(NSString *)sourceStr;
 + (UIColor *)colorFromHexRGB:(NSString *)inColorString;
+//去除UITableView多余分割线
++ (void)removeExtraCellLines:(UITableView *)tableView;
 @end

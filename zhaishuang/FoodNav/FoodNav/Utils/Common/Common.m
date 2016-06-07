@@ -62,4 +62,10 @@
     }
     return NO;
 }
+//去除UITableView多余分割线
++ (void)removeExtraCellLines:(UITableView *)tableView {
+    UIView *view = [UIView new];
+    view.backgroundColor = ClearColor;
+    [tableView setTableFooterView:view];
+}
 @end

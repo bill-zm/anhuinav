@@ -7,7 +7,7 @@
 //
 
 #import "FNMyCenterViewController.h"
-
+#import "FNCollectListViewController.h"
 @interface FNMyCenterViewController ()
 
 @end
@@ -25,15 +25,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)exitBtnClick:(id)sender{
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
-
+- (IBAction)collectBtnClick:(id)sender{
+    FNCollectListViewController *collect = [[FNCollectListViewController alloc] initWithNibName:@"FNCollectListViewController" bundle:nil];
+    [self.navigationController pushViewController:collect animated:YES];
+}
 @end
