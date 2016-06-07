@@ -8,6 +8,7 @@
 
 #import "FNHomeViewController.h"
 #import "CollectTableViewCell.h"
+#import "FNDetailViewController.h"
 @interface FNHomeViewController ()
 Strong UINib *cellNib;
 
@@ -17,10 +18,10 @@ Strong UINib *cellNib;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Home";
+    self.title = @"首页";
     self.cellNib = [UINib nibWithNibName:@"CollectTableViewCell" bundle:nil];
     self.hometableView.frame = Frame(0, 40, Screen_Width, Screen_Height-tabBar_Height-default_NavigationHeight_iOS7-40);
-    self.hometableView.rowHeight = 100.0;
+    self.hometableView.rowHeight = 150.0;
     [Common removeExtraCellLines:self.hometableView];
 }
 
@@ -48,12 +49,9 @@ Strong UINib *cellNib;
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    NSString *str=[NSString stringWithFormat:@"iosamap://path?sourceApplication=applicationName&backScheme=applicationScheme&slat=%f&slon=%f&sname=我&dlat=%f&dlon=%f&dname=%@&dev=0&m=0&t=1",39.989631,116.481018,39.989631,117.481018,@"nihao"];
-    str=[str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSURL * myURL_APP_A =[[NSURL alloc] initWithString:str];
-    NSLog(@"%@",myURL_APP_A);
-//    if ([[UIApplication sharedApplication] canOpenURL:myURL_APP_A]) {
-        [[UIApplication sharedApplication] openURL:myURL_APP_A];
-//    }
+//    NSString *str=[NSString stringWithFormat:@"iosamap://path?sourceApplication=applicationName&backScheme=applicationScheme&slat=%f&slon=%f&sname=我&dlat=%f&dlon=%f&dname=%@&dev=0&m=0&t=1",39.989631,116.481018,39.989631,117.481018,@"nihao"];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    FNDetailViewController *fndetail = [[FNDetailViewController alloc] initWithNibName:@"FNDetailViewController" bundle:nil];
+    [self.navigationController pushViewController:fndetail animated:YES];
 }
 @end

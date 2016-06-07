@@ -70,10 +70,10 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self setupViews];
-    [self presentViewController:self.leveyTabBarController
-                       animated:NO
-                     completion:nil];
+//    [self setupViews];
+//    [self presentViewController:self.leveyTabBarController
+//                       animated:NO
+//                     completion:nil];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -85,6 +85,11 @@
     [self presentViewController:self.leveyTabBarController
                        animated:NO
                      completion:nil];
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.userNumber resignFirstResponder];
+    [self.userPassword resignFirstResponder];
 }
 //-(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation
 //updatingLocation:(BOOL)updatingLocation

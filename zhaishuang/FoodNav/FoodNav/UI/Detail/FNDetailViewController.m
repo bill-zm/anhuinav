@@ -22,8 +22,9 @@
     [super viewDidLoad];
     //配置用户Key
 //        [AMapNaviServices sharedServices].apiKey =@"90a6b42e298d22c2ca28a5638adfbbfc";
+        self.title = @"粮仓详情";
         [AMapServices sharedServices].apiKey = @"90a6b42e298d22c2ca28a5638adfbbfc";
-        _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 300)];
+        _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds)-20, 420)];
         _mapView.delegate = self;
         [self.fnmapView addSubview:_mapView];
          _mapView.showsUserLocation = YES;
@@ -34,6 +35,8 @@
         pointAnnotation.subtitle = @"6";
         [_mapView addAnnotation:pointAnnotation];
         _mapView.centerCoordinate =  CLLocationCoordinate2DMake(39.989631, 116.481018);
+    
+    setViewCorner(self.navButton, 5);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,5 +60,18 @@
         return annotationView;
     }
     return nil;
+}
+- (IBAction)navigateBtnClick:(id)sender
+{
+    NSString *str = [NSString stringWithFormat:@"iosamap://navi?sourceApplication=%@&backScheme=applicationScheme&poiname=fangheng&poiid=BGVIS&lat=%f&lon=%f&dev=0&style=3",@"粮仓位置", 39.989631, 117.481018];
+    str=[str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSURL * myURL_APP_A =[[NSURL alloc] initWithString:str];
+    NSLog(@"%@",myURL_APP_A);
+    if ([[UIApplication sharedApplication] canOpenURL:myURL_APP_A]) {
+        [[UIApplication sharedApplication] openURL:myURL_APP_A];
+    }
+    else{
+        Alert(@"请您先安装高德地图");
+    }
 }
 @end

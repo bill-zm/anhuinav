@@ -53,7 +53,7 @@
     NSArray *titlesArray;
     ctrlArr = @[homeNC,centerNC];
     imgArr = @[imgDic,imgDic2];
-    titlesArray = @[@"home",@"center"];
+    titlesArray = @[@"首页",@"个人中心"];
     if (!self.leveyTabBarController) {
         self.leveyTabBarController = [[LeveyTabBarController alloc] initWithViewControllers:ctrlArr
                                                                                  imageArray:imgArr

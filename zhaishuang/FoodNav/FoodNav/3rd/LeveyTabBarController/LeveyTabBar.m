@@ -48,12 +48,12 @@
             [wself.buttons addObject:btn];
             
             //title
-            UILabel *label = [[UILabel alloc] initWithFrame:Frame(width * idx+width/2-20, 10, 60, 29)];
+            UILabel *label = [[UILabel alloc] initWithFrame:Frame(width * idx+width/2-15, 10, 100, 29)];
             label.text = titleArray[idx];
             label.backgroundColor = ClearColor;
             label.textColor = ColorRGB(153, 153, 153);
             label.font = Font(16.0);
-            label.textAlignment = NSTextAlignmentCenter;
+//            label.textAlignment = NSTextAlignmentCenter;
             [wself addSubview:label];
             [wself.labs addObject:label];
             
