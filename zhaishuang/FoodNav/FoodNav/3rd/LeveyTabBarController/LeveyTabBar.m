@@ -20,15 +20,15 @@
 - (id)initWithFrame:(CGRect)frame buttonImages:(NSArray *)imageArray titles:(NSArray *)titleArray {
     self = [super initWithFrame:frame];
     if (self) {
-		self.backgroundColor = ClearColor;
+        self.backgroundColor = [UIColor whiteColor];
         _object_NoticeKey_ApproveTabbar_Page = nil;
         _object_NoticeKey_ApproveTabbar_Remove = nil;
         _object_NoticeKey_HistoryLevTabbar_Page = nil;
         _object_NoticeKey_HistoryLevTabbar_Remove = nil;
         _object_NoticeKey_SettingLevTabbar_Page = nil;
         _object_NoticeKey_SettingLevTabbar_Remove = nil;
-		_backgroundView = [[UIImageView alloc] initWithFrame:self.bounds];
-		[self addSubview:_backgroundView];
+//		_backgroundView = [[UIImageView alloc] initWithFrame:self.bounds];
+//		[self addSubview:_backgroundView];
 		self.buttons = [NSMutableArray arrayWithCapacity:imageArray.count];
         self.labs = [NSMutableArray arrayWithCapacity:4];
         self.circles = [NSMutableArray array];
@@ -39,7 +39,7 @@
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
 			btn.showsTouchWhenHighlighted = YES;
 			btn.tag = idx;
-            btn.frame = CGRectMake(width * idx, 6, width, 21.0);
+            btn.frame = CGRectMake(width * idx+width/2-50, 10, 29, 29);
 
 			[btn setImage:imageArray[idx][@"Default"] forState:UIControlStateNormal];
 			[btn setImage:imageArray[idx][@"Highlighted"] forState:UIControlStateHighlighted];
@@ -48,11 +48,11 @@
             [wself.buttons addObject:btn];
             
             //title
-            UILabel *label = [[UILabel alloc] initWithFrame:Frame(width * idx, 6 + btn.frame.Height, width, 21.0)];
+            UILabel *label = [[UILabel alloc] initWithFrame:Frame(width * idx+width/2-20, 10, 60, 29)];
             label.text = titleArray[idx];
             label.backgroundColor = ClearColor;
             label.textColor = ColorRGB(153, 153, 153);
-            label.font = Font(14.0);
+            label.font = Font(16.0);
             label.textAlignment = NSTextAlignmentCenter;
             [wself addSubview:label];
             [wself.labs addObject:label];

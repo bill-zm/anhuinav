@@ -39,7 +39,9 @@ static LeveyTabBarController *leveyTabBarController;
         CGRect r = [UIScreen mainScreen].bounds;
         _containerView = [[UIView alloc] initWithFrame:r];
 		_transitionView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, _containerView.frame.size.height - (iOS7 ? 0 : kTabBarHeight))];
-		_transitionView.backgroundColor =  [UIColor groupTableViewBackgroundColor];
+//		_transitionView.backgroundColor =  [UIColor whiteColor];
+        _transitionView.layer.borderWidth = 0.5;
+        _transitionView.layer.borderColor = [Common colorFromHexRGB:@"999999"].CGColor;
 		_tabBar = [[LeveyTabBar alloc] initWithFrame:CGRectMake(0,[[UIScreen mainScreen] bounds].size.height - (iOS7 ? 0 : kTabBarHeight), [[UIScreen mainScreen] bounds].size.width, kTabBarHeight) buttonImages:arr titles:tArr];
 		_tabBar.delegate = self;
         leveyTabBarController = self;
@@ -50,6 +52,9 @@ static LeveyTabBarController *leveyTabBarController;
 {
 	[super loadView];
 	[_containerView addSubview:_transitionView];
+    UILabel *lab = [[UILabel alloc] initWithFrame:Frame(Screen_Width/2, 0, 0.5, kTabBarHeight)];
+    lab.backgroundColor = [Common colorFromHexRGB:@"999999"];
+    [_tabBar addSubview:lab];
 	[_containerView addSubview:_tabBar];
 	self.view = _containerView;
 }

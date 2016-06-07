@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Center";
+    setViewCorner(self.headimageView, 50);
     // Do any additional setup after loading the view from its nib.
 }
 
