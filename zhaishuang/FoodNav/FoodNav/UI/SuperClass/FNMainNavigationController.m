@@ -21,9 +21,9 @@
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     // 167 203 49
 //    [navBar setBackgroundColor:[Common colorFromHexRGB:@"a7cb31"]];
-    [navBar setBackgroundImage:[Common drawImageSize:Size(Screen_Width, 0.3) Color:[Common colorFromHexRGB:@"a7cb31"]]
+    [navBar setBackgroundImage:[Common drawImageSize:Size(Screen_Width, 64) Color:[Common colorFromHexRGB:@"a7cb31"]]
                  forBarMetrics:UIBarMetricsDefault];
-    [navBar setShadowImage:[Common drawImageSize:Size(Screen_Width, 0.3) Color:[Common colorFromHexRGB:@"ffffff"]]];
+//    [navBar setShadowImage:[Common drawImageSize:Size(Screen_Width, 0.3) Color:[Common colorFromHexRGB:@"ffffff"]]];
     // 3.标题
     NSShadow *shadow = [[NSShadow alloc] init];
     shadow.shadowColor = [Common colorFromHexRGB:@"000000"];

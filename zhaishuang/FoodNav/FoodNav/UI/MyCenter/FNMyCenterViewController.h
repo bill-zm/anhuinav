@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface FNMyCenterViewController : UIViewController
+@property(nonatomic,weak) IBOutlet UIImageView *headimageView;
+@property(nonatomic,weak) IBOutlet UILabel *nameLab;
+@property(nonatomic,weak) IBOutlet UILabel *welcomeLab;
 
+- (IBAction)exitBtnClick:(id)sender;
+- (IBAction)collectBtnClick:(id)sender;
 @end

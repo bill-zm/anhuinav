@@ -17,6 +17,12 @@
 		1DAF80F21BCCE667008C7F33 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DAF80F11BCCE667008C7F33 /* libz.tbd */; };
 		1DBE3BCD1C02A04800DAC62D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DBE3BCC1C02A04800DAC62D /* CoreGraphics.framework */; };
 		1DE0DF311BDDC78C00B9F455 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE0DF301BDDC78C00B9F455 /* CoreMotion.framework */; };
+		681D58311D06BA590050E629 /* FNCollectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 681D582F1D06BA590050E629 /* FNCollectListViewController.m */; };
+		681D58321D06BA590050E629 /* FNCollectListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 681D58301D06BA590050E629 /* FNCollectListViewController.xib */; };
+		681D58371D06BF370050E629 /* CollectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 681D58351D06BF370050E629 /* CollectTableViewCell.m */; };
+		681D58381D06BF370050E629 /* CollectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 681D58361D06BF370050E629 /* CollectTableViewCell.xib */; };
+		681D583D1D06C5490050E629 /* FNDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 681D583B1D06C5490050E629 /* FNDetailViewController.m */; };
+		681D583E1D06C5490050E629 /* FNDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 681D583C1D06C5490050E629 /* FNDetailViewController.xib */; };
 		6825DDA11D01CFDF00D8289F /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6825DD9F1D01CFDF00D8289F /* AMapFoundationKit.framework */; };
 		6825DDA21D01CFDF00D8289F /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6825DDA01D01CFDF00D8289F /* AMapSearchKit.framework */; };
 		6825DDA41D01CFED00D8289F /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6825DDA31D01CFED00D8289F /* AMap.bundle */; };
@@ -45,6 +51,7 @@
 		68F205B81D0517A700BC1927 /* BUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F205B61D0517A700BC1927 /* BUIView.m */; };
 		68F205BC1D0519E700BC1927 /* FNMyCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F205BA1D0519E700BC1927 /* FNMyCenterViewController.m */; };
 		68F205BD1D0519E700BC1927 /* FNMyCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68F205BB1D0519E700BC1927 /* FNMyCenterViewController.xib */; };
+		68F205C11D06572E00BC1927 /* HYCircleLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F205C01D06572E00BC1927 /* HYCircleLoadingView.m */; };
 		68FFC97D1D01DA25001D76F5 /* AMapNaviKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688ABA481D018A7C003F78CB /* AMapNaviKit.framework */; };
 		68FFC9801D01DA34001D76F5 /* AMapNavi.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FFC97E1D01DA34001D76F5 /* AMapNavi.bundle */; };
 		68FFC9811D01DA34001D76F5 /* AMapNaviKit in Frameworks */ = {isa = PBXBuildFile; fileRef = 68FFC97F1D01DA34001D76F5 /* AMapNaviKit */; };
@@ -69,6 +76,15 @@
 		1DBE3BCC1C02A04800DAC62D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1DE0DF2E1BDDC78100B9F455 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		1DE0DF301BDDC78C00B9F455 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		681D582E1D06BA590050E629 /* FNCollectListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNCollectListViewController.h; sourceTree = "<group>"; };
+		681D582F1D06BA590050E629 /* FNCollectListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNCollectListViewController.m; sourceTree = "<group>"; };
+		681D58301D06BA590050E629 /* FNCollectListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FNCollectListViewController.xib; sourceTree = "<group>"; };
+		681D58341D06BF370050E629 /* CollectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectTableViewCell.h; sourceTree = "<group>"; };
+		681D58351D06BF370050E629 /* CollectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectTableViewCell.m; sourceTree = "<group>"; };
+		681D58361D06BF370050E629 /* CollectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectTableViewCell.xib; sourceTree = "<group>"; };
+		681D583A1D06C5490050E629 /* FNDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNDetailViewController.h; sourceTree = "<group>"; };
+		681D583B1D06C5490050E629 /* FNDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNDetailViewController.m; sourceTree = "<group>"; };
+		681D583C1D06C5490050E629 /* FNDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FNDetailViewController.xib; sourceTree = "<group>"; };
 		6825DD9F1D01CFDF00D8289F /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
 		6825DDA01D01CFDF00D8289F /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
 		6825DDA31D01CFED00D8289F /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = 3rd/Gaode_MAMapKit/MAMapKit.framework/AMap.bundle; sourceTree = "<group>"; };
@@ -118,6 +134,8 @@
 		68F205B91D0519E700BC1927 /* FNMyCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNMyCenterViewController.h; sourceTree = "<group>"; };
 		68F205BA1D0519E700BC1927 /* FNMyCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNMyCenterViewController.m; sourceTree = "<group>"; };
 		68F205BB1D0519E700BC1927 /* FNMyCenterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FNMyCenterViewController.xib; sourceTree = "<group>"; };
+		68F205BF1D06572E00BC1927 /* HYCircleLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYCircleLoadingView.h; sourceTree = "<group>"; };
+		68F205C01D06572E00BC1927 /* HYCircleLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYCircleLoadingView.m; sourceTree = "<group>"; };
 		68FFC97E1D01DA34001D76F5 /* AMapNavi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMapNavi.bundle; path = FoodNav/3rd/Gaode_AMapNaviKit/AMapNaviKit.framework/AMapNavi.bundle; sourceTree = "<group>"; };
 		68FFC97F1D01DA34001D76F5 /* AMapNaviKit */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = AMapNaviKit; path = FoodNav/3rd/Gaode_AMapNaviKit/AMapNaviKit.framework/AMapNaviKit; sourceTree = "<group>"; };
 		68FFC9821D01DA4C001D76F5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -207,6 +225,37 @@
 			path = Cattle/SupportFiles;
 			sourceTree = "<group>";
 		};
+		681D582D1D06BA400050E629 /* Collect */ = {
+			isa = PBXGroup;
+			children = (
+				681D58331D06BA6A0050E629 /* cell */,
+				681D582E1D06BA590050E629 /* FNCollectListViewController.h */,
+				681D582F1D06BA590050E629 /* FNCollectListViewController.m */,
+				681D58301D06BA590050E629 /* FNCollectListViewController.xib */,
+			);
+			path = Collect;
+			sourceTree = "<group>";
+		};
+		681D58331D06BA6A0050E629 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				681D58341D06BF370050E629 /* CollectTableViewCell.h */,
+				681D58351D06BF370050E629 /* CollectTableViewCell.m */,
+				681D58361D06BF370050E629 /* CollectTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		681D58391D06C52A0050E629 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				681D583A1D06C5490050E629 /* FNDetailViewController.h */,
+				681D583B1D06C5490050E629 /* FNDetailViewController.m */,
+				681D583C1D06C5490050E629 /* FNDetailViewController.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		688ABA0D1D0153BF003F78CB /* FoodNav */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +275,7 @@
 		688ABA0E1D0153BF003F78CB /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				68F205BE1D06572E00BC1927 /* HYCircleLoadingView */,
 				68F205B11D0517A700BC1927 /* BlockUI */,
 				68F205AA1D05161F00BC1927 /* LeveyTabBarController */,
 				688ABA471D018A7C003F78CB /* Gaode_AMapNaviKit */,
@@ -252,6 +302,8 @@
 		688ABA1B1D0153BF003F78CB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				681D58391D06C52A0050E629 /* Detail */,
+				681D582D1D06BA400050E629 /* Collect */,
 				68F2059B1D05130200BC1927 /* SuperClass */,
 				68F205951D050AC400BC1927 /* MyCenter */,
 				68F205961D050AC400BC1927 /* Home */,
@@ -425,6 +477,15 @@
 			path = BlockUI;
 			sourceTree = "<group>";
 		};
+		68F205BE1D06572E00BC1927 /* HYCircleLoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				68F205BF1D06572E00BC1927 /* HYCircleLoadingView.h */,
+				68F205C01D06572E00BC1927 /* HYCircleLoadingView.m */,
+			);
+			path = HYCircleLoadingView;
+			sourceTree = "<group>";
+		};
 		84131F14176EACB400247373 = {
 			isa = PBXGroup;
 			children = (
@@ -512,10 +573,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				68F205BD1D0519E700BC1927 /* FNMyCenterViewController.xib in Resources */,
+				681D583E1D06C5490050E629 /* FNDetailViewController.xib in Resources */,
 				688ABA461D015772003F78CB /* InfoPlist.strings in Resources */,
 				68FFC98B1D01DB2A001D76F5 /* FNavViewController.xib in Resources */,
 				688ABA371D0153F8003F78CB /* FNLoginViewController.xib in Resources */,
 				68F205A61D0515BC00BC1927 /* FNHomeViewController.xib in Resources */,
+				681D58381D06BF370050E629 /* CollectTableViewCell.xib in Resources */,
+				681D58321D06BA590050E629 /* FNCollectListViewController.xib in Resources */,
 				6825DDA41D01CFED00D8289F /* AMap.bundle in Resources */,
 				688ABA2B1D0153BF003F78CB /* Images.xcassets in Resources */,
 			);
@@ -535,11 +599,15 @@
 				68F205B81D0517A700BC1927 /* BUIView.m in Sources */,
 				688ABA441D015639003F78CB /* main.m in Sources */,
 				68F205A01D05130200BC1927 /* FNMainNavigationController.m in Sources */,
+				68F205C11D06572E00BC1927 /* HYCircleLoadingView.m in Sources */,
 				68F205A91D0515E100BC1927 /* FNLoginViewController+Navigation.m in Sources */,
+				681D583D1D06C5490050E629 /* FNDetailViewController.m in Sources */,
 				68F205A51D0515BC00BC1927 /* FNHomeViewController.m in Sources */,
 				68F205B71D0517A700BC1927 /* BUIControl.m in Sources */,
+				681D58371D06BF370050E629 /* CollectTableViewCell.m in Sources */,
 				688ABA311D0153BF003F78CB /* Common.m in Sources */,
 				68F205BC1D0519E700BC1927 /* FNMyCenterViewController.m in Sources */,
+				681D58311D06BA590050E629 /* FNCollectListViewController.m in Sources */,
 				68FFC98A1D01DB2A001D76F5 /* FNavViewController.m in Sources */,
 				68F205B01D05161F00BC1927 /* LeveyTabBarController.m in Sources */,
 			);
@@ -671,7 +739,7 @@
 				PRODUCT_NAME = FoodNav;
 				PROVISIONING_PROFILE = "";
 				STRIP_INSTALLED_PRODUCT = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -710,7 +778,7 @@
 				PRODUCT_NAME = FoodNav;
 				PROVISIONING_PROFILE = "";
 				STRIP_INSTALLED_PRODUCT = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

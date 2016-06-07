@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FNHomeViewController : UIViewController
-
+@property(nonatomic,weak) IBOutlet UITableView *hometableView;
 @end
