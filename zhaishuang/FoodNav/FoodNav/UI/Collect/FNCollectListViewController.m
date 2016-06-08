@@ -9,6 +9,7 @@
 #import "FNCollectListViewController.h"
 #import "CollectTableViewCell.h"
 #import "FNDetailViewController.h"
+#import "FNMapViewController.h"
 @interface FNCollectListViewController ()
 Strong UINib *cellNib;
 @end
@@ -22,6 +23,11 @@ Strong UINib *cellNib;
     self.colltableView.frame = Frame(0, 0, Screen_Width, Screen_Height-tabBar_Height-default_NavigationHeight_iOS7);
     self.colltableView.rowHeight = 150.0;
     [Common removeExtraCellLines:self.colltableView];
+    
+    self.navigationItem.rightBarButtonItem = [Common createBarItemWithLbs:^{
+        FNMapViewController *mapVc = [[FNMapViewController alloc] initWithNibName:@"FNMapViewController" bundle:nil];
+        [self.navigationController pushViewController:mapVc animated:YES];
+    }];
     // Do any additional setup after loading the view from its nib.
 }
 

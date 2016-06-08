@@ -14,4 +14,5 @@
 + (UIColor *)colorFromHexRGB:(NSString *)inColorString;
 //去除UITableView多余分割线
 + (void)removeExtraCellLines:(UITableView *)tableView;
++ (UIBarButtonItem *)createBarItemWithLbs:(void (^)())block;
 @end
