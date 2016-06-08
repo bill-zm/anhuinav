@@ -10,4 +10,7 @@
 
 @interface FNDetailViewController : UIViewController
 @property(nonatomic,weak)IBOutlet UIView *fnmapView;
+@property(nonatomic,weak)IBOutlet UIButton *navButton;
+
+- (IBAction)navigateBtnClick:(id)sender;
 @end

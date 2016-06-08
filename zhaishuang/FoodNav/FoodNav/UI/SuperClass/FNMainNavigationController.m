@@ -19,18 +19,18 @@
     UINavigationBar *navBar = [UINavigationBar appearance];
     navBar.tintColor = [UIColor whiteColor];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    // 167 203 49
+    // 174 204 69
 //    [navBar setBackgroundColor:[Common colorFromHexRGB:@"a7cb31"]];
-    [navBar setBackgroundImage:[Common drawImageSize:Size(Screen_Width, 64) Color:[Common colorFromHexRGB:@"a7cb31"]]
+    [navBar setBackgroundImage:[Common drawImageSize:Size(Screen_Width, 64) Color:[Common colorFromHexRGB:@"A7CB31"]]
                  forBarMetrics:UIBarMetricsDefault];
 //    [navBar setShadowImage:[Common drawImageSize:Size(Screen_Width, 0.3) Color:[Common colorFromHexRGB:@"ffffff"]]];
     // 3.标题
-    NSShadow *shadow = [[NSShadow alloc] init];
-    shadow.shadowColor = [Common colorFromHexRGB:@"000000"];
-    shadow.shadowOffset = Size(0.1, 0.1);
+//    NSShadow *shadow = [[NSShadow alloc] init];
+//    shadow.shadowColor = [Common colorFromHexRGB:@"000000"];
+//    shadow.shadowOffset = Size(0.1, 0.1);
     NSDictionary *attributesDic = @{NSForegroundColorAttributeName : [Common colorFromHexRGB:@"ffffff"],
-                                    NSShadowAttributeName : shadow,
-                                    NSFontAttributeName : [UIFont boldSystemFontOfSize:17.0]};
+//                                    NSShadowAttributeName : shadow,
+                                    NSFontAttributeName : [UIFont boldSystemFontOfSize:20.0]};
     [navBar setTitleTextAttributes:attributesDic];
 }
 #pragma mark 控制状态栏的样式

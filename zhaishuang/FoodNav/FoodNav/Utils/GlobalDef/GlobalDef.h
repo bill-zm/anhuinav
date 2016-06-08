@@ -8,5 +8,4 @@
 
 // Global Varies Define
 @class LeveyTabBarController;
-
 LeveyTabBarController *gTabBar;

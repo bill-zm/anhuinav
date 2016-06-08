@@ -15,4 +15,5 @@
 
 - (IBAction)exitBtnClick:(id)sender;
 - (IBAction)collectBtnClick:(id)sender;
+Strong UIAlertView *alertView;
 @end
