@@ -29,6 +29,8 @@
 		6825DDA61D01D05E00D8289F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6825DDA51D01D05E00D8289F /* OpenGLES.framework */; };
 		6825DDA81D01D08800D8289F /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6825DDA71D01D08800D8289F /* libstdc++.6.0.9.tbd */; };
 		6825DDAA1D01D09C00D8289F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6825DDA91D01D09C00D8289F /* libc++.tbd */; };
+		6827830D1D07E8C300FB86B0 /* FNMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6827830B1D07E8C300FB86B0 /* FNMapViewController.m */; };
+		6827830E1D07E8C300FB86B0 /* FNMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6827830C1D07E8C300FB86B0 /* FNMapViewController.xib */; };
 		688ABA2A1D0153BF003F78CB /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 688ABA101D0153BF003F78CB /* AppDelegate.mm */; };
 		688ABA2B1D0153BF003F78CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 688ABA111D0153BF003F78CB /* Images.xcassets */; };
 		688ABA311D0153BF003F78CB /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 688ABA231D0153BF003F78CB /* Common.m */; };
@@ -91,6 +93,9 @@
 		6825DDA51D01D05E00D8289F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		6825DDA71D01D08800D8289F /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		6825DDA91D01D09C00D8289F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		6827830A1D07E8C300FB86B0 /* FNMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNMapViewController.h; sourceTree = "<group>"; };
+		6827830B1D07E8C300FB86B0 /* FNMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNMapViewController.m; sourceTree = "<group>"; };
+		6827830C1D07E8C300FB86B0 /* FNMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FNMapViewController.xib; sourceTree = "<group>"; };
 		6875CBAE1B881B5F0012BA9A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		687638DA1A9FFD23002E936C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		688ABA0F1D0153BF003F78CB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -311,6 +316,9 @@
 				68FFC9871D01DB2A001D76F5 /* FNavViewController.h */,
 				68FFC9881D01DB2A001D76F5 /* FNavViewController.m */,
 				68FFC9891D01DB2A001D76F5 /* FNavViewController.xib */,
+				6827830A1D07E8C300FB86B0 /* FNMapViewController.h */,
+				6827830B1D07E8C300FB86B0 /* FNMapViewController.m */,
+				6827830C1D07E8C300FB86B0 /* FNMapViewController.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -580,6 +588,7 @@
 				68F205A61D0515BC00BC1927 /* FNHomeViewController.xib in Resources */,
 				681D58381D06BF370050E629 /* CollectTableViewCell.xib in Resources */,
 				681D58321D06BA590050E629 /* FNCollectListViewController.xib in Resources */,
+				6827830E1D07E8C300FB86B0 /* FNMapViewController.xib in Resources */,
 				6825DDA41D01CFED00D8289F /* AMap.bundle in Resources */,
 				688ABA2B1D0153BF003F78CB /* Images.xcassets in Resources */,
 			);
@@ -596,6 +605,7 @@
 				68F205AF1D05161F00BC1927 /* LeveyTabBar.m in Sources */,
 				68F205A11D05130200BC1927 /* FNMainViewController.m in Sources */,
 				688ABA361D0153F8003F78CB /* FNLoginViewController.m in Sources */,
+				6827830D1D07E8C300FB86B0 /* FNMapViewController.m in Sources */,
 				68F205B81D0517A700BC1927 /* BUIView.m in Sources */,
 				688ABA441D015639003F78CB /* main.m in Sources */,
 				68F205A01D05130200BC1927 /* FNMainNavigationController.m in Sources */,

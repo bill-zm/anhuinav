@@ -9,6 +9,7 @@
 #import "FNHomeViewController.h"
 #import "CollectTableViewCell.h"
 #import "FNDetailViewController.h"
+#import "FNMapViewController.h"
 @interface FNHomeViewController ()
 Strong UINib *cellNib;
 
@@ -18,11 +19,22 @@ Strong UINib *cellNib;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"首页";
+    UIView *pview = [[UIView alloc] initWithFrame:Frame(0, 0, Screen_Width-250, 30)];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setTitle:@"" forState:UIControlStateNormal];
+    btn.frame = Frame(0, 0, Screen_Width-250, 30);
+    btn.titleLabel.textAlignment = NSTextAlignmentLeft;
+    pview.backgroundColor = [UIColor whiteColor];
+    setViewCorner(pview, 5);
+    self.navigationItem.titleView = pview;
     self.cellNib = [UINib nibWithNibName:@"CollectTableViewCell" bundle:nil];
     self.hometableView.frame = Frame(0, 40, Screen_Width, Screen_Height-tabBar_Height-default_NavigationHeight_iOS7-40);
     self.hometableView.rowHeight = 150.0;
     [Common removeExtraCellLines:self.hometableView];
+    self.navigationItem.rightBarButtonItem = [Common createBarItemWithLbs:^{
+        FNMapViewController *mapVc = [[FNMapViewController alloc] initWithNibName:@"FNMapViewController" bundle:nil];
+        [self.navigationController pushViewController:mapVc animated:YES];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
