@@ -14,8 +14,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="768" height="149.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fntouxiang" id="Txj-6x-9k6">
-                        <rect key="frame" x="25" y="25" width="100" height="100"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fnliangicon" id="Txj-6x-9k6">
+                        <rect key="frame" x="9" y="13" width="130" height="130"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="南京战略储备粮仓" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QwQ-pI-nHH">
@@ -84,7 +84,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="fnliangicon" width="135" height="135"/>
         <image name="fnsigngreenicon" width="16" height="16"/>
-        <image name="fntouxiang" width="50" height="50"/>
     </resources>
 </document>

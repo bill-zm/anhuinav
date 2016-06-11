@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FNHomeViewController : UIViewController
+@interface FNHomeViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+//@property(nonatomic,weak) IBOutlet UITableView *resultTable;
 @property(nonatomic,weak) IBOutlet UITableView *hometableView;
 @end

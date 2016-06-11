@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIBarButtonItem *tmpbarButtonItem = [[UIBarButtonItem alloc] init];
+    tmpbarButtonItem.title = NullString;
+    self.navigationItem.backBarButtonItem = tmpbarButtonItem;
     // Do any additional setup after loading the view from its nib.
     [AMapServices sharedServices].apiKey = @"90a6b42e298d22c2ca28a5638adfbbfc";
     if (self.mapView == nil)

@@ -19,6 +19,9 @@ Strong UINib *cellNib;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"粮仓收藏";
+    UIBarButtonItem *tmpbarButtonItem = [[UIBarButtonItem alloc] init];
+    tmpbarButtonItem.title = NullString;
+    self.navigationItem.backBarButtonItem = tmpbarButtonItem;
     self.cellNib = [UINib nibWithNibName:@"CollectTableViewCell" bundle:nil];
     self.colltableView.frame = Frame(0, 0, Screen_Width, Screen_Height-tabBar_Height-default_NavigationHeight_iOS7);
     self.colltableView.rowHeight = 150.0;

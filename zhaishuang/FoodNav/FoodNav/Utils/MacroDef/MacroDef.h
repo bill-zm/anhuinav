@@ -289,6 +289,23 @@ self.navigationController.interactivePopGestureRecognizer.delegate = nil;}}
 //delegate的判断
 #define isDelegate(delegate,sender)    delegate && [delegate respondsToSelector:@selector(sender)]
 
+#define DEFINE_SINGLETON_FOR_HEADER(className) \
+\
++ (className *)sharedInstance;
+
+#define DEFINE_SINGLETON_FOR_CLASS(className) \
+\
++ (className *)sharedInstance { \
+static className *shared##className = nil; \
+static dispatch_once_t onceToken; \
+dispatch_once(&onceToken, ^{ \
+@synchronized(self){ \
+shared##className = [[self alloc] init]; \
+} \
+}); \
+return shared##className; \
+}
+
 //arc警告宏
 #define SuppressPerformSelectorLeakWarning(Stuff) \
 do { \

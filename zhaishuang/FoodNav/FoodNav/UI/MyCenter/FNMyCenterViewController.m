@@ -19,6 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"个人中心";
+    UIBarButtonItem *tmpbarButtonItem = [[UIBarButtonItem alloc] init];
+    tmpbarButtonItem.title = NullString;
+    self.navigationItem.backBarButtonItem = tmpbarButtonItem;
     setViewCorner(self.headimageView, 50);
     // Do any additional setup after loading the view from its nib.
 }
