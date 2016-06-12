@@ -21,6 +21,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"地图";
+    UIBarButtonItem *tmpbarButtonItem = [[UIBarButtonItem alloc] init];
+    tmpbarButtonItem.title = NullString;
+    self.navigationItem.backBarButtonItem = tmpbarButtonItem;
     [AMapServices sharedServices].apiKey = @"90a6b42e298d22c2ca28a5638adfbbfc";
     _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), Screen_Height-default_NavigationHeight_iOS7-tabBar_Height)];
     _mapView.delegate = self;

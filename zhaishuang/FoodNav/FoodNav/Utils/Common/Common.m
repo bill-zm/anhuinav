@@ -72,7 +72,7 @@
 //生成BarItem
 + (UIBarButtonItem *)createBarItemWithLbs:(void (^)())block {
     UIView *tmpView = [[UIView alloc] initWithFrame:Frame(0, 0, 50, 40)];
-    tmpView.backgroundColor = [UIColor redColor];
+    tmpView.backgroundColor = [UIColor clearColor];
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(20, 0, 20, 40);
     btn.backgroundColor = [UIColor clearColor];

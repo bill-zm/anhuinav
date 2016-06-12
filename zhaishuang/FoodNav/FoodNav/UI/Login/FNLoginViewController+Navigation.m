@@ -40,13 +40,13 @@
     
     NSMutableDictionary *imgDic = [NSMutableDictionary dictionary];
     imgDic[@"Default"]     = Image(@"fnhomeicon.png");
-    imgDic[@"Highlighted"] = Image(@"bar_signS.png");
-    imgDic[@"Seleted"]     = Image(@"bar_signS.png");
+    imgDic[@"Highlighted"] = Image(@"fnhighcentericon.png");
+    imgDic[@"Seleted"]     = Image(@"fnhighcentericon.png");
     
     NSMutableDictionary *imgDic2 = [NSMutableDictionary dictionary];
     imgDic2[@"Default"]     = Image(@"fncentericon.png");
-    imgDic2[@"Highlighted"] = Image(@"bar_leaveS.png");
-    imgDic2[@"Seleted"]     = Image(@"bar_leaveS.png");
+    imgDic2[@"Highlighted"] = Image(@"fnhighhomeicon.png");
+    imgDic2[@"Seleted"]     = Image(@"fnhighhomeicon.png");
     //
     NSArray *ctrlArr;
     NSArray *imgArr;

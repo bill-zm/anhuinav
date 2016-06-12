@@ -96,7 +96,7 @@
         lab.textColor = ColorRGB(153, 153, 153);
     }];
     UILabel *lab = self.labs[index];
-    lab.textColor = [Common colorFromHexRGB:@"00bbee"];
+    lab.textColor = [Common colorFromHexRGB:@"A7CB31"];
     
     if ([_delegate respondsToSelector:@selector(tabBar:didSelectIndex:)])
     {
