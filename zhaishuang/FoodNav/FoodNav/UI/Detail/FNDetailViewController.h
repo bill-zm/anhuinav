@@ -11,6 +11,7 @@
 @interface FNDetailViewController : UIViewController
 @property(nonatomic,weak)IBOutlet UIView *fnmapView;
 @property(nonatomic,weak)IBOutlet UIButton *navButton;
-
+@property(nonatomic,weak)IBOutlet UIButton *collButton;
 - (IBAction)navigateBtnClick:(id)sender;
+- (IBAction)collectBtnClick:(id)sender;
 @end

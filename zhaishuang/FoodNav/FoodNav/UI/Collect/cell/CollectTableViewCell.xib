@@ -78,8 +78,23 @@
                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="s22-9I-RPQ">
+                        <rect key="frame" x="630" y="55" width="105" height="45"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                        <color key="backgroundColor" red="0.47843137250000001" green="0.67450980390000004" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" title="导   航">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="navigateBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ZHT-Dt-MZw"/>
+                        </connections>
+                    </button>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="navButton" destination="s22-9I-RPQ" id="yEm-oz-sEZ"/>
+            </connections>
             <point key="canvasLocation" x="339" y="343"/>
         </tableViewCell>
     </objects>
