@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -18,7 +18,7 @@
                         <rect key="frame" x="9" y="13" width="130" height="130"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="南京战略储备粮仓" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QwQ-pI-nHH">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QwQ-pI-nHH">
                         <rect key="frame" x="150" y="24" width="500" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -93,7 +93,12 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="address" destination="0XA-95-8fV" id="7gc-6C-0TX"/>
+                <outlet property="allNumber" destination="KRJ-cN-d48" id="r0P-eg-RfH"/>
+                <outlet property="aoHouseNumber" destination="nFX-E6-XIl" id="8QH-Pf-epY"/>
+                <outlet property="name" destination="QwQ-pI-nHH" id="VZT-Wl-JDH"/>
                 <outlet property="navButton" destination="s22-9I-RPQ" id="yEm-oz-sEZ"/>
+                <outlet property="youAllnumber" destination="2GI-1A-WH1" id="Bfa-5G-Z54"/>
             </connections>
             <point key="canvasLocation" x="339" y="343"/>
         </tableViewCell>

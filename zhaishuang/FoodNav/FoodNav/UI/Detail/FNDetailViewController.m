@@ -10,6 +10,7 @@
 #import <MAMapKit/MAMapKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapNaviKit/AMapNaviKit.h>
+#import "CAppService.h"
 @interface FNDetailViewController ()<MAMapViewDelegate>
 {
     MAMapView *_mapView;
@@ -22,31 +23,69 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //配置用户Key
-//        [AMapNaviServices sharedServices].apiKey =@"90a6b42e298d22c2ca28a5638adfbbfc";
-        self.title = @"粮仓详情";
+    //        [AMapNaviServices sharedServices].apiKey =@"90a6b42e298d22c2ca28a5638adfbbfc";
+    self.title = @"粮仓详情";
     UIBarButtonItem *tmpbarButtonItem = [[UIBarButtonItem alloc] init];
     tmpbarButtonItem.title = NullString;
     self.navigationItem.backBarButtonItem = tmpbarButtonItem;
-        [AMapServices sharedServices].apiKey = @"90a6b42e298d22c2ca28a5638adfbbfc";
-        _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds)-20, 420)];
-        _mapView.delegate = self;
-        [self.fnmapView addSubview:_mapView];
-         _mapView.showsUserLocation = YES;
-        [_mapView setUserTrackingMode: MAUserTrackingModeFollow animated:YES]; //地图跟着位置移动
-        MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
-        pointAnnotation.coordinate = CLLocationCoordinate2DMake(39.989631, 116.481018);
-        pointAnnotation.title = @"ff";
-        pointAnnotation.subtitle = @"6";
-        [_mapView addAnnotation:pointAnnotation];
-        _mapView.centerCoordinate =  CLLocationCoordinate2DMake(39.989631, 116.481018);
+    [AMapServices sharedServices].apiKey = @"90a6b42e298d22c2ca28a5638adfbbfc";
+    _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds)-20, 420)];
+    _mapView.delegate = self;
+    [self.fnmapView addSubview:_mapView];
+    _mapView.showsUserLocation = YES;
+    [_mapView setUserTrackingMode: MAUserTrackingModeFollow animated:YES]; //地图跟着位置移动
+    MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
+    pointAnnotation.coordinate = CLLocationCoordinate2DMake(39.989631, 116.481018);
+    pointAnnotation.title = @"ff";
+    pointAnnotation.subtitle = @"6";
+    [_mapView addAnnotation:pointAnnotation];
+    _mapView.centerCoordinate =  CLLocationCoordinate2DMake(39.989631, 116.481018);
     
     setViewCorner(self.navButton, 5);
     iscollect = NO;
+    [[CAppService sharedInstance] liangDetail_request:self.liangId success:^(NSDictionary *model) {
+        [self setUIdata:model];
+    } failure:^(CAppServiceError *error) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (void)setUIdata:(NSDictionary *)dataDic
+{
+    if([dataDic.allKeys containsObject:@"data"]){
+        NSDictionary *model = dataDic[@"data"];
+        if([model.allKeys containsObject:@"graindepot_name"])
+            self.name.text = model[@"graindepot_name"];
+        
+        if([model.allKeys containsObject:@"address"])
+            self.address.text = model[@"address"];
+        
+        if([model.allKeys containsObject:@"store_count"])
+            self.cangHouseAllNum.text = model[@"store_count"];
+        
+        if([model.allKeys containsObject:@"warehouse_count"])
+            self.aoHouseAllNum.text = model[@"warehouse_count"];
+        
+        if([model.allKeys containsObject:@"oilcan_count"])
+            self.youguanAllnumber.text = model[@"oilcan_count"];
+        
+        if([model.allKeys containsObject:@"store_design_capacity"])
+            self.designAllcapacity.text = model[@"store_design_capacity"];
+        
+        if([model.allKeys containsObject:@"oilcan_design_capacity"])
+            self.youkuanDesignAll.text = model[@"oilcan_design_capacity"];
+        
+        
+        if([model.allKeys containsObject:@"enterprise_id"])
+            self.enterpriseName.text = model[@"enterprise_id"];
+        
+        if([model.allKeys containsObject:@"longitude"] && [model.allKeys containsObject:@"latitude"])
+            self.lbsSign.text = [NSString stringWithFormat:@"%@, %@",model[@"longitude"],model[@"longitude"]];
+    }
 }
 - (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id <MAAnnotation>)annotation
 {
@@ -72,21 +111,34 @@
     str=[str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSURL * myURL_APP_A =[[NSURL alloc] initWithString:str];
     NSLog(@"%@",myURL_APP_A);
-//    if ([[UIApplication sharedApplication] canOpenURL:myURL_APP_A]) {
-        [[UIApplication sharedApplication] openURL:myURL_APP_A];
-//    }
-//    else{
-//        Alert(@"请您先安装高德地图");
-//    }
+    //    if ([[UIApplication sharedApplication] canOpenURL:myURL_APP_A]) {
+    [[UIApplication sharedApplication] openURL:myURL_APP_A];
+    //    }
+    //    else{
+    //        Alert(@"请您先安装高德地图");
+    //    }
 }
 - (IBAction)collectBtnClick:(id)sender
 {
     if(iscollect){
-        [self.collButton setImage:Image(@"fnuncollecticon") forState:UIControlStateNormal];
+        [[CAppService sharedInstance] collectLiang_request:user_id warehouse_id:self.liangId isdelte:1 success:^(NSDictionary *model) {
+            if([model.allKeys containsObject:@"msg"]){
+                if([model[@"msg"] isEqualToString:@"00001"]){
+                    [self.collButton setImage:Image(@"fnuncollecticon") forState:UIControlStateNormal];
+                    iscollect = !iscollect;
+                }
+            }
+        } failure:^(CAppServiceError *error) {
+        }];
     }
     else{
-        [self.collButton setImage:Image(@"fnalcollecticon") forState:UIControlStateNormal];
+        [[CAppService sharedInstance] collectLiang_request:user_id warehouse_id:self.liangId isdelte:0 success:^(NSDictionary *model) {
+            if([model[@"msg"] isEqualToString:@"00001"]){
+                [self.collButton setImage:Image(@"fnalcollecticon") forState:UIControlStateNormal];
+                iscollect = !iscollect;
+            }
+        } failure:^(CAppServiceError *error) {
+        }];
     }
-    iscollect = !iscollect;
 }
 @end

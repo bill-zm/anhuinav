@@ -11,6 +11,9 @@
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapNaviKit/AMapNaviKit.h>
 #import "FNLoginViewController+Navigation.h"
+#import "CAppService.h"
+#import "SVProgressHUD.h"
+#import "NSString+MD5Addition.h"
 @interface FNLoginViewController ()<MAMapViewDelegate>
 {
     MAMapView *_mapView;
@@ -57,11 +60,24 @@
 //    pointAnnotation3.subtitle = @"阜通东大街6号";
 //    
 //    [_mapView addAnnotation:pointAnnotation3];
-    
+    WeakSelf;
     setViewCorner(self.loginBtn, 5);
     setViewCorner(self.userView, 5);
     setViewCorner(self.pawView, 5);
-    
+    self.userNumber.text = UserDefaultsGet(UserDefaultKey_UserName);
+    self.userPassword.text = UserDefaultsGet(UserDefaultKey_Password);
+//    [[CAppService sharedInstance] isLogin_request:^(NSDictionary *model) {
+//        if([model.allKeys containsObject:@"data"]){
+//            if([model[@"data"] integerValue] == 0){
+//                    [wself setupViews];
+//                    [wself presentViewController:self.leveyTabBarController
+//                                       animated:NO
+//                                     completion:nil];
+//            }
+//        }
+//    } failure:^(CAppServiceError *error) {
+//        
+//    }];
 }
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -81,10 +97,57 @@
 }
 - (IBAction)btnClick:(id)sender {
     // 接口: login
-    [self setupViews];
-    [self presentViewController:self.leveyTabBarController
-                       animated:NO
-                     completion:nil];
+    if([Common isEmptyString:self.userNumber.text]){
+        [SVProgressHUD showErrorWithStatus:@"请输入用户名"];
+        return;
+    }
+    if([Common isEmptyString:self.userPassword.text]){
+        [SVProgressHUD showErrorWithStatus:@"请输入密码"];
+        return;
+    }
+    WeakSelf;
+//    * 登录接口
+//    * msg 值含义
+//    * 00001  登录成功
+//    * 00002 用户名为空
+//    * 00003 密码为空
+//    * 00004 用户不存在
+//    * 00005 密码错误
+    [[CAppService sharedInstance] appLogin_request:self.userNumber.text password:[self.userPassword.text stringFromMD5] success:^(NSDictionary *model) {
+        if([model.allKeys containsObject:@"data"]){
+            user_id = model[@"data"];
+        }
+        if([model.allKeys containsObject:@"msg"]){
+            if([model[@"msg"] isEqualToString:@"00001"]){
+                UserDefaultsSave(wself.userNumber.text, UserDefaultKey_UserName);
+                UserDefaultsSave(wself.userPassword.text, UserDefaultKey_Password);
+                [[CAppService sharedInstance] pstDeveiceInfo_request:^(NSDictionary *model) {
+                } failure:^(CAppServiceError *error) {
+                }];
+                [wself setupViews];
+                [wself presentViewController:wself.leveyTabBarController
+                                    animated:NO
+                                  completion:nil];
+            }
+            else if([model[@"msg"] isEqualToString:@"00002"]){
+                [SVProgressHUD showErrorWithStatus:@"用户名为空"];
+            }
+            else if([model[@"msg"] isEqualToString:@"00003"]){
+                [SVProgressHUD showErrorWithStatus:@"密码为空"];
+            }
+            else if([model[@"msg"] isEqualToString:@"00004"]){
+                [SVProgressHUD showErrorWithStatus:@"用户不存在"];
+            }
+            else if([model[@"msg"] isEqualToString:@"00005"]){
+                [SVProgressHUD showErrorWithStatus:@"密码错误"];
+            }
+        }
+        else{
+            [SVProgressHUD showErrorWithStatus:@"登录失败"];
+        }
+    } failure:^(CAppServiceError *error) {
+        
+    }];
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {

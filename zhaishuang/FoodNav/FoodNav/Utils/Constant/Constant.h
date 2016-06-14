@@ -37,4 +37,9 @@ static const double default_NavigationHeight_iOS6 = 44.0;
 static const double default_NavigationHeight_iOS7 = 64.0;
 
 static const double default_Arrow_Height = 15.0;
+
+
+
+static NSString *const UserDefaultKey_UserName = @"UserName";
+static NSString *const UserDefaultKey_Password = @"Password";
 #endif

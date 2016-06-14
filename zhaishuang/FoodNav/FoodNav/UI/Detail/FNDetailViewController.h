@@ -12,6 +12,17 @@
 @property(nonatomic,weak)IBOutlet UIView *fnmapView;
 @property(nonatomic,weak)IBOutlet UIButton *navButton;
 @property(nonatomic,weak)IBOutlet UIButton *collButton;
+Strong NSString *liangId;
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *address;
+@property (weak, nonatomic) IBOutlet UILabel *youguanAllnumber;
+@property (weak, nonatomic) IBOutlet UILabel *cangHouseAllNum;
+@property (weak, nonatomic) IBOutlet UILabel *aoHouseAllNum;
+
+@property (weak, nonatomic) IBOutlet UILabel *enterpriseName;
+@property (weak, nonatomic) IBOutlet UILabel *designAllcapacity;
+@property (weak, nonatomic) IBOutlet UILabel *lbsSign;
+@property (weak, nonatomic) IBOutlet UILabel *youkuanDesignAll;
 - (IBAction)navigateBtnClick:(id)sender;
 - (IBAction)collectBtnClick:(id)sender;
 @end

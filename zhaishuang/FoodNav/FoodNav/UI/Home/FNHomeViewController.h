@@ -11,4 +11,7 @@
 @interface FNHomeViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 //@property(nonatomic,weak) IBOutlet UITableView *resultTable;
 @property(nonatomic,weak) IBOutlet UITableView *hometableView;
+Assign NSInteger npage;
+Strong NSMutableArray *dataArr;
+- (void)setupRefreshControllList;
 @end

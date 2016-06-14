@@ -83,6 +83,8 @@
 		6825DDAA1D01D09C00D8289F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6825DDA91D01D09C00D8289F /* libc++.tbd */; };
 		6827830D1D07E8C300FB86B0 /* FNMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6827830B1D07E8C300FB86B0 /* FNMapViewController.m */; };
 		6827830E1D07E8C300FB86B0 /* FNMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6827830C1D07E8C300FB86B0 /* FNMapViewController.xib */; };
+		688AA31C1D0FDC6900A63D2F /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 688AA31B1D0FDC6900A63D2F /* NSString+MD5Addition.m */; };
+		688AA31F1D0FF11C00A63D2F /* FNHomeViewController+request.m in Sources */ = {isa = PBXBuildFile; fileRef = 688AA31E1D0FF11C00A63D2F /* FNHomeViewController+request.m */; };
 		688ABA2A1D0153BF003F78CB /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 688ABA101D0153BF003F78CB /* AppDelegate.mm */; };
 		688ABA2B1D0153BF003F78CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 688ABA111D0153BF003F78CB /* Images.xcassets */; };
 		688ABA311D0153BF003F78CB /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 688ABA231D0153BF003F78CB /* Common.m */; };
@@ -252,6 +254,10 @@
 		6827830C1D07E8C300FB86B0 /* FNMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FNMapViewController.xib; sourceTree = "<group>"; };
 		6875CBAE1B881B5F0012BA9A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		687638DA1A9FFD23002E936C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		688AA31A1D0FDC6900A63D2F /* NSString+MD5Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5Addition.h"; sourceTree = "<group>"; };
+		688AA31B1D0FDC6900A63D2F /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5Addition.m"; sourceTree = "<group>"; };
+		688AA31D1D0FF11C00A63D2F /* FNHomeViewController+request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FNHomeViewController+request.h"; sourceTree = "<group>"; };
+		688AA31E1D0FF11C00A63D2F /* FNHomeViewController+request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FNHomeViewController+request.m"; sourceTree = "<group>"; };
 		688ABA0F1D0153BF003F78CB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		688ABA101D0153BF003F78CB /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		688ABA111D0153BF003F78CB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -629,6 +635,15 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		688AA3191D0FDC6900A63D2F /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				688AA31A1D0FDC6900A63D2F /* NSString+MD5Addition.h */,
+				688AA31B1D0FDC6900A63D2F /* NSString+MD5Addition.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
 		688ABA0D1D0153BF003F78CB /* FoodNav */ = {
 			isa = PBXGroup;
 			children = (
@@ -714,6 +729,7 @@
 		688ABA201D0153BF003F78CB /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				688AA3191D0FDC6900A63D2F /* NSString */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -823,6 +839,8 @@
 				68F205A21D0515BC00BC1927 /* FNHomeViewController.h */,
 				68F205A31D0515BC00BC1927 /* FNHomeViewController.m */,
 				68F205A41D0515BC00BC1927 /* FNHomeViewController.xib */,
+				688AA31D1D0FF11C00A63D2F /* FNHomeViewController+request.h */,
+				688AA31E1D0FF11C00A63D2F /* FNHomeViewController+request.m */,
 				68080F3F1D0C0EC800BB9E8D /* FNSiftViewController.h */,
 				68080F401D0C0EC800BB9E8D /* FNSiftViewController.m */,
 				68080F411D0C0EC800BB9E8D /* FNSiftViewController.xib */,
@@ -1029,11 +1047,13 @@
 				680352401D09A20A001A89AD /* AFSecurityPolicy.m in Sources */,
 				6806416B1D0EE16A007FB5CA /* UIView+MJExtension.m in Sources */,
 				681D583D1D06C5490050E629 /* FNDetailViewController.m in Sources */,
+				688AA31F1D0FF11C00A63D2F /* FNHomeViewController+request.m in Sources */,
 				68F205A51D0515BC00BC1927 /* FNHomeViewController.m in Sources */,
 				6803523F1D09A20A001A89AD /* AFNetworkReachabilityManager.m in Sources */,
 				68F205B71D0517A700BC1927 /* BUIControl.m in Sources */,
 				680641611D0EE16A007FB5CA /* MJRefreshBackGifFooter.m in Sources */,
 				6803523E1D09A20A001A89AD /* AFHTTPSessionManager.m in Sources */,
+				688AA31C1D0FDC6900A63D2F /* NSString+MD5Addition.m in Sources */,
 				680352421D09A20A001A89AD /* AFURLRequestSerialization.m in Sources */,
 				681D58371D06BF370050E629 /* CollectTableViewCell.m in Sources */,
 				680641651D0EE16A007FB5CA /* MJRefreshNormalHeader.m in Sources */,

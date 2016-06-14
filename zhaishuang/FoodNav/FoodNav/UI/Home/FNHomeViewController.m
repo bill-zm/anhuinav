@@ -15,6 +15,9 @@
 #import "FNSearchViewController.h"
 #import "FNSiftViewController.h"
 #import "MJRefresh.h"
+#import "FNHomeViewController+request.h"
+#import "CAppService.h"
+#import "SVProgressHUD.h"
 @interface FNHomeViewController ()<UITextFieldDelegate>
 {
     UITextField *searchText;
@@ -57,7 +60,7 @@ Strong UINib *cellNib;
     
     UIButton *cancelbtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [cancelbtn setFrame:Frame(Screen_Width-290, 0, 40, 30)];
-    [cancelbtn setTitleColor:[Common colorFromHexRGB:@"A7CB31"] forState:UIControlStateNormal];
+    [cancelbtn setTitleColor:[Common colorFromHexRGB:@"7AACF4"] forState:UIControlStateNormal];
     [cancelbtn setTitle:@"取消" forState:UIControlStateNormal];
     cancelbtn.titleLabel.font = Font(14.0);
     [cancelbtn addTarget:self action:@selector(cancelBtnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -77,6 +80,8 @@ Strong UINib *cellNib;
     }];
     [self setSiftView];
     [self lowsetupRefreshControllList];
+    self.npage = 1;
+    [self getLiangListData:10 P:1];
 }
 - (void)setSiftView
 {
@@ -173,6 +178,8 @@ Strong UINib *cellNib;
 - (void)lowsetupRefreshControllList {
     __weak typeof(self) wself = self;
     self.hometableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        self.npage = 1;
+        [self getLiangListData:10 P:1];
         [wself.hometableView.mj_header endRefreshing];
 //        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2.0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
 //            [wself.hometableView.mj_header endRefreshing];
@@ -184,19 +191,20 @@ Strong UINib *cellNib;
 {
     WeakSelf;
     self.hometableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        [self getLiangListData:10 P:self.npage];
 //        if(!(wself.recordArr.count % gPageSize)){
 //            [wself getAppointmentRecordListRequestMany];
 //        }
 //        else{
 //            [Common promptShowTextTips:@"暂无更多数据" Time:1.5 CounstView:self.view];
             [wself.hometableView.mj_footer endRefreshing];
-            [wself.hometableView.mj_footer endRefreshingWithNoMoreData];
+//            [wself.hometableView.mj_footer endRefreshingWithNoMoreData];
 //        }
     }];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return self.dataArr.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -205,7 +213,7 @@ Strong UINib *cellNib;
     if(!cell){
         cell = [self.cellNib instantiateWithOwner:self options:nil][0];
     }
-    //    [cell initViewCellData:self.dataArr[indexPath.row]];
+        [cell initViewCellData:self.dataArr[indexPath.row]];
     return cell;
     
 }
@@ -217,6 +225,7 @@ Strong UINib *cellNib;
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     FNDetailViewController *fndetail = [[FNDetailViewController alloc] initWithNibName:@"FNDetailViewController" bundle:nil];
+    fndetail.liangId = self.dataArr[indexPath.row][@"id"];
     [self.navigationController pushViewController:fndetail animated:YES];
 }
 - (void)searchBtnClick:(id)sender
@@ -250,10 +259,24 @@ Strong UINib *cellNib;
 - (BOOL)textFieldShouldReturn:(UITextField *)textField;
 {
     //send 搜索命令
-    FNSearchViewController *serView = [[FNSearchViewController alloc] initWithNibName:@"FNSearchViewController" bundle:nil];
-    [self.navigationController pushViewController:serView animated:YES];
-    searchText.text = NullString;
+//    FNSearchViewController *serView = [[FNSearchViewController alloc] initWithNibName:@"FNSearchViewController" bundle:nil];
+//    [self.navigationController pushViewController:serView animated:YES];
+//    searchText.text = NullString;
     [searchText resignFirstResponder];
+    [SVProgressHUD showWithStatus:@"正在搜索..."];
+    [[CAppService sharedInstance] getSearch_request:searchText.text success:^(NSDictionary *model) {
+        [SVProgressHUD dismiss];
+        if([model.allKeys containsObject:@"data"]){
+            if([model[@"data"] isKindOfClass:[NSArray class]]){
+                    self.dataArr = [NSMutableArray arrayWithArray:model[@"data"]];
+            }
+            self.npage = 1;
+            [self.hometableView.mj_footer removeFromSuperview];
+            [self.hometableView reloadData];
+        }
+    } failure:^(CAppServiceError *error) {
+        [SVProgressHUD dismiss];
+    }];
     return YES;
 }
 - (void)btnClickSift:(UIButton *)sender

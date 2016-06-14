@@ -11,8 +11,10 @@
 #import "FNDetailViewController.h"
 #import "FNMapViewController.h"
 #import "MJRefresh.h"
+#import "CAppService.h"
 @interface FNCollectListViewController ()
 Strong UINib *cellNib;
+Strong NSMutableArray *dataArr;
 @end
 
 @implementation FNCollectListViewController
@@ -33,6 +35,22 @@ Strong UINib *cellNib;
         [self.navigationController pushViewController:mapVc animated:YES];
     }];
     [self lowsetupRefreshControllList];
+    [[CAppService sharedInstance] collectList_request:user_id success:^(NSDictionary *model) {
+        if([model.allKeys containsObject:@"data"]){
+            if([model[@"data"] isKindOfClass:[NSArray class]]){
+                self.dataArr = [NSMutableArray arrayWithArray:model[@"data"]];
+//                if(self.dataArr.count == 0){
+//                    self.dataArr = [NSMutableArray arrayWithArray:model[@"data"]];
+//                }
+//                else{
+////                    [self.dataArr addObjectsFromArray:model[@"data"]];
+//                }
+            }
+            [self.colltableView reloadData];
+        }
+    } failure:^(CAppServiceError *error) {
+        
+    }];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -43,6 +61,16 @@ Strong UINib *cellNib;
 - (void)lowsetupRefreshControllList {
     __weak typeof(self) wself = self;
     self.colltableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [[CAppService sharedInstance] collectList_request:user_id success:^(NSDictionary *model) {
+            if([model.allKeys containsObject:@"data"]){
+                if([model[@"data"] isKindOfClass:[NSArray class]]){
+                    self.dataArr = [NSMutableArray arrayWithArray:model[@"data"]];
+                }
+                [self.colltableView reloadData];
+            }
+        } failure:^(CAppServiceError *error) {
+            
+        }];
         [wself.colltableView.mj_header endRefreshing];
 //        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2.0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
 //            [wself.colltableView.mj_header endRefreshing];
@@ -66,7 +94,7 @@ Strong UINib *cellNib;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return self.dataArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -76,7 +104,7 @@ Strong UINib *cellNib;
     if(!cell){
         cell = [self.cellNib instantiateWithOwner:self options:nil][0];
     }
-//    [cell initViewCellData:self.dataArr[indexPath.row]];
+    [cell initViewCellData:self.dataArr[indexPath.row]];
     return cell;
  
 }
@@ -84,6 +112,45 @@ Strong UINib *cellNib;
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     FNDetailViewController *fndetail = [[FNDetailViewController alloc] initWithNibName:@"FNDetailViewController" bundle:nil];
+    fndetail.liangId = self.dataArr[indexPath.row][@"id"];
     [self.navigationController pushViewController:fndetail animated:YES];
+}
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"点击了删除");
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+//        [self.infoItems removeObjectAtIndex:(indexPath.row*2)];
+//        [self.infoItems removeObjectAtIndex:(indexPath.row*2)];
+//        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [[CAppService sharedInstance] collectLiang_request:user_id warehouse_id:NullString isdelte:0 success:^(NSDictionary *model) {
+            if([model[@"msg"] isEqualToString:@"00001"]){
+                [self.dataArr removeObjectAtIndex:indexPath.row];
+                [self.colltableView reloadData];
+            }
+        } failure:^(CAppServiceError *error) {
+        }];
+    }
+    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }
+}
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"手指撮动了");
+    return UITableViewCellEditingStyleDelete;
+}
+-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return  @"删除";
+}
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
 }
 @end

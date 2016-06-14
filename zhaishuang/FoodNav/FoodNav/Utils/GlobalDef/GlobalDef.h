@@ -9,3 +9,4 @@
 // Global Varies Define
 @class LeveyTabBarController;
 LeveyTabBarController *gTabBar;
+NSString *user_id;

@@ -34,4 +34,21 @@
     //        Alert(@"请您先安装高德地图");
     //    }
 }
+- (void)initViewCellData:(NSDictionary *)model
+{
+    if([model.allKeys containsObject:@"graindepot_name"])
+    self.name.text = model[@"graindepot_name"];
+    
+    if([model.allKeys containsObject:@"address"])
+        self.address.text = model[@"address"];
+    
+    if([model.allKeys containsObject:@"store_count"])
+        self.allNumber.text = model[@"store_count"];
+    
+    if([model.allKeys containsObject:@"warehouse_count"])
+        self.aoHouseNumber.text = model[@"warehouse_count"];
+    
+    if([model.allKeys containsObject:@"oilcan_count"])
+        self.youAllnumber.text = model[@"oilcan_count"];
+}
 @end

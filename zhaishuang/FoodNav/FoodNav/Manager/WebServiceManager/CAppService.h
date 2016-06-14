@@ -44,7 +44,31 @@ typedef void(^AppServiceErrorRespondBlock)(CAppServiceError *error);
 @interface CAppService : NSObject
 
 DEFINE_SINGLETON_FOR_HEADER(CAppService);
-- (AFHTTPRequestOperation *)getSearch_request:(void (^)(NSDictionary *model))success
-                                      failure:(AppServiceErrorRespondBlock)failure
-                                     animated:(BOOL)animated;
+- (AFHTTPRequestOperation *)getSearch_request:(NSString *)serText
+                                      success:(void (^)(NSDictionary *model))success
+                                      failure:(AppServiceErrorRespondBlock)failure;
+- (AFHTTPRequestOperation *)isLogin_request:(void (^)(NSDictionary *model))success
+                                    failure:(AppServiceErrorRespondBlock)failure;
+
+- (AFHTTPRequestOperation *)appLogin_request:(NSString *)username
+                                    password:(NSString *)password
+                                     success:(void (^)(NSDictionary *model))success
+                                     failure:(AppServiceErrorRespondBlock)failure;
+- (AFHTTPRequestOperation *)collectLiang_request:(NSString *)user_id
+                                        warehouse_id:(NSString *)warehouse_id
+                                         isdelte:(NSInteger)isdelete
+                                         success:(void (^)(NSDictionary *model))success
+                                         failure:(AppServiceErrorRespondBlock)failure;
+- (AFHTTPRequestOperation *)liangDetail_request:(NSString *)warehouse_id
+                                        success:(void (^)(NSDictionary *model))success
+                                        failure:(AppServiceErrorRespondBlock)failure;
+- (AFHTTPRequestOperation *)collectList_request:(NSString *)user_id
+                                        success:(void (^)(NSDictionary *model))success
+                                        failure:(AppServiceErrorRespondBlock)failure;
+- (AFHTTPRequestOperation *)liangcangList_request:(NSInteger)pn
+                                                p:(NSInteger)p
+                                          success:(void (^)(NSDictionary *model))success
+                                          failure:(AppServiceErrorRespondBlock)failure;
+- (AFHTTPRequestOperation *)pstDeveiceInfo_request:(void (^)(NSDictionary *model))success
+                                           failure:(AppServiceErrorRespondBlock)failure;
 @end
