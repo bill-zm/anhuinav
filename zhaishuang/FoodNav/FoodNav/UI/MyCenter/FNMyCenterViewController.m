@@ -10,6 +10,7 @@
 #import "FNCollectListViewController.h"
 #import "BUIView.h"
 #import "FNLoginViewController.h"
+#import "SVProgressHUD.h"
 @interface FNMyCenterViewController ()
 
 @end
@@ -47,6 +48,10 @@
     }];
 }
 - (IBAction)collectBtnClick:(id)sender{
+    if([Common isEmptyString:user_id]){
+        [SVProgressHUD showErrorWithStatus:@"未登录"];
+        return;
+    }
     FNCollectListViewController *collect = [[FNCollectListViewController alloc] initWithNibName:@"FNCollectListViewController" bundle:nil];
     [self.navigationController pushViewController:collect animated:YES];
 }

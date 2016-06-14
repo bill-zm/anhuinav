@@ -23,6 +23,7 @@
     UITextField *searchText;
     UIButton *cancelButton;
     FNSiftViewController *fnsift;
+    BOOL isSearch;
 }
 Strong UINib *cellNib;
 @end
@@ -83,6 +84,7 @@ Strong UINib *cellNib;
     [self lowsetupRefreshControllList];
     self.npage = 1;
     [self getLiangListData:10 P:1];
+    isSearch = NO;
 }
 - (void)setSiftView
 {
@@ -179,6 +181,8 @@ Strong UINib *cellNib;
 - (void)lowsetupRefreshControllList {
     __weak typeof(self) wself = self;
     self.hometableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        isSearch = NO;
+        searchText.text = NullString;
         self.npage = 1;
         [self getLiangListData:10 P:1];
         [wself.hometableView.mj_header endRefreshing];
@@ -192,7 +196,29 @@ Strong UINib *cellNib;
 {
     WeakSelf;
     self.hometableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        if(isSearch){
+            [[CAppService sharedInstance] getSearch_request:searchText.text pn:10 p:self.npage success:^(NSDictionary *model) {
+                [SVProgressHUD dismiss];
+                if([model.allKeys containsObject:@"data"]){
+                    if([model[@"data"] isKindOfClass:[NSArray class]]){
+                        [self.dataArr addObjectsFromArray:model[@"data"]];
+                        self.npage++;
+                        isSearch = YES;
+                    }
+                    else{
+                        [self.hometableView.mj_footer removeFromSuperview];
+                        [self.hometableView reloadData];
+//                        [SVProgressHUD showErrorWithStatus:@"未搜索到粮仓"];
+                    }
+                }
+            } failure:^(CAppServiceError *error) {
+                //        [SVProgressHUD dismiss];
+//                [SVProgressHUD showErrorWithStatus:@"查询失败"];
+            }];
+        }
+        else{
         [self getLiangListData:10 P:self.npage];
+        }
 //        if(!(wself.recordArr.count % gPageSize)){
 //            [wself getAppointmentRecordListRequestMany];
 //        }
@@ -244,6 +270,7 @@ Strong UINib *cellNib;
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     cancelButton.hidden = NO;
+    [fnsift removeSelfView];
 }
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
@@ -265,18 +292,31 @@ Strong UINib *cellNib;
 //    searchText.text = NullString;
     [searchText resignFirstResponder];
     [SVProgressHUD showWithStatus:@"正在搜索..."];
-    [[CAppService sharedInstance] getSearch_request:searchText.text success:^(NSDictionary *model) {
+    [[CAppService sharedInstance] getSearch_request:searchText.text pn:10 p:1 success:^(NSDictionary *model) {
         [SVProgressHUD dismiss];
         if([model.allKeys containsObject:@"data"]){
             if([model[@"data"] isKindOfClass:[NSArray class]]){
-                    self.dataArr = [NSMutableArray arrayWithArray:model[@"data"]];
+                self.dataArr = [NSMutableArray arrayWithArray:model[@"data"]];
+                if(self.dataArr.count < 10){
+                    self.npage = 2;
+                    [self.hometableView.mj_footer removeFromSuperview];
+                }
+                else{
+                }
+                [self.hometableView reloadData];
+                isSearch = YES;
             }
-            self.npage = 1;
-            [self.hometableView.mj_footer removeFromSuperview];
-            [self.hometableView reloadData];
+            else{
+                self.dataArr = [NSMutableArray array];
+                self.npage = 1;
+                [self.hometableView.mj_footer removeFromSuperview];
+                [self.hometableView reloadData];
+                [SVProgressHUD showErrorWithStatus:@"未搜索到粮仓"];
+            }
         }
     } failure:^(CAppServiceError *error) {
-        [SVProgressHUD dismiss];
+//        [SVProgressHUD dismiss];
+        [SVProgressHUD showErrorWithStatus:@"查询失败"];
     }];
     return YES;
 }
@@ -298,6 +338,67 @@ Strong UINib *cellNib;
     fnsift.view.tag = sender.tag;
     fnsift.tableCellBlock = ^(NSInteger row,id data){
         [fnsift removeSelfView];
+        //    20000，50000，100000，10000000
+        if(fnsift.view.tag == 1){
+            NSString *indes = NullString;
+            switch (row) {
+                case 0:
+                    indes = @"20000";
+                    break;
+                case 1:
+                    indes = @"50000";
+                    break;
+                case 2:
+                    indes = @"100000";
+                    break;
+                case 3:
+                    indes = NullString;
+                    break;
+                default:
+                    break;
+            }
+                [[CAppService sharedInstance] getMData_request:indes success:^(NSDictionary *model) {
+                if([model.allKeys containsObject:@"data"]){
+                    if([model[@"data"] isKindOfClass:[NSArray class]]){
+                        self.dataArr = [NSMutableArray arrayWithArray:model[@"data"]];
+                        self.npage = 1;
+                        [self.hometableView.mj_footer removeFromSuperview];
+                        [self.hometableView reloadData];
+                    }
+                    else{
+                        self.dataArr = [NSMutableArray array];
+                        self.npage = 1;
+                        [self.hometableView.mj_footer removeFromSuperview];
+                        [self.hometableView reloadData];
+                        [SVProgressHUD showErrorWithStatus:@"未查询到粮仓"];
+                    }
+                }
+            } failure:^(CAppServiceError *error) {
+                [SVProgressHUD showErrorWithStatus:@"查询失败"];
+            }];
+        }
+        //发送
+        else{
+        [[CAppService sharedInstance] getCityiD_request:data success:^(NSDictionary *model) {
+            if([model.allKeys containsObject:@"data"]){
+                if([model[@"data"] isKindOfClass:[NSArray class]]){
+                    self.dataArr = [NSMutableArray arrayWithArray:model[@"data"]];
+                    self.npage = 1;
+                    [self.hometableView.mj_footer removeFromSuperview];
+                    [self.hometableView reloadData];
+                }
+                else{
+                    self.dataArr = [NSMutableArray array];
+                    self.npage = 1;
+                    [self.hometableView.mj_footer removeFromSuperview];
+                    [self.hometableView reloadData];
+                    [SVProgressHUD showErrorWithStatus:@"未查询到粮仓"];
+                }
+            }
+        } failure:^(CAppServiceError *error) {
+            [SVProgressHUD showErrorWithStatus:@"查询失败"];
+        }];
+        }
     };
     [fnsift.view setFrame:Frame(0, -Screen_Height, Screen_Width, Screen_Height)];
     [self.view addSubview:fnsift.view];

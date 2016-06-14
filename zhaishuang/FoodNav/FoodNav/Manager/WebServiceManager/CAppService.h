@@ -45,6 +45,8 @@ typedef void(^AppServiceErrorRespondBlock)(CAppServiceError *error);
 
 DEFINE_SINGLETON_FOR_HEADER(CAppService);
 - (AFHTTPRequestOperation *)getSearch_request:(NSString *)serText
+                                           pn:(NSInteger)pn
+                                            p:(NSInteger)p
                                       success:(void (^)(NSDictionary *model))success
                                       failure:(AppServiceErrorRespondBlock)failure;
 - (AFHTTPRequestOperation *)isLogin_request:(void (^)(NSDictionary *model))success
@@ -71,4 +73,13 @@ DEFINE_SINGLETON_FOR_HEADER(CAppService);
                                           failure:(AppServiceErrorRespondBlock)failure;
 - (AFHTTPRequestOperation *)pstDeveiceInfo_request:(void (^)(NSDictionary *model))success
                                            failure:(AppServiceErrorRespondBlock)failure;
+- (AFHTTPRequestOperation *)getCitycode_request:(void (^)(NSDictionary *model))success
+                                        failure:(AppServiceErrorRespondBlock)failure;
+- (AFHTTPRequestOperation *)getCityiD_request:(NSString *)city_id
+                                      success:(void (^)(NSDictionary *model))success
+                                      failure:(AppServiceErrorRespondBlock)failure;
+- (AFHTTPRequestOperation *)getMData_request:(NSString *)distance
+                                     success:(void (^)(NSDictionary *model))success
+                                     failure:(AppServiceErrorRespondBlock)failure
+;
 @end

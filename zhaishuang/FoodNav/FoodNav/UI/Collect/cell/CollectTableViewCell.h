@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *youAllnumber;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property(nonatomic,weak)IBOutlet UIButton *navButton;
+@property (weak, nonatomic) IBOutlet UILabel *distancelab;
+
 Strong NSDictionary *dataDic;
 - (IBAction)navigateBtnClick:(id)sender;
 - (void)initViewCellData:(id)model;

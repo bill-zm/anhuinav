@@ -34,11 +34,11 @@
     for(NSDictionary *model in self.dataArr){
         if([model.allKeys containsObject:@"longitude"] && [model.allKeys containsObject:@"latitude"]){
             MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
-            pointAnnotation.coordinate = CLLocationCoordinate2DMake([model[@"longitude"] doubleValue], [model[@"latitude"] doubleValue]);
+            pointAnnotation.coordinate = CLLocationCoordinate2DMake([model[@"latitude"] doubleValue], [model[@"longitude"] doubleValue]);
             pointAnnotation.title = model[@"graindepot_name"];
             pointAnnotation.subtitle = model[@"address"];
             [_mapView addAnnotation:pointAnnotation];
-            _mapView.centerCoordinate =  CLLocationCoordinate2DMake([model[@"longitude"] doubleValue], [model[@"latitude"] doubleValue]);
+            _mapView.centerCoordinate =  CLLocationCoordinate2DMake([model[@"latitude"] doubleValue], [model[@"longitude"] doubleValue]);
         }
     }
     // Do any additional setup after loading the view from its nib.

@@ -123,8 +123,8 @@ Strong NSMutableArray *dataArr;
 //        [self.infoItems removeObjectAtIndex:(indexPath.row*2)];
 //        [self.infoItems removeObjectAtIndex:(indexPath.row*2)];
 //        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        [[CAppService sharedInstance] collectLiang_request:user_id warehouse_id:NullString isdelte:0 success:^(NSDictionary *model) {
-            if([model[@"msg"] isEqualToString:@"00001"]){
+        [[CAppService sharedInstance] collectLiang_request:user_id warehouse_id:self.dataArr[indexPath.row][@"id"] isdelte:1 success:^(NSDictionary *model) {
+            if([model[@"msg"] isEqualToString:@"00007"]){
                 [self.dataArr removeObjectAtIndex:indexPath.row];
                 [self.colltableView reloadData];
             }
