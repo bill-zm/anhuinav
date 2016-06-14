@@ -10,4 +10,6 @@
 
 @interface CollectTableViewCell : UITableViewCell
 
+@property(nonatomic,weak)IBOutlet UIButton *navButton;
+- (IBAction)navigateBtnClick:(id)sender;
 @end

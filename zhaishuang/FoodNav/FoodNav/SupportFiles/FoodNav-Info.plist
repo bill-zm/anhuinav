@@ -5,17 +5,13 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>zh_CN</string>
 	<key>CFBundleDisplayName</key>
-	<string>Hi</string>
+	<string>粮仓导航</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleIconFile</key>
-	<string></string>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>Icon_GZN</string>
-		<string>Icon_GZN@2x</string>
-		<string>Icon_GZN120</string>
-		<string>Icon_GZN72</string>
+		<string>fniconss.png</string>
+		<string>fnshiju@2x.png</string>
 	</array>
 	<key>CFBundleIcons</key>
 	<dict/>

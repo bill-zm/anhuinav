@@ -14,6 +14,7 @@
 #import "MLSearchBar.h"
 #import "FNSearchViewController.h"
 #import "FNSiftViewController.h"
+#import "MJRefresh.h"
 @interface FNHomeViewController ()<UITextFieldDelegate>
 {
     UITextField *searchText;
@@ -75,6 +76,7 @@ Strong UINib *cellNib;
         [self.navigationController pushViewController:mapVc animated:YES];
     }];
     [self setSiftView];
+    [self lowsetupRefreshControllList];
 }
 - (void)setSiftView
 {
@@ -85,51 +87,112 @@ Strong UINib *cellNib;
     linelab.text = NullString;
     linelab.backgroundColor = [Common colorFromHexRGB:@"cccccc"];
     [pview addSubview:linelab];
-    for(int i=0;i<4;i++){
+    
+    
+    
+    for(int i=0;i<2;i++){
         UIButton *tmpbtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        tmpbtn.tag = i;
         [tmpbtn setBackgroundColor:[UIColor clearColor]];
         tmpbtn.titleLabel.font = Font(15.0);
         [tmpbtn setTitleColor:[Common colorFromHexRGB:@"444444"] forState:UIControlStateNormal];
-        [tmpbtn setFrame:Frame(i*Screen_Width/4, 0, Screen_Width/4, 50)];
+        [tmpbtn setFrame:Frame(i*Screen_Width/2, 0, Screen_Width/2, 50)];
         [tmpbtn addTarget:self action:@selector(btnClickSift:) forControlEvents:UIControlEventTouchUpInside];
         [pview addSubview:tmpbtn];
-        UILabel *linelab1 = [[UILabel alloc] initWithFrame:Frame(Screen_Width/4*i, 0, 1, 50)];
+        UILabel *linelab1 = [[UILabel alloc] initWithFrame:Frame(Screen_Width/2*i, 0, 1, 50)];
         linelab1.text = NullString;
         linelab1.backgroundColor = [Common colorFromHexRGB:@"cccccc"];
-        UIImageView *imageview = [[UIImageView alloc] initWithFrame:Frame(Screen_Width/4*(i+1)-60, 17, 16, 16)];
+        UIImageView *imageview = [[UIImageView alloc] initWithFrame:Frame(Screen_Width/2*(i+1)-60, 17, 16, 16)];
         [imageview setImage:Image(@"fnarrowicon.png")];
         switch (i) {
             case 0:
-                [tmpbtn setTitle:@"默认排序" forState:UIControlStateNormal];
+                [tmpbtn setTitle:@"所在地" forState:UIControlStateNormal];
+                [pview addSubview:linelab1];
+                SetFrameByXPos(imageview.frame, Screen_Width/2*(i+1)-160);
                 [pview addSubview:imageview];
                 break;
             case 1:
-                [tmpbtn setTitle:@"所在地" forState:UIControlStateNormal];
-                [pview addSubview:linelab1];
-                SetFrameByXPos(imageview.frame, Screen_Width/4*(i+1)-70);
-                [pview addSubview:imageview];
-                break;
-            case 2:
                 [tmpbtn setTitle:@"距离" forState:UIControlStateNormal];
                 [pview addSubview:linelab1];
-                SetFrameByXPos(imageview.frame, Screen_Width/4*(i+1)-80);
-                [pview addSubview:imageview];
-                break;
-            case 3:
-                [tmpbtn setTitle:@"筛选" forState:UIControlStateNormal];
-                [pview addSubview:linelab1];
-                [imageview setImage:Image(@"fnsifticon.png")];
-                [imageview setFrame:Frame(Screen_Width/4*i+60, 17, 16, 16)];
+                SetFrameByXPos(imageview.frame, Screen_Width/2*(i+1)-170);
                 [pview addSubview:imageview];
                 break;
             default:
                 break;
         }
     }
+
+    
+    
+//    for(int i=0;i<4;i++){
+//        UIButton *tmpbtn = [UIButton buttonWithType:UIButtonTypeCustom];
+//        [tmpbtn setBackgroundColor:[UIColor clearColor]];
+//        tmpbtn.titleLabel.font = Font(15.0);
+//        [tmpbtn setTitleColor:[Common colorFromHexRGB:@"444444"] forState:UIControlStateNormal];
+//        [tmpbtn setFrame:Frame(i*Screen_Width/4, 0, Screen_Width/4, 50)];
+//        [tmpbtn addTarget:self action:@selector(btnClickSift:) forControlEvents:UIControlEventTouchUpInside];
+//        [pview addSubview:tmpbtn];
+//        UILabel *linelab1 = [[UILabel alloc] initWithFrame:Frame(Screen_Width/4*i, 0, 1, 50)];
+//        linelab1.text = NullString;
+//        linelab1.backgroundColor = [Common colorFromHexRGB:@"cccccc"];
+//        UIImageView *imageview = [[UIImageView alloc] initWithFrame:Frame(Screen_Width/4*(i+1)-60, 17, 16, 16)];
+//        [imageview setImage:Image(@"fnarrowicon.png")];
+//        switch (i) {
+//            case 0:
+//                [tmpbtn setTitle:@"默认排序" forState:UIControlStateNormal];
+//                [pview addSubview:imageview];
+//                break;
+//            case 1:
+//                [tmpbtn setTitle:@"所在地" forState:UIControlStateNormal];
+//                [pview addSubview:linelab1];
+//                SetFrameByXPos(imageview.frame, Screen_Width/4*(i+1)-70);
+//                [pview addSubview:imageview];
+//                break;
+//            case 2:
+//                [tmpbtn setTitle:@"距离" forState:UIControlStateNormal];
+//                [pview addSubview:linelab1];
+//                SetFrameByXPos(imageview.frame, Screen_Width/4*(i+1)-80);
+//                [pview addSubview:imageview];
+//                break;
+//            case 3:
+//                [tmpbtn setTitle:@"筛选" forState:UIControlStateNormal];
+//                [pview addSubview:linelab1];
+//                [imageview setImage:Image(@"fnsifticon.png")];
+//                [imageview setFrame:Frame(Screen_Width/4*i+60, 17, 16, 16)];
+//                [pview addSubview:imageview];
+//                break;
+//            default:
+//                break;
+//        }
+//    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (void)lowsetupRefreshControllList {
+    __weak typeof(self) wself = self;
+    self.hometableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [wself.hometableView.mj_header endRefreshing];
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2.0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
+//            [wself.hometableView.mj_header endRefreshing];
+//        });
+    }];
+}
+//上拉刷新
+- (void)setupRefreshControllList
+{
+    WeakSelf;
+    self.hometableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+//        if(!(wself.recordArr.count % gPageSize)){
+//            [wself getAppointmentRecordListRequestMany];
+//        }
+//        else{
+//            [Common promptShowTextTips:@"暂无更多数据" Time:1.5 CounstView:self.view];
+            [wself.hometableView.mj_footer endRefreshing];
+            [wself.hometableView.mj_footer endRefreshingWithNoMoreData];
+//        }
+    }];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -145,6 +208,10 @@ Strong UINib *cellNib;
     //    [cell initViewCellData:self.dataArr[indexPath.row]];
     return cell;
     
+}
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [searchText resignFirstResponder];
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -192,9 +259,18 @@ Strong UINib *cellNib;
 - (void)btnClickSift:(UIButton *)sender
 {
     if([self.view.subviews containsObject:fnsift.view]){
-        return;
+        if(sender.tag == fnsift.view.tag){
+        [fnsift removeSelfView];
+            return;
+        }
+        else{
+        //换数据
+            fnsift.view.tag = sender.tag;
+        }
     }
+    else{
     fnsift = [[FNSiftViewController alloc] initWithNibName:@"FNSiftViewController" bundle:nil];
+    fnsift.view.tag = sender.tag;
     fnsift.tableCellBlock = ^(NSInteger row,id data){
         [fnsift removeSelfView];
     };
@@ -204,5 +280,6 @@ Strong UINib *cellNib;
         SetFrameByYPos(fnsift.view.frame,50);
     } completion:^(BOOL finished) {
     }];
+    }
 }
 @end

@@ -10,6 +10,7 @@
 #import "CollectTableViewCell.h"
 #import "FNDetailViewController.h"
 #import "FNMapViewController.h"
+#import "MJRefresh.h"
 @interface FNCollectListViewController ()
 Strong UINib *cellNib;
 @end
@@ -31,6 +32,7 @@ Strong UINib *cellNib;
         FNMapViewController *mapVc = [[FNMapViewController alloc] initWithNibName:@"FNMapViewController" bundle:nil];
         [self.navigationController pushViewController:mapVc animated:YES];
     }];
+    [self lowsetupRefreshControllList];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -38,7 +40,30 @@ Strong UINib *cellNib;
     [super didReceiveMemoryWarning];
     
 }
-
+- (void)lowsetupRefreshControllList {
+    __weak typeof(self) wself = self;
+    self.colltableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [wself.colltableView.mj_header endRefreshing];
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2.0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
+//            [wself.colltableView.mj_header endRefreshing];
+//        });
+    }];
+}
+//上拉刷新
+- (void)setupRefreshControllList
+{
+    WeakSelf;
+    self.colltableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        //        if(!(wself.recordArr.count % gPageSize)){
+        //            [wself getAppointmentRecordListRequestMany];
+        //        }
+        //        else{
+        //            [Common promptShowTextTips:@"暂无更多数据" Time:1.5 CounstView:self.view];
+        [wself.colltableView.mj_footer endRefreshing];
+        [wself.colltableView.mj_footer endRefreshingWithNoMoreData];
+        //        }
+    }];
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 10;

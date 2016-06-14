@@ -13,6 +13,7 @@
 @interface FNDetailViewController ()<MAMapViewDelegate>
 {
     MAMapView *_mapView;
+    BOOL iscollect;
 }
 @end
 
@@ -40,6 +41,7 @@
         _mapView.centerCoordinate =  CLLocationCoordinate2DMake(39.989631, 116.481018);
     
     setViewCorner(self.navButton, 5);
+    iscollect = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,11 +72,21 @@
     str=[str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSURL * myURL_APP_A =[[NSURL alloc] initWithString:str];
     NSLog(@"%@",myURL_APP_A);
-    if ([[UIApplication sharedApplication] canOpenURL:myURL_APP_A]) {
+//    if ([[UIApplication sharedApplication] canOpenURL:myURL_APP_A]) {
         [[UIApplication sharedApplication] openURL:myURL_APP_A];
+//    }
+//    else{
+//        Alert(@"请您先安装高德地图");
+//    }
+}
+- (IBAction)collectBtnClick:(id)sender
+{
+    if(iscollect){
+        [self.collButton setImage:Image(@"fnuncollecticon") forState:UIControlStateNormal];
     }
     else{
-        Alert(@"请您先安装高德地图");
+        [self.collButton setImage:Image(@"fnalcollecticon") forState:UIControlStateNormal];
     }
+    iscollect = !iscollect;
 }
 @end
