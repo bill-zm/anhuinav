@@ -12,6 +12,8 @@ typedef void(^tableCellSelect)(NSInteger,id);
 @property(nonatomic,weak) IBOutlet UITableView *allTableView;
 @property(nonatomic,weak) IBOutlet UITableView *quTableView;
 @property(nonatomic,weak) IBOutlet UIButton *btnClear;
+Strong NSMutableArray *dataArr;
+Strong NSMutableArray *quDataArr;
 Copy tableCellSelect tableCellBlock;
 - (IBAction)btnClickClear:(id)sender;
 - (void)removeSelfView;

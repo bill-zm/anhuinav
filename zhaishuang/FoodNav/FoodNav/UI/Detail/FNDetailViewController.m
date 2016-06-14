@@ -51,8 +51,11 @@
 {
     if([dataDic.allKeys containsObject:@"data"]){
         NSDictionary *model = dataDic[@"data"];
-        if([model.allKeys containsObject:@"graindepot_name"])
+        if([model.allKeys containsObject:@"graindepot_name"]){
             self.name.text = model[@"graindepot_name"];
+            CGRect r = [self.name.text boundingRectWithSize:CGSizeMake(Screen_Width, Screen_Height) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.name.font} context:nil];
+            SetFrameByXPos(self.collButton.frame, 134+r.size.width+10);
+        }
         
         if([model.allKeys containsObject:@"address"])
             self.address.text = model[@"address"];
