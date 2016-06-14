@@ -15,7 +15,6 @@
     if (self = [super init]) {
 //发布之前请设置服务器的Url
         self.baseURL = @"http://interface.xinzhigan.com:88";
-//        self.baseURL = AppServiceAddress;
         self.manager = [[AFHTTPRequestOperationManager alloc] init];
         AFSecurityPolicy *securityPolicy = [AFSecurityPolicy defaultPolicy];
         securityPolicy.allowInvalidCertificates = YES;
@@ -30,9 +29,8 @@
 #pragma mark Http Reques
 - (AFHTTPRequestOperation *)getHttpRequestWithURL:(NSString *)url
                                        parameters:(id)parameters
-                                          success:(void (^) (NSData *responseObject))success
-                                          failure:(ErrorRespondBlock)failure
-                                         animated:(BOOL)animated {
+                                          success:(void (^) (id responseObject))success
+                                          failure:(ErrorRespondBlock)failure{
     NSLog(@"\r\n%@%@\nparam:%@", self.baseURL, url, parameters);
     NSString *tmpurl = NullString;
     if ([url rangeOfString:@"http"].location == NSNotFound) {
@@ -40,31 +38,21 @@
     } else {
         tmpurl = url;
     }
-    if (animated) {
-        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeClear];
-    }
     return [self.manager GET:tmpurl
                   parameters:parameters
                      success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                         if (animated) {
-                             [SVProgressHUD dismiss];
-                         }
-                         success(operation.responseData);
+                        success(responseObject);
                          NSLog(@"\r\n%@", operation.responseString);
                      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                         if (animated) {
-                             [SVProgressHUD dismiss];
-                         }
-                         failure(operation, error);
+                        failure(operation, error);
                          NSLog(@"\r\n%@", operation.responseString);
                      }];
 }
 
 - (AFHTTPRequestOperation *)postHttpRequestWithURL:(NSString *)url
                                         parameters:(id)parameters
-                                           success:(void (^)(NSData *responseObject))success
-                                           failure:(ErrorRespondBlock)failure
-                                          animated:(BOOL)animated {
+                                           success:(void (^)(id responseObject))success
+                                           failure:(ErrorRespondBlock)failure{
     NSLog(@"\r\n%@%@\nparam:%@", self.baseURL, url, parameters);
     NSString *tmpurl = NullString;
     if ([url rangeOfString:@"http"].location == NSNotFound) {
@@ -72,22 +60,13 @@
     } else {
         tmpurl = url;
     }
-    if (animated) {
-        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeClear];
-    }
     return [self.manager POST:tmpurl
                    parameters:parameters
                       success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                          if (animated) {
-                              [SVProgressHUD dismiss];
-                          }
-                          success(operation.responseData);
+                          success(responseObject);
                           NSLog(@"\r\n%@", operation.responseString);
                       }
                       failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                          if (animated) {
-                              [SVProgressHUD dismiss];
-                          }
                           failure(operation, error);
                           NSLog(@"\r\n%@", operation.responseString);
                       }];
@@ -98,11 +77,7 @@
                                               data:(NSData *)data
                                            success:(void (^) (NSData *responseObject)) success
                                            failure: (ErrorRespondBlock) failure
-                                          animated: (BOOL) animated
 {
-    if (animated) {
-        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeClear];
-    }
     NSString *tmpurl = NullString;
     if ([url rangeOfString:@"http"].location == NSNotFound) {
         tmpurl = [NSString stringWithFormat:@"%@%@",self.baseURL,url];
@@ -115,14 +90,8 @@
         }
     } success:^(AFHTTPRequestOperation *operation, id responseObject) {
         success(operation.responseData);
-        if (animated) {
-            [SVProgressHUD dismiss];
-        }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         failure(operation,error);
-        if (animated) {
-            [SVProgressHUD dismiss];
-        }
     }];
 }
 - (void)cancelAllRequests {

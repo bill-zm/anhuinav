@@ -16,15 +16,13 @@ typedef void(^ErrorRespondBlock)(AFHTTPRequestOperation *operation, NSError *err
 @property (nonatomic, strong) NSString *baseURL;
 - (AFHTTPRequestOperation *)getHttpRequestWithURL:(NSString *)url
                                        parameters:(id)parameters
-                                          success:(void (^) (NSData *responseObject))success
-                                          failure:(ErrorRespondBlock)failure
-                                         animated:(BOOL) animated;
+                                          success:(void (^) (id responseObject))success
+                                          failure:(ErrorRespondBlock)failure;
 
 - (AFHTTPRequestOperation *)postHttpRequestWithURL:(NSString *)url
                                         parameters:(id)parameters
-                                           success:(void (^) (NSData *responseObject))success
-                                           failure:(ErrorRespondBlock)failure
-                                          animated:(BOOL)animated;
+                                           success:(void (^) (id responseObject))success
+                                           failure:(ErrorRespondBlock)failure;
 
 - (void)cancelAllRequests;
 @end
