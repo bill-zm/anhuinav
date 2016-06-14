@@ -23,19 +23,22 @@
 }
 - (IBAction)navigateBtnClick:(id)sender
 {
-    NSString *str = [NSString stringWithFormat:@"iosamap://navi?sourceApplication=%@&backScheme=applicationScheme&poiname=fangheng&poiid=BGVIS&lat=%f&lon=%f&dev=0&style=3",@"粮仓位置", 39.989631, 117.481018];
-    str=[str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSURL * myURL_APP_A =[[NSURL alloc] initWithString:str];
-    NSLog(@"%@",myURL_APP_A);
-    //    if ([[UIApplication sharedApplication] canOpenURL:myURL_APP_A]) {
-    [[UIApplication sharedApplication] openURL:myURL_APP_A];
-    //    }
-    //    else{
-    //        Alert(@"请您先安装高德地图");
-    //    }
+    if([self.dataDic.allKeys containsObject:@"longitude"] && [self.dataDic.allKeys containsObject:@"latitude"]){
+        NSString *str = [NSString stringWithFormat:@"iosamap://navi?sourceApplication=%@&backScheme=applicationScheme&poiname=fangheng&poiid=BGVIS&lat=%f&lon=%f&dev=0&style=3",@"粮仓位置", [self.dataDic[@"longitude"] doubleValue], [self.dataDic[@"latitude"] doubleValue]];
+        str=[str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSURL * myURL_APP_A =[[NSURL alloc] initWithString:str];
+        NSLog(@"%@",myURL_APP_A);
+        //    if ([[UIApplication sharedApplication] canOpenURL:myURL_APP_A]) {
+        [[UIApplication sharedApplication] openURL:myURL_APP_A];
+        //    }
+        //    else{
+        //        Alert(@"请您先安装高德地图");
+        //    }
+    }
 }
 - (void)initViewCellData:(NSDictionary *)model
 {
+    self.dataDic = model;
     if([model.allKeys containsObject:@"graindepot_name"])
     self.name.text = model[@"graindepot_name"];
     

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FNMapViewController : UIViewController
-
+Strong NSMutableArray *dataArr;
 @end

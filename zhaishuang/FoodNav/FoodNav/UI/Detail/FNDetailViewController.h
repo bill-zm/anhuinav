@@ -18,6 +18,9 @@ Strong NSString *liangId;
 @property (weak, nonatomic) IBOutlet UILabel *youguanAllnumber;
 @property (weak, nonatomic) IBOutlet UILabel *cangHouseAllNum;
 @property (weak, nonatomic) IBOutlet UILabel *aoHouseAllNum;
+@property (weak, nonatomic) IBOutlet UILabel *youguanAllnumber1;
+@property (weak, nonatomic) IBOutlet UILabel *cangHouseAllNum1;
+@property (weak, nonatomic) IBOutlet UILabel *aoHouseAllNum1;
 
 @property (weak, nonatomic) IBOutlet UILabel *enterpriseName;
 @property (weak, nonatomic) IBOutlet UILabel *designAllcapacity;

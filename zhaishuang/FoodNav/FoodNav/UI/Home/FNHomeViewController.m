@@ -76,6 +76,7 @@ Strong UINib *cellNib;
     [Common removeExtraCellLines:self.hometableView];
     self.navigationItem.rightBarButtonItem = [Common createBarItemWithLbs:^{
         FNMapViewController *mapVc = [[FNMapViewController alloc] initWithNibName:@"FNMapViewController" bundle:nil];
+        mapVc.dataArr = self.dataArr;
         [self.navigationController pushViewController:mapVc animated:YES];
     }];
     [self setSiftView];

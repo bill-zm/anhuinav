@@ -9,7 +9,9 @@
             <connections>
                 <outlet property="address" destination="u2W-Ok-PjA" id="OkK-v7-Xas"/>
                 <outlet property="aoHouseAllNum" destination="yJU-3s-7yc" id="VPG-Jn-ww9"/>
+                <outlet property="aoHouseAllNum1" destination="y10-8Z-lek" id="DST-Nx-Tud"/>
                 <outlet property="cangHouseAllNum" destination="2hX-2B-MJH" id="NM2-g2-kIg"/>
+                <outlet property="cangHouseAllNum1" destination="N4g-CE-Sgm" id="y6L-AR-HLB"/>
                 <outlet property="collButton" destination="7bS-CY-ncA" id="87b-bh-mE2"/>
                 <outlet property="designAllcapacity" destination="2kF-bH-PDQ" id="shR-i1-kfd"/>
                 <outlet property="enterpriseName" destination="6An-R1-07o" id="H1D-Gq-Z32"/>
@@ -19,6 +21,7 @@
                 <outlet property="navButton" destination="W5u-wa-GTK" id="Ltf-0h-hKS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="youguanAllnumber" destination="ZaO-My-zQm" id="csv-G0-fxi"/>
+                <outlet property="youguanAllnumber1" destination="dMu-hP-rlp" id="wiP-QI-CjW"/>
                 <outlet property="youkuanDesignAll" destination="DXd-rv-vog" id="HS1-XI-5C2"/>
             </connections>
         </placeholder>

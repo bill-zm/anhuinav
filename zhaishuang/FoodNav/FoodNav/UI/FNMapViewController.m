@@ -31,12 +31,16 @@
     [self.view addSubview:_mapView];
     _mapView.showsUserLocation = YES;
     [_mapView setUserTrackingMode: MAUserTrackingModeFollow animated:YES]; //地图跟着位置移动
-    MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
-    pointAnnotation.coordinate = CLLocationCoordinate2DMake(39.989631, 116.481018);
-    pointAnnotation.title = @"ff";
-    pointAnnotation.subtitle = @"6";
-    [_mapView addAnnotation:pointAnnotation];
-    _mapView.centerCoordinate =  CLLocationCoordinate2DMake(39.989631, 116.481018);
+    for(NSDictionary *model in self.dataArr){
+        if([model.allKeys containsObject:@"longitude"] && [model.allKeys containsObject:@"latitude"]){
+            MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
+            pointAnnotation.coordinate = CLLocationCoordinate2DMake([model[@"longitude"] doubleValue], [model[@"latitude"] doubleValue]);
+            pointAnnotation.title = model[@"graindepot_name"];
+            pointAnnotation.subtitle = model[@"address"];
+            [_mapView addAnnotation:pointAnnotation];
+            _mapView.centerCoordinate =  CLLocationCoordinate2DMake([model[@"longitude"] doubleValue], [model[@"latitude"] doubleValue]);
+        }
+    }
     // Do any additional setup after loading the view from its nib.
 }
 

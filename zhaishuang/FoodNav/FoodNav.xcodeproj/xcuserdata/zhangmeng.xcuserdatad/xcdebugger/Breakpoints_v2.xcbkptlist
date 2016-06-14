@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodNav/UI/Detail/FNDetailViewController.m"
-            timestampString = "487586224.240069"
+            timestampString = "487589463.119557"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodNav/UI/Detail/FNDetailViewController.m"
-            timestampString = "487586225.423529"
+            timestampString = "487589463.119557"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodNav/UI/Detail/FNDetailViewController.m"
-            timestampString = "487588373.720701"
+            timestampString = "487589463.119557"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "-collectBtnClick:"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,59 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodNav/UI/Detail/FNDetailViewController.m"
-            timestampString = "487588373.720701"
+            timestampString = "487589463.119557"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
-            landmarkName = "-collectBtnClick:"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[FNDetailViewController collectBtnClick:]"
-                  moduleName = "FoodNav"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangmeng/Documents/anhuinav/zhaishuang/FoodNav/FoodNav/UI/Detail/FNDetailViewController.m"
-                  timestampString = "487588374.8294"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "137"
-                  endingLineNumber = "137"
-                  offsetFromSymbolStart = "372">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__42-[FNDetailViewController collectBtnClick:]_block_invoke_2"
-                  moduleName = "FoodNav"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangmeng/Documents/anhuinav/zhaishuang/FoodNav/FoodNav/UI/Detail/FNDetailViewController.m"
-                  timestampString = "487588374.82973"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "138"
-                  endingLineNumber = "138"
-                  offsetFromSymbolStart = "67">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FoodNav/UI/Detail/FNDetailViewController.m"
-            timestampString = "487588373.720701"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
             landmarkName = "-collectBtnClick:"
             landmarkType = "5">
          </BreakpointContent>
@@ -186,11 +138,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodNav/UI/Detail/FNDetailViewController.m"
-            timestampString = "487588373.720701"
+            timestampString = "487589463.119557"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "-collectBtnClick:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodNav/UI/Detail/FNDetailViewController.m"
+            timestampString = "487589463.119557"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "-collectBtnClick:"
             landmarkType = "5">
          </BreakpointContent>
@@ -202,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodNav/UI/Collect/FNCollectListViewController.m"
-            timestampString = "487586984.419752"
+            timestampString = "487589463.119557"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
             <Locations>
@@ -214,60 +182,60 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__42-[FNCollectListViewController viewDidLoad]_block_invoke.57"
+                  symbolName = "__42-[FNCollectListViewController viewDidLoad]_block_invoke.61"
                   moduleName = "FoodNav"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhangmeng/Documents/anhuinav/zhaishuang/FoodNav/FoodNav/UI/Collect/FNCollectListViewController.m"
-                  timestampString = "487588374.836459"
+                  timestampString = "487590192.704067"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
                   offsetFromSymbolStart = "507">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__copy_helper_block_.78"
+                  symbolName = "__copy_helper_block_.80"
                   moduleName = "FoodNav"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhangmeng/Documents/anhuinav/zhaishuang/FoodNav/FoodNav/UI/Collect/FNCollectListViewController.m"
-                  timestampString = "487588374.836665"
+                  timestampString = "487590192.70423"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
                   offsetFromSymbolStart = "51">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.79"
+                  symbolName = "__destroy_helper_block_.81"
                   moduleName = "FoodNav"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhangmeng/Documents/anhuinav/zhaishuang/FoodNav/FoodNav/UI/Collect/FNCollectListViewController.m"
-                  timestampString = "487588374.836807"
+                  timestampString = "487590192.704317"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
                   offsetFromSymbolStart = "39">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__42-[FNCollectListViewController viewDidLoad]_block_invoke.82"
+                  symbolName = "__42-[FNCollectListViewController viewDidLoad]_block_invoke.84"
                   moduleName = "FoodNav"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhangmeng/Documents/anhuinav/zhaishuang/FoodNav/FoodNav/UI/Collect/FNCollectListViewController.m"
-                  timestampString = "487588374.83699"
+                  timestampString = "487590192.704428"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
                   offsetFromSymbolStart = "51">
                </Location>
             </Locations>
@@ -280,11 +248,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodNav/UI/Collect/FNCollectListViewController.m"
-            timestampString = "487586984.419752"
+            timestampString = "487589463.119557"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -296,11 +264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodNav/UI/Home/FNHomeViewController.m"
-            timestampString = "487587972.229161"
+            timestampString = "487589463.119557"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "271"
-            endingLineNumber = "271"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
             landmarkName = "-textFieldShouldReturn:"
             landmarkType = "5">
          </BreakpointContent>
@@ -312,11 +280,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodNav/UI/Home/FNHomeViewController.m"
-            timestampString = "487587972.229161"
+            timestampString = "487589463.119557"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "278"
-            endingLineNumber = "278"
+            startingLineNumber = "279"
+            endingLineNumber = "279"
             landmarkName = "-textFieldShouldReturn:"
             landmarkType = "5">
          </BreakpointContent>
@@ -328,11 +296,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodNav/UI/Home/FNHomeViewController.m"
-            timestampString = "487587972.229161"
+            timestampString = "487589463.119557"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "269"
-            endingLineNumber = "269"
+            startingLineNumber = "270"
+            endingLineNumber = "270"
             landmarkName = "-textFieldShouldReturn:"
             landmarkType = "5">
          </BreakpointContent>
@@ -344,12 +312,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodNav/UI/Detail/FNDetailViewController.m"
-            timestampString = "487587963.971332"
+            timestampString = "487589463.119557"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "-setUIdata:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodNav/UI/Collect/FNCollectListViewController.m"
+            timestampString = "487590192.637129"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "-tableView:commitEditingStyle:forRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodNav/UI/Collect/FNCollectListViewController.m"
+            timestampString = "487590194.774501"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "-tableView:commitEditingStyle:forRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

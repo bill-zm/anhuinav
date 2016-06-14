@@ -34,13 +34,6 @@
     [self.fnmapView addSubview:_mapView];
     _mapView.showsUserLocation = YES;
     [_mapView setUserTrackingMode: MAUserTrackingModeFollow animated:YES]; //地图跟着位置移动
-    MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
-    pointAnnotation.coordinate = CLLocationCoordinate2DMake(39.989631, 116.481018);
-    pointAnnotation.title = @"ff";
-    pointAnnotation.subtitle = @"6";
-    [_mapView addAnnotation:pointAnnotation];
-    _mapView.centerCoordinate =  CLLocationCoordinate2DMake(39.989631, 116.481018);
-    
     setViewCorner(self.navButton, 5);
     iscollect = NO;
     [[CAppService sharedInstance] liangDetail_request:self.liangId success:^(NSDictionary *model) {
@@ -64,14 +57,20 @@
         if([model.allKeys containsObject:@"address"])
             self.address.text = model[@"address"];
         
-        if([model.allKeys containsObject:@"store_count"])
+        if([model.allKeys containsObject:@"store_count"]){
             self.cangHouseAllNum.text = model[@"store_count"];
+            self.cangHouseAllNum1.text = model[@"store_count"];
+        }
         
-        if([model.allKeys containsObject:@"warehouse_count"])
+        if([model.allKeys containsObject:@"warehouse_count"]){
             self.aoHouseAllNum.text = model[@"warehouse_count"];
+            self.aoHouseAllNum1.text = model[@"warehouse_count"];
+        }
         
-        if([model.allKeys containsObject:@"oilcan_count"])
+        if([model.allKeys containsObject:@"oilcan_count"]){
             self.youguanAllnumber.text = model[@"oilcan_count"];
+            self.youguanAllnumber1.text = model[@"oilcan_count"];
+        }
         
         if([model.allKeys containsObject:@"store_design_capacity"])
             self.designAllcapacity.text = model[@"store_design_capacity"];
@@ -83,9 +82,18 @@
         if([model.allKeys containsObject:@"enterprise_id"])
             self.enterpriseName.text = model[@"enterprise_id"];
         
-        if([model.allKeys containsObject:@"longitude"] && [model.allKeys containsObject:@"latitude"])
-            self.lbsSign.text = [NSString stringWithFormat:@"%@, %@",model[@"longitude"],model[@"longitude"]];
+        if([model.allKeys containsObject:@"longitude"] && [model.allKeys containsObject:@"latitude"]){
+            self.lbsSign.text = [NSString stringWithFormat:@"%@, %@",model[@"longitude"],model[@"latitude"]];
+            
+            MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
+            pointAnnotation.coordinate = CLLocationCoordinate2DMake([model[@"longitude"] doubleValue], [model[@"latitude"] doubleValue]);
+            pointAnnotation.title = model[@"graindepot_name"];
+            pointAnnotation.subtitle = model[@"address"];
+            [_mapView addAnnotation:pointAnnotation];
+            _mapView.centerCoordinate =  CLLocationCoordinate2DMake([model[@"longitude"] doubleValue], [model[@"latitude"] doubleValue]);
+        }
     }
+ 
 }
 - (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id <MAAnnotation>)annotation
 {
