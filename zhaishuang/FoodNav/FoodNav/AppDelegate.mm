@@ -8,6 +8,7 @@
 #import "FNLoginViewController.h"
 //#import "FNavViewController.h"
 #import "SVProgressHUD.h"
+#import "CAppService.h"
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -17,6 +18,11 @@
     FNLoginViewController *fnController = [[FNLoginViewController alloc] initWithNibName:@"FNLoginViewController" bundle:nil];
     self.window.rootViewController = fnController;
     [self.window makeKeyAndVisible];
+    [[CAppService sharedInstance] getSearch_request:^(NSDictionary *model) {
+        
+    } failure:^(CAppServiceError *error) {
+        
+    } animated:NO];
     return YES;
 }
 @end

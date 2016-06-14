@@ -11,9 +11,9 @@
 #import "AFNetworking.h"
 typedef NS_ENUM(NSUInteger, ykAppServiceError) {
     eAppServiceErrorSuccess = 0, //成功
-    eAppServiceErrorFailed = -1, //未知原因错误
-    eAppServiceErrorTimeout = -1001, //响应超时
-    eAppServiceErrorConnectFailed = -1004,
+//    eAppServiceErrorFailed = -1, //未知原因错误
+//    eAppServiceErrorTimeout = -1001, //响应超时
+//    eAppServiceErrorConnectFailed = -1004,
     eAppServiceErrorAuthentication_Failure = 1, //Token鉴权失败
     eAppServiceErrorInvalid_Category = 2, //未知的品类
     eAppServiceErrorInvalid_Brand = 3, //未知的品牌
@@ -49,4 +49,7 @@ DEFINE_SINGLETON_FOR_HEADER(CAppService);
 //                                       success:(void (^)(NSDictionary *model))success
 //                                       failure:(AppServiceErrorRespondBlock)failure
 //                                      animated:(BOOL)animated;
+- (AFHTTPRequestOperation *)getSearch_request:(void (^)(NSDictionary *model))success
+                                      failure:(AppServiceErrorRespondBlock)failure
+                                     animated:(BOOL)animated;
 @end

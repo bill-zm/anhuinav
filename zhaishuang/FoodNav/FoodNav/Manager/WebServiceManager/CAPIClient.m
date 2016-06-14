@@ -14,7 +14,7 @@
 - (instancetype)init {
     if (self = [super init]) {
 //发布之前请设置服务器的Url
-//      self.baseURL = [NSURL URLWithString:@"http://121.41.109.117:8200"];
+        self.baseURL = @"http://interface.xinzhigan.com:88";
 //        self.baseURL = AppServiceAddress;
         self.manager = [[AFHTTPRequestOperationManager alloc] init];
         AFSecurityPolicy *securityPolicy = [AFSecurityPolicy defaultPolicy];
