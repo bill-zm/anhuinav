@@ -290,6 +290,7 @@ Strong UINib *cellNib;
         else{
         //换数据
             fnsift.view.tag = sender.tag;
+            [fnsift fuTableView];
         }
     }
     else{

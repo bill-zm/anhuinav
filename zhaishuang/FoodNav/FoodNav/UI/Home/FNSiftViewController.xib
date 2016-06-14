@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="allTableView" destination="Kad-dX-HCH" id="Erk-ax-CCn"/>
                 <outlet property="btnClear" destination="8uW-Jy-ydx" id="Seg-7X-GOf"/>
+                <outlet property="quTableView" destination="wHX-rv-yra" id="2OR-gZ-U52"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,6 +33,15 @@
                     <connections>
                         <outlet property="dataSource" destination="-1" id="VES-e3-WTn"/>
                         <outlet property="delegate" destination="-1" id="yrY-lS-p3Z"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wHX-rv-yra">
+                    <rect key="frame" x="768" y="0.0" width="768" height="500"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="BgI-Cn-jOf"/>
+                        <outlet property="delegate" destination="-1" id="7a0-YY-Atx"/>
                     </connections>
                 </tableView>
             </subviews>

@@ -20,6 +20,7 @@
     tmpbarButtonItem.title = NullString;
     self.navigationItem.backBarButtonItem = tmpbarButtonItem;
     [Common removeExtraCellLines:self.allTableView];
+    [Common removeExtraCellLines:self.quTableView];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -44,9 +45,28 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if(self.view.tag == 1){
     if(self.tableCellBlock){
-        self.tableCellBlock(indexPath.row,@"data");
+            self.tableCellBlock(indexPath.row,@"data");
     }
+        return;
+    }
+    if(tableView == self.quTableView){
+        if(self.tableCellBlock){
+            self.tableCellBlock(indexPath.row,@"data");
+        }
+        return;
+    }
+    if(tableView == self.allTableView){
+        SetFrameByWidth(self.allTableView.frame, Screen_Width/2);
+        SetFrameByXPos(self.quTableView.frame, Screen_Width/2);
+        SetFrameByWidth(self.quTableView.frame, Screen_Width/2);
+    }
+}
+- (void)fuTableView{
+    SetFrameByWidth(self.allTableView.frame, Screen_Width);
+    SetFrameByXPos(self.quTableView.frame, Screen_Width);
+    SetFrameByWidth(self.quTableView.frame, Screen_Width/2);
 }
 - (IBAction)btnClickClear:(id)sender
 {

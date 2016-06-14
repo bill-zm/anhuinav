@@ -10,8 +10,10 @@
 typedef void(^tableCellSelect)(NSInteger,id);
 @interface FNSiftViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,weak) IBOutlet UITableView *allTableView;
+@property(nonatomic,weak) IBOutlet UITableView *quTableView;
 @property(nonatomic,weak) IBOutlet UIButton *btnClear;
 Copy tableCellSelect tableCellBlock;
 - (IBAction)btnClickClear:(id)sender;
 - (void)removeSelfView;
+- (void)fuTableView;
 @end
