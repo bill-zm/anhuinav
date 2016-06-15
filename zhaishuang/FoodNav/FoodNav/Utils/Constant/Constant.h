@@ -42,4 +42,5 @@ static const double default_Arrow_Height = 15.0;
 
 static NSString *const UserDefaultKey_UserName = @"UserName";
 static NSString *const UserDefaultKey_Password = @"Password";
+static NSString *const UserDefaultKey_Collect = @"Collect";
 #endif

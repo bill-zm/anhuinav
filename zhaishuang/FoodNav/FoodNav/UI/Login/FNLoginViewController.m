@@ -66,22 +66,24 @@
     setViewCorner(self.pawView, 5);
     self.userNumber.text = UserDefaultsGet(UserDefaultKey_UserName);
     self.userPassword.text = UserDefaultsGet(UserDefaultKey_Password);
-//    [[CAppService sharedInstance] isLogin_request:^(NSDictionary *model) {
-//        if([model.allKeys containsObject:@"data"]){
-//            if([model[@"data"] integerValue] == 0){
-//                    [wself setupViews];
-//                    [wself presentViewController:self.leveyTabBarController
-//                                       animated:NO
-//                                     completion:nil];
-//            }
-//        }
-//    } failure:^(CAppServiceError *error) {
-//        
-//    }];
+    [[CAppService sharedInstance] isLogin_request:^(NSDictionary *model) {
+        if([model.allKeys containsObject:@"data"]){
+            if([model[@"data"] integerValue] == 0){
+                    [wself setupViews];
+                    [wself presentViewController:self.leveyTabBarController
+                                       animated:NO
+                                     completion:nil];
+            }
+        }
+    } failure:^(CAppServiceError *error) {
+        
+    }];
 }
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.userNumber.text = UserDefaultsGet(UserDefaultKey_UserName);
+    self.userPassword.text = UserDefaultsGet(UserDefaultKey_Password);
 }
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -146,7 +148,7 @@
             [SVProgressHUD showErrorWithStatus:@"登录失败"];
         }
     } failure:^(CAppServiceError *error) {
-        
+        [SVProgressHUD showErrorWithStatus:@"登录失败"];
     }];
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

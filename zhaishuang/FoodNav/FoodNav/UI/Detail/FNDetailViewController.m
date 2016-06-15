@@ -41,6 +41,9 @@
     } failure:^(CAppServiceError *error) {
         
     }];
+    if([Common isEmptyString:user_id]){
+        self.collButton.hidden = YES;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,40 +64,49 @@
             self.address.text = model[@"address"];
         
         if([model.allKeys containsObject:@"store_count"]){
-            self.cangHouseAllNum.text = model[@"store_count"];
-            self.cangHouseAllNum1.text = model[@"store_count"];
+            self.cangHouseAllNum.text = [NSString stringWithFormat:@"%@ 个",model[@"store_count"]];
+            self.cangHouseAllNum1.text = [NSString stringWithFormat:@"%@ 个",model[@"store_count"]];
         }
         
         if([model.allKeys containsObject:@"warehouse_count"]){
-            self.aoHouseAllNum.text = model[@"warehouse_count"];
-            self.aoHouseAllNum1.text = model[@"warehouse_count"];
+            self.aoHouseAllNum.text = [NSString stringWithFormat:@"%@ 个",model[@"warehouse_count"]];
+            self.aoHouseAllNum1.text = [NSString stringWithFormat:@"%@ 个",model[@"warehouse_count"]];
         }
         
         if([model.allKeys containsObject:@"oilcan_count"]){
-            self.youguanAllnumber.text = model[@"oilcan_count"];
-            self.youguanAllnumber1.text = model[@"oilcan_count"];
+            self.youguanAllnumber.text = [NSString stringWithFormat:@"%@ 个",model[@"oilcan_count"]];
+            self.youguanAllnumber1.text =  [NSString stringWithFormat:@"%@ 个",model[@"oilcan_count"]];
         }
         
         if([model.allKeys containsObject:@"store_design_capacity"])
-            self.designAllcapacity.text = model[@"store_design_capacity"];
+            self.designAllcapacity.text =  [NSString stringWithFormat:@"%@ 吨",model[@"store_design_capacity"]];
         
         if([model.allKeys containsObject:@"oilcan_design_capacity"])
-            self.youkuanDesignAll.text = model[@"oilcan_design_capacity"];
+            self.youkuanDesignAll.text = [NSString stringWithFormat:@"%@ 吨",model[@"oilcan_design_capacity"]];
         
         
-        if([model.allKeys containsObject:@"enterprise_id"])
-            self.enterpriseName.text = model[@"enterprise_id"];
+        if([model.allKeys containsObject:@"enterprise_name"])
+            self.enterpriseName.text = model[@"enterprise_name"];
         
         if([model.allKeys containsObject:@"longitude"] && [model.allKeys containsObject:@"latitude"]){
             self.lbsSign.text = [NSString stringWithFormat:@"%@, %@",model[@"longitude"],model[@"latitude"]];
             
             MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
-            pointAnnotation.coordinate = CLLocationCoordinate2DMake([model[@"longitude"] doubleValue], [model[@"latitude"] doubleValue]);
+            pointAnnotation.coordinate = CLLocationCoordinate2DMake([model[@"latitude"] doubleValue], [model[@"longitude"] doubleValue]);
             pointAnnotation.title = model[@"graindepot_name"];
             pointAnnotation.subtitle = model[@"address"];
             [_mapView addAnnotation:pointAnnotation];
-            _mapView.centerCoordinate =  CLLocationCoordinate2DMake([model[@"longitude"] doubleValue], [model[@"latitude"] doubleValue]);
+            _mapView.centerCoordinate =  CLLocationCoordinate2DMake([model[@"latitude"] doubleValue], [model[@"longitude"] doubleValue]);
         }
+        if([model.allKeys containsObject:@"isCollected"]){
+            if([model[@"isCollected"] integerValue] == 1){
+                [self.collButton setImage:Image(@"fnalcollecticon") forState:UIControlStateNormal];
+                iscollect = YES;
+            }
+        }
+        if([model.allKeys containsObject:@"distance"])
+            self.distancelab.text = [NSString stringWithFormat:@"%.1f km",[model[@"distance"] floatValue]/1000];
+ 
     }
  
 }
@@ -134,7 +146,7 @@
     if(iscollect){
         [[CAppService sharedInstance] collectLiang_request:user_id warehouse_id:self.liangId isdelte:1 success:^(NSDictionary *model) {
             if([model.allKeys containsObject:@"msg"]){
-                if([model[@"msg"] isEqualToString:@"00001"]){
+                if([model[@"msg"] isEqualToString:@"00007"]){
                     [self.collButton setImage:Image(@"fnuncollecticon") forState:UIControlStateNormal];
                     iscollect = !iscollect;
                 }
@@ -147,6 +159,11 @@
             if([model[@"msg"] isEqualToString:@"00001"]){
                 [self.collButton setImage:Image(@"fnalcollecticon") forState:UIControlStateNormal];
                 iscollect = !iscollect;
+//                NSArray *tmparr = UserDefaultsGet(UserDefaultKey_Collect);
+//                if(tmparr.count == 0){
+//                    NSMutableArray *arr = [];
+//                }
+//                UserDefaultsSave(, UserDefaultKey_Collect)
             }
         } failure:^(CAppServiceError *error) {
         }];

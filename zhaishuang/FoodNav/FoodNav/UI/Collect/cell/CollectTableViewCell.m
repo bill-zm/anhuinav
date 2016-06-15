@@ -24,7 +24,7 @@
 - (IBAction)navigateBtnClick:(id)sender
 {
     if([self.dataDic.allKeys containsObject:@"longitude"] && [self.dataDic.allKeys containsObject:@"latitude"]){
-        NSString *str = [NSString stringWithFormat:@"iosamap://navi?sourceApplication=%@&backScheme=applicationScheme&poiname=fangheng&poiid=BGVIS&lat=%f&lon=%f&dev=0&style=3",@"粮仓位置", [self.dataDic[@"longitude"] doubleValue], [self.dataDic[@"latitude"] doubleValue]];
+        NSString *str = [NSString stringWithFormat:@"iosamap://navi?sourceApplication=%@&backScheme=applicationScheme&poiname=fangheng&poiid=BGVIS&lat=%f&lon=%f&dev=0&style=3",@"粮仓位置", [self.dataDic[@"latitude"] doubleValue], [self.dataDic[@"longitude"] doubleValue]];
         str=[str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         NSURL * myURL_APP_A =[[NSURL alloc] initWithString:str];
         NSLog(@"%@",myURL_APP_A);
@@ -53,5 +53,7 @@
     
     if([model.allKeys containsObject:@"oilcan_count"])
         self.youAllnumber.text = model[@"oilcan_count"];
+    if([model.allKeys containsObject:@"distance"])
+        self.distancelab.text = [NSString stringWithFormat:@"%.1f km",[model[@"distance"] floatValue]/1000];
 }
 @end

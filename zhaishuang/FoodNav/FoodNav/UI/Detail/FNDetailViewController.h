@@ -26,6 +26,8 @@ Strong NSString *liangId;
 @property (weak, nonatomic) IBOutlet UILabel *designAllcapacity;
 @property (weak, nonatomic) IBOutlet UILabel *lbsSign;
 @property (weak, nonatomic) IBOutlet UILabel *youkuanDesignAll;
+@property (weak, nonatomic) IBOutlet UILabel *distancelab;
+Strong NSDictionary *dataDic;
 - (IBAction)navigateBtnClick:(id)sender;
 - (IBAction)collectBtnClick:(id)sender;
 @end
