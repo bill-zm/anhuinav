@@ -22,7 +22,7 @@
     [Common removeExtraCellLines:self.allTableView];
     [Common removeExtraCellLines:self.quTableView];
 //    20000，50000，100000，10000000
-    self.mdataArr = [NSMutableArray arrayWithArray:@[@"0 - 20公里",@"0 - 500公里",@"0 - 100公里",@"不限"]];
+    self.mdataArr = [NSMutableArray arrayWithArray:@[@"0 - 20km",@"0 - 50km",@"0 - 100km",@"不限"]];
     [[CAppService sharedInstance] getCitycode_request:^(NSDictionary *model) {
         if([model.allKeys containsObject:@"data"]){
             self.alldataArr = [NSMutableArray arrayWithArray:model[@"data"]];

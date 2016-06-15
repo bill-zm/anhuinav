@@ -44,6 +44,7 @@
     if([Common isEmptyString:user_id]){
         self.collButton.hidden = YES;
     }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,25 +65,41 @@
             self.address.text = model[@"address"];
         
         if([model.allKeys containsObject:@"store_count"]){
+            if([model[@"store_count"] integerValue] != 0){
             self.cangHouseAllNum.text = [NSString stringWithFormat:@"%@ 个",model[@"store_count"]];
             self.cangHouseAllNum1.text = [NSString stringWithFormat:@"%@ 个",model[@"store_count"]];
+            }
         }
         
         if([model.allKeys containsObject:@"warehouse_count"]){
-            self.aoHouseAllNum.text = [NSString stringWithFormat:@"%@ 个",model[@"warehouse_count"]];
-            self.aoHouseAllNum1.text = [NSString stringWithFormat:@"%@ 个",model[@"warehouse_count"]];
+            if([model[@"warehouse_count"] integerValue] != 0){
+            self.aoHouseAllNum.text = [NSString stringWithFormat:@"%d 个",[model[@"warehouse_count"] integerValue]];
+            self.aoHouseAllNum1.text = [NSString stringWithFormat:@"%d 个",[model[@"warehouse_count"] integerValue]];
+            }
         }
         
         if([model.allKeys containsObject:@"oilcan_count"]){
-            self.youguanAllnumber.text = [NSString stringWithFormat:@"%@ 个",model[@"oilcan_count"]];
-            self.youguanAllnumber1.text =  [NSString stringWithFormat:@"%@ 个",model[@"oilcan_count"]];
+            if([model[@"oilcan_count"] integerValue] != 0){
+            self.youguanAllnumber.text = [NSString stringWithFormat:@"%d 个",[model[@"oilcan_count"] integerValue]];
+            self.youguanAllnumber1.text =  [NSString stringWithFormat:@"%d 个",[model[@"oilcan_count"] integerValue]];
+            }
         }
         
-        if([model.allKeys containsObject:@"store_design_capacity"])
-            self.designAllcapacity.text =  [NSString stringWithFormat:@"%@ 吨",model[@"store_design_capacity"]];
+        if([model.allKeys containsObject:@"store_design_capacity"]){
+            if([model[@"store_design_capacity"] integerValue] != 0){
+                if(![model[@"store_design_capacity"] isEqualToString:@".0000"]){
+                    self.designAllcapacity.text =  [NSString stringWithFormat:@"%d 吨",[model[@"store_design_capacity"] integerValue]];
+                }
+            }
+        }
         
-        if([model.allKeys containsObject:@"oilcan_design_capacity"])
-            self.youkuanDesignAll.text = [NSString stringWithFormat:@"%@ 吨",model[@"oilcan_design_capacity"]];
+        if([model.allKeys containsObject:@"oilcan_design_capacity"]){
+            if([model[@"oilcan_design_capacity"] integerValue] != 0){
+                if(![model[@"oilcan_design_capacity"] isEqualToString:@".0000"]){
+                    self.youkuanDesignAll.text = [NSString stringWithFormat:@"%d 吨",[model[@"oilcan_design_capacity"] integerValue]];
+                }
+            }
+        }
         
         
         if([model.allKeys containsObject:@"enterprise_name"])

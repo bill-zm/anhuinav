@@ -45,14 +45,23 @@
     if([model.allKeys containsObject:@"address"])
         self.address.text = model[@"address"];
     
-    if([model.allKeys containsObject:@"store_count"])
+    if([model.allKeys containsObject:@"store_count"]){
+        if([model[@"store_count"] integerValue] != 0){
         self.allNumber.text = model[@"store_count"];
+        }
+    }
     
-    if([model.allKeys containsObject:@"warehouse_count"])
+    if([model.allKeys containsObject:@"warehouse_count"]){
+        if([model[@"warehouse_count"] integerValue] != 0){
         self.aoHouseNumber.text = model[@"warehouse_count"];
+        }
+    }
     
-    if([model.allKeys containsObject:@"oilcan_count"])
+    if([model.allKeys containsObject:@"oilcan_count"]){
+        if([model[@"oilcan_count"] integerValue] != 0){
         self.youAllnumber.text = model[@"oilcan_count"];
+        }
+    }
     if([model.allKeys containsObject:@"distance"])
         self.distancelab.text = [NSString stringWithFormat:@"%.1f km",[model[@"distance"] floatValue]/1000];
 }
