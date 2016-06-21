@@ -14,6 +14,7 @@
 #import "CAppService.h"
 #import "SVProgressHUD.h"
 #import "NSString+MD5Addition.h"
+#import "FNMapViewController.h"
 @interface FNLoginViewController ()<MAMapViewDelegate>
 {
     MAMapView *_mapView;

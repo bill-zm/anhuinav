@@ -15,4 +15,5 @@
 //去除UITableView多余分割线
 + (void)removeExtraCellLines:(UITableView *)tableView;
 + (UIBarButtonItem *)createBarItemWithLbs:(void (^)())block;
++ (UIBarButtonItem *)createNextBarItemWithLbs:(NSString *)titlestr Block:(void (^)())block;
 @end

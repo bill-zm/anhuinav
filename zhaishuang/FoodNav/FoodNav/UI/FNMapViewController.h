@@ -10,4 +10,5 @@
 
 @interface FNMapViewController : UIViewController
 Strong NSMutableArray *dataArr;
+Assign BOOL isFirstPage;
 @end

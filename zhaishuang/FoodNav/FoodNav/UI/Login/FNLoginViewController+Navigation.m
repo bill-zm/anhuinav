@@ -11,6 +11,7 @@
 #import "FNHomeViewController.h"
 #import "FNMyCenterViewController.h"
 #import "FNMainNavigationController.h"
+#import "FNMapViewController.h"
 @implementation FNLoginViewController (Navigation)
 
 #pragma -mark
@@ -29,8 +30,8 @@
 #pragma -mark init ViewController & NavigationController
 - (void)setupViews{
 
-    FNHomeViewController *homeVc = [[FNHomeViewController alloc] init];
-    
+    FNMapViewController *homeVc = [[FNMapViewController alloc] init];
+    homeVc.isFirstPage = YES;
     FNMyCenterViewController *myCenterVc = [[FNMyCenterViewController alloc] init];
     
     FNMainNavigationController *homeNC = [[FNMainNavigationController alloc] initWithRootViewController:homeVc];

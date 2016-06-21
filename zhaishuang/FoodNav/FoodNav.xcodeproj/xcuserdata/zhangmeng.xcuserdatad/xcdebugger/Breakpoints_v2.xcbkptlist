@@ -18,43 +18,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodNav/UI/Home/FNHomeViewController.m"
-            timestampString = "487609436.149194"
+            timestampString = "488192324.676318"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
+            landmarkName = "-setupRefreshControllList"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodNav/UI/Home/FNHomeViewController.m"
+            timestampString = "488192324.676318"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
+            landmarkName = "-setupRefreshControllList"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodNav/UI/Home/FNHomeViewController.m"
+            timestampString = "488192324.676318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "204"
             endingLineNumber = "204"
-            landmarkName = "-setupRefreshControllList"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FoodNav/UI/Home/FNHomeViewController.m"
-            timestampString = "487609438.551425"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
-            landmarkName = "-setupRefreshControllList"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FoodNav/UI/Home/FNHomeViewController.m"
-            timestampString = "487609443.391435"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
             landmarkName = "-setupRefreshControllList"
             landmarkType = "5">
             <Locations>
@@ -66,11 +66,11 @@
                   moduleName = "FoodNav"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhangmeng/Documents/anhuinav/zhaishuang/FoodNav/FoodNav/UI/Home/FNHomeViewController.m"
-                  timestampString = "487670861.625505"
+                  timestampString = "488192706.442273"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "200"
-                  endingLineNumber = "200"
+                  startingLineNumber = "204"
+                  endingLineNumber = "204"
                   offsetFromSymbolStart = "54">
                </Location>
                <Location
@@ -81,11 +81,11 @@
                   moduleName = "FoodNav"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhangmeng/Documents/anhuinav/zhaishuang/FoodNav/FoodNav/UI/Home/FNHomeViewController.m"
-                  timestampString = "487670861.625742"
+                  timestampString = "488192706.442432"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "201"
-                  endingLineNumber = "201"
+                  startingLineNumber = "205"
+                  endingLineNumber = "205"
                   offsetFromSymbolStart = "57">
                </Location>
             </Locations>
@@ -98,11 +98,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodNav/UI/Home/FNHomeViewController.m"
-            timestampString = "487609449.103725"
+            timestampString = "488192324.676318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "202"
-            endingLineNumber = "202"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
             landmarkName = "-setupRefreshControllList"
             landmarkType = "5">
          </BreakpointContent>
@@ -114,11 +114,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodNav/UI/Home/FNHomeViewController.m"
-            timestampString = "487609459.606121"
+            timestampString = "488192324.676318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "216"
-            endingLineNumber = "216"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
             landmarkName = "-setupRefreshControllList"
             landmarkType = "5">
          </BreakpointContent>
@@ -130,11 +130,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodNav/UI/Home/FNHomeViewController.m"
-            timestampString = "487609462.394162"
+            timestampString = "488192324.676318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "201"
-            endingLineNumber = "201"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
             landmarkName = "-setupRefreshControllList"
             landmarkType = "5">
          </BreakpointContent>
@@ -210,7 +210,7 @@
                   moduleName = "FoodNav"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhangmeng/Documents/anhuinav/zhaishuang/FoodNav/FoodNav/UI/Home/FNHomeViewController+request.m"
-                  timestampString = "487670861.645465"
+                  timestampString = "488192706.448909"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
@@ -225,7 +225,7 @@
                   moduleName = "FoodNav"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhangmeng/Documents/anhuinav/zhaishuang/FoodNav/FoodNav/UI/Home/FNHomeViewController+request.m"
-                  timestampString = "487670861.645888"
+                  timestampString = "488192706.449045"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
@@ -264,6 +264,70 @@
             startingLineNumber = "99"
             endingLineNumber = "99"
             landmarkName = "-setUIdata:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodNav/UI/FNMapViewController.m"
+            timestampString = "488192705.392838"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodNav/Manager/WebServiceManager/CAppService.m"
+            timestampString = "488191069.625576"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "231"
+            endingLineNumber = "231"
+            landmarkName = "-getAllAddress_request:failure:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodNav/Manager/WebServiceManager/CAppService.m"
+            timestampString = "488191070.90058"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "233"
+            endingLineNumber = "233"
+            landmarkName = "-getAllAddress_request:failure:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodNav/UI/FNMapViewController.m"
+            timestampString = "488192705.392838"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

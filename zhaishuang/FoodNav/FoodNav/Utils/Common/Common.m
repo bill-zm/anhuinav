@@ -90,4 +90,26 @@
     UIBarButtonItem *barItem = [[UIBarButtonItem alloc] initWithCustomView:tmpView];
     return barItem;
 }
+
+//生成BarItem
++ (UIBarButtonItem *)createNextBarItemWithLbs:(NSString *)titlestr Block:(void (^)())block {
+    UIView *tmpView = [[UIView alloc] initWithFrame:Frame(0, 0, 50, 40)];
+    tmpView.backgroundColor = [UIColor clearColor];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0, 5, 50, 40);
+    btn.backgroundColor = [UIColor clearColor];
+    [btn handleControlEvent:UIControlEventTouchUpInside withBlock:block];
+    [btn setTitle:titlestr
+         forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor whiteColor]
+              forState:UIControlStateNormal];
+    [btn.titleLabel setFont:[UIFont boldSystemFontOfSize:15.0]];
+    [btn sizeToFit];
+//    UIImageView *tmpimage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 7, 16, 16)];
+//    [tmpimage setImage:Image(@"fnmapicon.png")];
+//    [tmpView addSubview:tmpimage];
+    [tmpView addSubview:btn];
+    UIBarButtonItem *barItem = [[UIBarButtonItem alloc] initWithCustomView:tmpView];
+    return barItem;
+}
 @end

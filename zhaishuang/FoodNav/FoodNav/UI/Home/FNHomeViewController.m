@@ -78,7 +78,11 @@ Strong UINib *cellNib;
     self.navigationItem.rightBarButtonItem = [Common createBarItemWithLbs:^{
         FNMapViewController *mapVc = [[FNMapViewController alloc] initWithNibName:@"FNMapViewController" bundle:nil];
         mapVc.dataArr = self.dataArr;
+        mapVc.isFirstPage = NO;
         [self.navigationController pushViewController:mapVc animated:YES];
+    }];
+    self.navigationItem.leftBarButtonItem = [Common createNextBarItemWithLbs:@"切换" Block:^{
+        [self.navigationController popViewControllerAnimated:NO];
     }];
     [self setSiftView];
     [self lowsetupRefreshControllList];

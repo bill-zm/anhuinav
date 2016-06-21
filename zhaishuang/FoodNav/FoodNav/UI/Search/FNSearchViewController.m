@@ -31,6 +31,7 @@ Strong UINib *cellNib;
     [Common removeExtraCellLines:self.resultTable];
     self.navigationItem.rightBarButtonItem = [Common createBarItemWithLbs:^{
         FNMapViewController *mapVc = [[FNMapViewController alloc] initWithNibName:@"FNMapViewController" bundle:nil];
+        mapVc.isFirstPage = NO;
         //传粮仓坐标列表
         [self.navigationController pushViewController:mapVc animated:YES];
     }];

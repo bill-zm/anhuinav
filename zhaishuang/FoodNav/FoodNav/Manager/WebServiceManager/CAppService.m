@@ -220,5 +220,18 @@ DEFINE_SINGLETON_FOR_CLASS(CAppService);
                                           failure([CAppServiceError error:error]);
                                       }];
 }
+- (AFHTTPRequestOperation *)getAllAddress_request:(void (^)(NSDictionary *model))success
+                                     failure:(AppServiceErrorRespondBlock)failure
+{
+    NSString *url = @"/?app=warehouse&act=indexAll";
+//    url = [NSString stringWithFormat:url,distance,glolongitude,glolatitude];
+    return [self.client getHttpRequestWithURL:url
+                                   parameters:nil
+                                      success:^(id responseObject) {
+                                          success(responseObject);
+                                      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                          failure([CAppServiceError error:error]);
+                                      }];
+}
 @end
 

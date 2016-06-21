@@ -82,4 +82,6 @@ DEFINE_SINGLETON_FOR_HEADER(CAppService);
                                      success:(void (^)(NSDictionary *model))success
                                      failure:(AppServiceErrorRespondBlock)failure
 ;
+- (AFHTTPRequestOperation *)getAllAddress_request:(void (^)(NSDictionary *model))success
+                                          failure:(AppServiceErrorRespondBlock)failure;
 @end
