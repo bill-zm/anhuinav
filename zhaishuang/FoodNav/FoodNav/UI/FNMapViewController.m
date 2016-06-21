@@ -12,6 +12,7 @@
 #import <AMapNaviKit/AMapNaviKit.h>
 #import "CAppService.h"
 #import "FNHomeViewController.h"
+#import "SVProgressHUD.h"
 @interface FNMapViewController ()<MAMapViewDelegate>
 {
     MAMapView *_mapView;
@@ -64,10 +65,14 @@
                         _mapView.centerCoordinate =  CLLocationCoordinate2DMake([model[@"latitude"] doubleValue], [model[@"longitude"] doubleValue]);
                     }
                 }
+                [SVProgressHUD dismiss];
+            }
+            else{
+                [SVProgressHUD dismiss];
             }
         }
     } failure:^(CAppServiceError *error) {
-        
+        [SVProgressHUD dismiss];
     }];
     }
     // Do any additional setup after loading the view from its nib.

@@ -30,6 +30,8 @@
     self.navigationItem.backBarButtonItem = tmpbarButtonItem;
     [AMapServices sharedServices].apiKey = @"90a6b42e298d22c2ca28a5638adfbbfc";
     _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds)-20, 420)];
+    UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapClick:)];
+    [_mapView addGestureRecognizer:tapGes];
     _mapView.delegate = self;
     [self.fnmapView addSubview:_mapView];
     _mapView.showsUserLocation = YES;
@@ -50,6 +52,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (void)tapClick:(id)sender
+{
+    
 }
 - (void)setUIdata:(NSDictionary *)dataDic
 {
