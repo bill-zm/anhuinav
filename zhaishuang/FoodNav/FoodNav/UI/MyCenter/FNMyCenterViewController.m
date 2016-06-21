@@ -24,6 +24,7 @@
     tmpbarButtonItem.title = NullString;
     self.navigationItem.backBarButtonItem = tmpbarButtonItem;
     setViewCorner(self.headimageView, 50);
+    self.nameLab.text = UserDefaultsGet(UserDefaultKey_UserName);
     // Do any additional setup after loading the view from its nib.
 }
 
