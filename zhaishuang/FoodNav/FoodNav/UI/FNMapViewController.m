@@ -23,7 +23,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"地图";
     UIBarButtonItem *tmpbarButtonItem = [[UIBarButtonItem alloc] init];
     tmpbarButtonItem.title = NullString;
     self.navigationItem.backBarButtonItem = tmpbarButtonItem;
@@ -34,6 +33,8 @@
     _mapView.showsUserLocation = YES;
     [_mapView setUserTrackingMode: MAUserTrackingModeFollow animated:YES]; //地图跟着位置移动
     if(!self.isFirstPage){
+        self.title = @"地图";
+        int i = 0;
     for(NSDictionary *model in self.dataArr){
         if([model.allKeys containsObject:@"longitude"] && [model.allKeys containsObject:@"latitude"]){
             MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
@@ -41,11 +42,14 @@
             pointAnnotation.title = model[@"graindepot_name"];
             pointAnnotation.subtitle = model[@"address"];
             [_mapView addAnnotation:pointAnnotation];
+            if(i == 0)
             _mapView.centerCoordinate =  CLLocationCoordinate2DMake([model[@"latitude"] doubleValue], [model[@"longitude"] doubleValue]);
         }
+        i++;
     }
     }
     else{
+        self.title = @"粮仓";
         self.navigationItem.rightBarButtonItem = [Common createNextBarItemWithLbs:@"切换" Block:^{
             FNHomeViewController *homeVc = [[FNHomeViewController alloc] initWithNibName:@"FNHomeViewController" bundle:nil];
             [self.navigationController pushViewController:homeVc animated:NO];
