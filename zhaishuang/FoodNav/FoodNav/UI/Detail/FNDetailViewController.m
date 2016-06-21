@@ -30,14 +30,21 @@
     self.navigationItem.backBarButtonItem = tmpbarButtonItem;
     [AMapServices sharedServices].apiKey = @"90a6b42e298d22c2ca28a5638adfbbfc";
     _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds)-20, 420)];
-    UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapClick:)];
-    [_mapView addGestureRecognizer:tapGes];
+//    UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapClick:)];
+//    [_mapView addGestureRecognizer:tapGes];
+    
     _mapView.delegate = self;
     [self.fnmapView addSubview:_mapView];
     _mapView.showsUserLocation = YES;
     [_mapView setUserTrackingMode: MAUserTrackingModeFollow animated:YES]; //地图跟着位置移动
     setViewCorner(self.navButton, 5);
     iscollect = NO;
+    
+    UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(addAnnotationsd:)];
+    [longPressGesture setMinimumPressDuration:0.5];
+    [_mapView addGestureRecognizer:longPressGesture];
+    
+    
     [[CAppService sharedInstance] liangDetail_request:self.liangId success:^(NSDictionary *model) {
         [self setUIdata:model];
     } failure:^(CAppServiceError *error) {
@@ -53,9 +60,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)addAnnotationsd:(UILongPressGestureRecognizer *)gestureRecognizer {
+    if ([gestureRecognizer state] == UIGestureRecognizerStateBegan) {
+        //do something...:)
+    }
+}
 - (void)tapClick:(id)sender
 {
-    
+
 }
 - (void)setUIdata:(NSDictionary *)dataDic
 {

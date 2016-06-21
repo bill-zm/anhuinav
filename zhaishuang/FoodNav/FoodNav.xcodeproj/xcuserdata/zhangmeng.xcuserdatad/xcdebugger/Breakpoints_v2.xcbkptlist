@@ -66,7 +66,7 @@
                   moduleName = "FoodNav"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhangmeng/Documents/anhuinav/zhaishuang/FoodNav/FoodNav/UI/Home/FNHomeViewController.m"
-                  timestampString = "488200461.391695"
+                  timestampString = "488204002.082597"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "204"
@@ -81,7 +81,7 @@
                   moduleName = "FoodNav"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhangmeng/Documents/anhuinav/zhaishuang/FoodNav/FoodNav/UI/Home/FNHomeViewController.m"
-                  timestampString = "488200461.391879"
+                  timestampString = "488204002.082785"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "205"
@@ -146,11 +146,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodNav/UI/Detail/FNDetailViewController.m"
-            timestampString = "488200460.351847"
+            timestampString = "488203749.5536"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "-setUIdata:"
             landmarkType = "5">
          </BreakpointContent>
@@ -161,13 +161,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FoodNav/UI/Collect/cell/CollectTableViewCell.m"
-            timestampString = "487670536.013879"
+            filePath = "FoodNav/UI/Detail/FNDetailViewController.m"
+            timestampString = "488203749.5536"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "-initViewCellData:"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "-tapClick:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -177,109 +177,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FoodNav/UI/Collect/cell/CollectTableViewCell.m"
-            timestampString = "487670536.013879"
+            filePath = "FoodNav/UI/Detail/FNDetailViewController.m"
+            timestampString = "488203742.342885"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "-addAnnotation:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodNav/UI/Detail/FNDetailViewController.m"
+            timestampString = "488203743.013098"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
             endingLineNumber = "65"
-            landmarkName = "-initViewCellData:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FoodNav/UI/Home/FNHomeViewController+request.m"
-            timestampString = "487613913.668723"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "-getLiangListData:P:"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[FNHomeViewController(request) getLiangListData:P:]"
-                  moduleName = "FoodNav"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangmeng/Documents/anhuinav/zhaishuang/FoodNav/FoodNav/UI/Home/FNHomeViewController+request.m"
-                  timestampString = "488200461.397809"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "92">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__52-[FNHomeViewController(request) getLiangListData:P:]_block_invoke"
-                  moduleName = "FoodNav"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhangmeng/Documents/anhuinav/zhaishuang/FoodNav/FoodNav/UI/Home/FNHomeViewController+request.m"
-                  timestampString = "488200461.398003"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "27">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FoodNav/Manager/WebServiceManager/CAppService.m"
-            timestampString = "487613919.192979"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
-            landmarkName = "-liangcangList_request:p:success:failure:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FoodNav/UI/Detail/FNDetailViewController.m"
-            timestampString = "488200460.351847"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "-setUIdata:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FoodNav/UI/Detail/FNDetailViewController.m"
-            timestampString = "488200454.114517"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "-tapClick:"
+            landmarkName = "-addAnnotation:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
