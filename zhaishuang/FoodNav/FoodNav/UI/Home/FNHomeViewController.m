@@ -69,8 +69,6 @@ Strong UINib *cellNib;
     cancelButton = cancelbtn;
     cancelButton.hidden = YES;
     self.navigationItem.titleView = pview;
-    
-    
     self.cellNib = [UINib nibWithNibName:@"CollectTableViewCell" bundle:nil];
     self.hometableView.frame = Frame(0, 50, Screen_Width, Screen_Height-tabBar_Height-default_NavigationHeight_iOS7-50);
     self.hometableView.rowHeight = 150.0;

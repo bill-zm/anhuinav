@@ -10,6 +10,7 @@
 
 @interface FNDetailViewController : UIViewController
 @property(nonatomic,weak)IBOutlet UIView *fnmapView;
+@property (weak, nonatomic) IBOutlet UIView *mymapView;
 @property(nonatomic,weak)IBOutlet UIButton *navButton;
 @property(nonatomic,weak)IBOutlet UIButton *collButton;
 Strong NSString *liangId;

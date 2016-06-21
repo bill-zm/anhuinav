@@ -15,6 +15,7 @@
                 <outlet property="distancelab" destination="YUn-p2-GaA" id="bdY-n6-pKw"/>
                 <outlet property="enterpriseName" destination="6An-R1-07o" id="H1D-Gq-Z32"/>
                 <outlet property="fnmapView" destination="muT-RU-an0" id="hC3-r0-Zuj"/>
+                <outlet property="mymapView" destination="f9H-1z-gEZ" id="pLa-hP-lhZ"/>
                 <outlet property="name" destination="U9r-zq-aZy" id="BTM-MM-jTQ"/>
                 <outlet property="navButton" destination="W5u-wa-GTK" id="Ltf-0h-hKS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

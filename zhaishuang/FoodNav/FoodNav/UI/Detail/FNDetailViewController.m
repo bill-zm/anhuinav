@@ -15,6 +15,7 @@
 {
     MAMapView *_mapView;
     BOOL iscollect;
+    BOOL isallScreen;
 }
 @end
 
@@ -40,11 +41,6 @@
     setViewCorner(self.navButton, 5);
     iscollect = NO;
     
-    UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(addAnnotationsd:)];
-    [longPressGesture setMinimumPressDuration:0.5];
-    [_mapView addGestureRecognizer:longPressGesture];
-    
-    
     [[CAppService sharedInstance] liangDetail_request:self.liangId success:^(NSDictionary *model) {
         [self setUIdata:model];
     } failure:^(CAppServiceError *error) {
@@ -53,21 +49,12 @@
     if([Common isEmptyString:user_id]){
         self.collButton.hidden = YES;
     }
-    
+    isallScreen = NO;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-- (void)addAnnotationsd:(UILongPressGestureRecognizer *)gestureRecognizer {
-    if ([gestureRecognizer state] == UIGestureRecognizerStateBegan) {
-        //do something...:)
-    }
-}
-- (void)tapClick:(id)sender
-{
-
 }
 - (void)setUIdata:(NSDictionary *)dataDic
 {
@@ -162,6 +149,31 @@
         return annotationView;
     }
     return nil;
+}
+- (void)mapView:(MAMapView *)mapView didAnnotationViewCalloutTapped:(MAAnnotationView *)view
+{
+
+}
+- (void)mapView:(MAMapView *)mapView annotationView:(MAAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+
+}
+- (void)mapView:(MAMapView *)mapView didSingleTappedAtCoordinate:(CLLocationCoordinate2D)coordinate
+{
+    if(!isallScreen){
+    SetFrameByYPos(self.mymapView.frame, 0);
+    SetFrameByHeight(self.mymapView.frame,Screen_Height-tabBar_Height-default_NavigationHeight_iOS7);
+    SetFrameByHeight(self.fnmapView.frame,Screen_Height-tabBar_Height-default_NavigationHeight_iOS7-50);
+    SetFrameByHeight(_mapView.frame,Screen_Height-tabBar_Height-default_NavigationHeight_iOS7-50);
+        isallScreen = YES;
+    }
+    else{
+        SetFrameByYPos(self.mymapView.frame, 420);
+        SetFrameByHeight(self.mymapView.frame,470);
+        SetFrameByHeight(self.fnmapView.frame,420);
+        SetFrameByHeight(_mapView.frame,420);
+        isallScreen = NO;
+    }
 }
 - (IBAction)navigateBtnClick:(id)sender
 {
