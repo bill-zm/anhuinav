@@ -97,6 +97,13 @@
 		68A0D6EA1D0EF58800321988 /* fniconss.png in Resources */ = {isa = PBXBuildFile; fileRef = 68A0D6E81D0EF58800321988 /* fniconss.png */; };
 		68A0D6EB1D0EF58800321988 /* fnshiju@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68A0D6E91D0EF58800321988 /* fnshiju@2x.png */; };
 		68BABDC819ECC87200B795A0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68BABDC719ECC87200B795A0 /* Security.framework */; };
+		68EB583D1D1BF5B800A7A059 /* AnnotationClusterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EB582D1D1BF5B800A7A059 /* AnnotationClusterViewController.m */; };
+		68EB583E1D1BF5B800A7A059 /* BaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EB582F1D1BF5B800A7A059 /* BaseMapViewController.m */; };
+		68EB583F1D1BF5B800A7A059 /* PoiDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EB58311D1BF5B800A7A059 /* PoiDetailViewController.m */; };
+		68EB58401D1BF5B800A7A059 /* ClusterAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EB58351D1BF5B800A7A059 /* ClusterAnnotation.m */; };
+		68EB58411D1BF5B800A7A059 /* CoordinateQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EB58371D1BF5B800A7A059 /* CoordinateQuadTree.m */; };
+		68EB58421D1BF5B800A7A059 /* QuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EB58391D1BF5B800A7A059 /* QuadTree.m */; };
+		68EB58431D1BF5B800A7A059 /* ClusterAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EB583C1D1BF5B800A7A059 /* ClusterAnnotationView.m */; };
 		68F2059A1D050B9900BC1927 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 687638DA1A9FFD23002E936C /* MapKit.framework */; };
 		68F205A01D05130200BC1927 /* FNMainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F2059D1D05130200BC1927 /* FNMainNavigationController.m */; };
 		68F205A11D05130200BC1927 /* FNMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F2059F1D05130200BC1927 /* FNMainViewController.m */; };
@@ -280,6 +287,20 @@
 		68A0D6E81D0EF58800321988 /* fniconss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fniconss.png; sourceTree = "<group>"; };
 		68A0D6E91D0EF58800321988 /* fnshiju@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fnshiju@2x.png"; sourceTree = "<group>"; };
 		68BABDC719ECC87200B795A0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		68EB582C1D1BF5B800A7A059 /* AnnotationClusterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationClusterViewController.h; sourceTree = "<group>"; };
+		68EB582D1D1BF5B800A7A059 /* AnnotationClusterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotationClusterViewController.m; sourceTree = "<group>"; };
+		68EB582E1D1BF5B800A7A059 /* BaseMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMapViewController.h; sourceTree = "<group>"; };
+		68EB582F1D1BF5B800A7A059 /* BaseMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMapViewController.m; sourceTree = "<group>"; };
+		68EB58301D1BF5B800A7A059 /* PoiDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoiDetailViewController.h; sourceTree = "<group>"; };
+		68EB58311D1BF5B800A7A059 /* PoiDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoiDetailViewController.m; sourceTree = "<group>"; };
+		68EB58341D1BF5B800A7A059 /* ClusterAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClusterAnnotation.h; sourceTree = "<group>"; };
+		68EB58351D1BF5B800A7A059 /* ClusterAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClusterAnnotation.m; sourceTree = "<group>"; };
+		68EB58361D1BF5B800A7A059 /* CoordinateQuadTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoordinateQuadTree.h; sourceTree = "<group>"; };
+		68EB58371D1BF5B800A7A059 /* CoordinateQuadTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinateQuadTree.m; sourceTree = "<group>"; };
+		68EB58381D1BF5B800A7A059 /* QuadTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadTree.h; sourceTree = "<group>"; };
+		68EB58391D1BF5B800A7A059 /* QuadTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadTree.m; sourceTree = "<group>"; };
+		68EB583B1D1BF5B800A7A059 /* ClusterAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClusterAnnotationView.h; sourceTree = "<group>"; };
+		68EB583C1D1BF5B800A7A059 /* ClusterAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClusterAnnotationView.m; sourceTree = "<group>"; };
 		68F2059C1D05130200BC1927 /* FNMainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNMainNavigationController.h; sourceTree = "<group>"; };
 		68F2059D1D05130200BC1927 /* FNMainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNMainNavigationController.m; sourceTree = "<group>"; };
 		68F2059E1D05130200BC1927 /* FNMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNMainViewController.h; sourceTree = "<group>"; };
@@ -697,6 +718,8 @@
 		688ABA1B1D0153BF003F78CB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				68EB582B1D1BF5B800A7A059 /* Controller */,
+				68EB58321D1BF5B800A7A059 /* ClusterAnnotation */,
 				68035F621D08486600AB1487 /* Search */,
 				681D58391D06C52A0050E629 /* Detail */,
 				681D582D1D06BA400050E629 /* Collect */,
@@ -821,6 +844,50 @@
 				688ABA4C1D018A7C003F78CB /* MAMapKit.framework */,
 			);
 			path = Gaode_MAMapKit;
+			sourceTree = "<group>";
+		};
+		68EB582B1D1BF5B800A7A059 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				68EB582C1D1BF5B800A7A059 /* AnnotationClusterViewController.h */,
+				68EB582D1D1BF5B800A7A059 /* AnnotationClusterViewController.m */,
+				68EB582E1D1BF5B800A7A059 /* BaseMapViewController.h */,
+				68EB582F1D1BF5B800A7A059 /* BaseMapViewController.m */,
+				68EB58301D1BF5B800A7A059 /* PoiDetailViewController.h */,
+				68EB58311D1BF5B800A7A059 /* PoiDetailViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		68EB58321D1BF5B800A7A059 /* ClusterAnnotation */ = {
+			isa = PBXGroup;
+			children = (
+				68EB58331D1BF5B800A7A059 /* Model */,
+				68EB583A1D1BF5B800A7A059 /* View */,
+			);
+			path = ClusterAnnotation;
+			sourceTree = "<group>";
+		};
+		68EB58331D1BF5B800A7A059 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				68EB58341D1BF5B800A7A059 /* ClusterAnnotation.h */,
+				68EB58351D1BF5B800A7A059 /* ClusterAnnotation.m */,
+				68EB58361D1BF5B800A7A059 /* CoordinateQuadTree.h */,
+				68EB58371D1BF5B800A7A059 /* CoordinateQuadTree.m */,
+				68EB58381D1BF5B800A7A059 /* QuadTree.h */,
+				68EB58391D1BF5B800A7A059 /* QuadTree.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		68EB583A1D1BF5B800A7A059 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68EB583B1D1BF5B800A7A059 /* ClusterAnnotationView.h */,
+				68EB583C1D1BF5B800A7A059 /* ClusterAnnotationView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		68F205951D050AC400BC1927 /* MyCenter */ = {
@@ -1012,10 +1079,12 @@
 				68F205AF1D05161F00BC1927 /* LeveyTabBar.m in Sources */,
 				680352431D09A20A001A89AD /* AFURLResponseSerialization.m in Sources */,
 				6803520C1D09A1AA001A89AD /* README.md in Sources */,
+				68EB583E1D1BF5B800A7A059 /* BaseMapViewController.m in Sources */,
 				6806415A1D0EE16A007FB5CA /* MJRefreshBackFooter.m in Sources */,
 				6803524E1D09A20A001A89AD /* UIWebView+AFNetworking.m in Sources */,
 				68F205A11D05130200BC1927 /* FNMainViewController.m in Sources */,
 				688ABA361D0153F8003F78CB /* FNLoginViewController.m in Sources */,
+				68EB583D1D1BF5B800A7A059 /* AnnotationClusterViewController.m in Sources */,
 				680641681D0EE16A007FB5CA /* MJRefreshConst.m in Sources */,
 				6803524D1D09A20A001A89AD /* UIRefreshControl+AFNetworking.m in Sources */,
 				680641631D0EE16A007FB5CA /* MJRefreshBackStateFooter.m in Sources */,
@@ -1028,6 +1097,7 @@
 				6803523D1D09A20A001A89AD /* AFHTTPRequestOperationManager.m in Sources */,
 				68F205B81D0517A700BC1927 /* BUIView.m in Sources */,
 				688ABA441D015639003F78CB /* main.m in Sources */,
+				68EB58421D1BF5B800A7A059 /* QuadTree.m in Sources */,
 				680352111D09A1AA001A89AD /* SVRadialGradientLayer.m in Sources */,
 				6803524C1D09A20A001A89AD /* UIProgressView+AFNetworking.m in Sources */,
 				6803520D1D09A1AA001A89AD /* SVIndefiniteAnimatedView.m in Sources */,
@@ -1038,6 +1108,9 @@
 				68F205C11D06572E00BC1927 /* HYCircleLoadingView.m in Sources */,
 				68080F421D0C0EC800BB9E8D /* FNSiftViewController.m in Sources */,
 				6806415D1D0EE16A007FB5CA /* MJRefreshHeader.m in Sources */,
+				68EB583F1D1BF5B800A7A059 /* PoiDetailViewController.m in Sources */,
+				68EB58401D1BF5B800A7A059 /* ClusterAnnotation.m in Sources */,
+				68EB58411D1BF5B800A7A059 /* CoordinateQuadTree.m in Sources */,
 				6806416A1D0EE16A007FB5CA /* UIScrollView+MJRefresh.m in Sources */,
 				680641621D0EE16A007FB5CA /* MJRefreshBackNormalFooter.m in Sources */,
 				680352461D09A20A001A89AD /* README.md in Sources */,
@@ -1050,6 +1123,7 @@
 				688AA31F1D0FF11C00A63D2F /* FNHomeViewController+request.m in Sources */,
 				68F205A51D0515BC00BC1927 /* FNHomeViewController.m in Sources */,
 				6803523F1D09A20A001A89AD /* AFNetworkReachabilityManager.m in Sources */,
+				68EB58431D1BF5B800A7A059 /* ClusterAnnotationView.m in Sources */,
 				68F205B71D0517A700BC1927 /* BUIControl.m in Sources */,
 				680641611D0EE16A007FB5CA /* MJRefreshBackGifFooter.m in Sources */,
 				6803523E1D09A20A001A89AD /* AFHTTPSessionManager.m in Sources */,

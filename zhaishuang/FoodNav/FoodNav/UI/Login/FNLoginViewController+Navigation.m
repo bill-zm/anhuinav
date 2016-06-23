@@ -12,6 +12,7 @@
 #import "FNMyCenterViewController.h"
 #import "FNMainNavigationController.h"
 #import "FNMapViewController.h"
+#import "AnnotationClusterViewController.h"
 @implementation FNLoginViewController (Navigation)
 
 #pragma -mark
@@ -30,8 +31,9 @@
 #pragma -mark init ViewController & NavigationController
 - (void)setupViews{
 
-    FNMapViewController *homeVc = [[FNMapViewController alloc] init];
-    homeVc.isFirstPage = YES;
+//    FNMapViewController *homeVc = [[FNMapViewController alloc] init];
+    AnnotationClusterViewController *homeVc = [[AnnotationClusterViewController alloc] init];
+//    homeVc.isFirstPage = YES;
     FNMyCenterViewController *myCenterVc = [[FNMyCenterViewController alloc] init];
     
     FNMainNavigationController *homeNC = [[FNMainNavigationController alloc] initWithRootViewController:homeVc];
