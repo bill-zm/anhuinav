@@ -31,8 +31,8 @@
 #pragma -mark init ViewController & NavigationController
 - (void)setupViews{
 
-//    FNMapViewController *homeVc = [[FNMapViewController alloc] init];
-    AnnotationClusterViewController *homeVc = [[AnnotationClusterViewController alloc] init];
+    FNHomeViewController *homeVc = [[FNHomeViewController alloc] init];
+//    AnnotationClusterViewController *homeVc = [[AnnotationClusterViewController alloc] init];
 //    homeVc.isFirstPage = YES;
     FNMyCenterViewController *myCenterVc = [[FNMyCenterViewController alloc] init];
     

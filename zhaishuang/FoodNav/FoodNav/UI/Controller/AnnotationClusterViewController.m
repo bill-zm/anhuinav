@@ -208,7 +208,7 @@
     /* 如果只有一个结果，设置其为中心点. */
     if (respons.pois.count == 1)
     {
-        self.mapView.centerCoordinate = [respons.pois[0] coordinate];
+//        self.mapView.centerCoordinate = [respons.pois[0] coordinate];
     }
     /* 如果有多个结果, 设置地图使所有的annotation都可见. */
     else
