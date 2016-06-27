@@ -15,8 +15,8 @@
 @property (assign, nonatomic) CLLocationCoordinate2D coordinate; //poi的平均位置
 @property (assign, nonatomic) NSInteger count;
 @property (nonatomic, strong) NSMutableArray *pois;
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSString *subtitle;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *subtitle;
 
 
 - (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate count:(NSInteger)count;

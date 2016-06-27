@@ -47,7 +47,6 @@
 		680352551D09A231001A89AD /* CAppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 680352531D09A231001A89AD /* CAppService.m */; };
 		68035F661D08488C00AB1487 /* FNSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68035F641D08488C00AB1487 /* FNSearchViewController.m */; };
 		68035F671D08488C00AB1487 /* FNSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68035F651D08488C00AB1487 /* FNSearchViewController.xib */; };
-		68035F6B1D084EF800AB1487 /* libMLSearchBar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68035F691D084EF800AB1487 /* libMLSearchBar.a */; };
 		680641591D0EE16A007FB5CA /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6806412F1D0EE16A007FB5CA /* MJRefreshAutoFooter.m */; };
 		6806415A1D0EE16A007FB5CA /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 680641311D0EE16A007FB5CA /* MJRefreshBackFooter.m */; };
 		6806415B1D0EE16A007FB5CA /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 680641331D0EE16A007FB5CA /* MJRefreshComponent.m */; };
@@ -198,8 +197,6 @@
 		68035F631D08488C00AB1487 /* FNSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNSearchViewController.h; sourceTree = "<group>"; };
 		68035F641D08488C00AB1487 /* FNSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNSearchViewController.m; sourceTree = "<group>"; };
 		68035F651D08488C00AB1487 /* FNSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FNSearchViewController.xib; sourceTree = "<group>"; };
-		68035F691D084EF800AB1487 /* libMLSearchBar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMLSearchBar.a; sourceTree = "<group>"; };
-		68035F6A1D084EF800AB1487 /* MLSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSearchBar.h; sourceTree = "<group>"; };
 		6806412E1D0EE16A007FB5CA /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		6806412F1D0EE16A007FB5CA /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		680641301D0EE16A007FB5CA /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -349,7 +346,6 @@
 				6825DDA81D01D08800D8289F /* libstdc++.6.0.9.tbd in Frameworks */,
 				6825DDA61D01D05E00D8289F /* OpenGLES.framework in Frameworks */,
 				6825DDA11D01CFDF00D8289F /* AMapFoundationKit.framework in Frameworks */,
-				68035F6B1D084EF800AB1487 /* libMLSearchBar.a in Frameworks */,
 				6825DDA21D01CFDF00D8289F /* AMapSearchKit.framework in Frameworks */,
 				688ABA4F1D018A7C003F78CB /* MAMapKit.framework in Frameworks */,
 				1DBE3BCD1C02A04800DAC62D /* CoreGraphics.framework in Frameworks */,
@@ -523,15 +519,6 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		68035F681D084EF800AB1487 /* MLSearchBar */ = {
-			isa = PBXGroup;
-			children = (
-				68035F691D084EF800AB1487 /* libMLSearchBar.a */,
-				68035F6A1D084EF800AB1487 /* MLSearchBar.h */,
-			);
-			path = MLSearchBar;
-			sourceTree = "<group>";
-		};
 		6806412C1D0EE16A007FB5CA /* MJRefresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -687,7 +674,6 @@
 				6806412C1D0EE16A007FB5CA /* MJRefresh */,
 				680352121D09A20A001A89AD /* AFNetworking */,
 				680351FE1D09A1AA001A89AD /* SVProgressHUD */,
-				68035F681D084EF800AB1487 /* MLSearchBar */,
 				68F205BE1D06572E00BC1927 /* HYCircleLoadingView */,
 				68F205B11D0517A700BC1927 /* BlockUI */,
 				68F205AA1D05161F00BC1927 /* LeveyTabBarController */,
@@ -1264,11 +1250,7 @@
 				);
 				INFOPLIST_FILE = "FoodNav/SupportFiles/FoodNav-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/FoodNav/3rd/Gaode_AMapNaviKit/AMapNaviKit.framework",
-					"$(PROJECT_DIR)/FoodNav/3rd/MLSearchBar",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_BUNDLE_IDENTIFIER = com.foodnav.cn;
@@ -1304,11 +1286,7 @@
 				);
 				INFOPLIST_FILE = "FoodNav/SupportFiles/FoodNav-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/FoodNav/3rd/Gaode_AMapNaviKit/AMapNaviKit.framework",
-					"$(PROJECT_DIR)/FoodNav/3rd/MLSearchBar",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_BUNDLE_IDENTIFIER = com.foodnav.cn;
 				PRODUCT_NAME = FoodNav;

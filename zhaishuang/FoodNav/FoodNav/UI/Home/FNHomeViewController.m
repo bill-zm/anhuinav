@@ -11,7 +11,6 @@
 #import "FNMapViewController.h"
 #import "FNSearchViewController.h"
 #import "FNMainNavigationController.h"
-#import "MLSearchBar.h"
 #import "FNSearchViewController.h"
 #import "FNSiftViewController.h"
 #import "MJRefresh.h"
@@ -75,18 +74,19 @@ Strong UINib *cellNib;
     [Common removeExtraCellLines:self.hometableView];
     self.navigationItem.rightBarButtonItem = [Common createBarItemWithLbs:^{
         FNMapViewController *mapVc = [[FNMapViewController alloc] initWithNibName:@"FNMapViewController" bundle:nil];
-        mapVc.dataArr = self.dataArr;
-        mapVc.isFirstPage = NO;
+//        mapVc.dataArr = self.dataArr;
+        mapVc.isFirstPage = YES;
         [self.navigationController pushViewController:mapVc animated:YES];
     }];
-    self.navigationItem.leftBarButtonItem = [Common createNextBarItemWithLbs:@"切换" Block:^{
-        [self.navigationController popViewControllerAnimated:NO];
-    }];
+//    self.navigationItem.leftBarButtonItem = [Common createNextBarItemWithLbs:@"切换" Block:^{
+//        [self.navigationController popViewControllerAnimated:NO];
+//    }];
     [self setSiftView];
     [self lowsetupRefreshControllList];
     self.npage = 1;
     [self getLiangListData:10 P:1];
     isSearch = NO;
+    areaId = 0;
 }
 - (void)setSiftView
 {

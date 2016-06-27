@@ -32,8 +32,8 @@
     [self.view addSubview:_mapView];
     _mapView.showsUserLocation = YES;
     [_mapView setUserTrackingMode: MAUserTrackingModeFollow animated:YES]; //地图跟着位置移动
+    self.title = @"地图";
     if(!self.isFirstPage){
-        self.title = @"地图";
         int i = 0;
     for(NSDictionary *model in self.dataArr){
         if([model.allKeys containsObject:@"longitude"] && [model.allKeys containsObject:@"latitude"]){
@@ -49,11 +49,11 @@
     }
     }
     else{
-        self.title = @"粮仓";
-        self.navigationItem.rightBarButtonItem = [Common createNextBarItemWithLbs:@"切换" Block:^{
-            FNHomeViewController *homeVc = [[FNHomeViewController alloc] initWithNibName:@"FNHomeViewController" bundle:nil];
-            [self.navigationController pushViewController:homeVc animated:NO];
-        }];
+//        self.navigationItem.rightBarButtonItem = [Common createNextBarItemWithLbs:@"切换" Block:^{
+//            FNHomeViewController *homeVc = [[FNHomeViewController alloc] initWithNibName:@"FNHomeViewController" bundle:nil];
+//            [self.navigationController pushViewController:homeVc animated:NO];
+//        }];
+        if(areaId != 0){
     [SVProgressHUD showWithStatus:@"加载数据中..."];
     [[CAppService sharedInstance] getAllAddress_request:^(NSDictionary *model) {
         if([model.allKeys containsObject:@"data"]){
@@ -78,6 +78,7 @@
     } failure:^(CAppServiceError *error) {
         [SVProgressHUD dismiss];
     }];
+    }
     }
     // Do any additional setup after loading the view from its nib.
 }

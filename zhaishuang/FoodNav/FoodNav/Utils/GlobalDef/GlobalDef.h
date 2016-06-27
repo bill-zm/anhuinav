@@ -12,4 +12,5 @@ LeveyTabBarController *gTabBar;
 NSString *user_id;
 double glolongitude;
 double glolatitude;
+NSInteger areaId;
 

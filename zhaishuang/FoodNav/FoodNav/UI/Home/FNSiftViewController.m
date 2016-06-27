@@ -67,8 +67,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     if(self.view.tag == 0){
-    if(tableView == self.allTableView)
-        cell.textLabel.text = self.alldataArr[indexPath.row][@"name"];
+        if(tableView == self.allTableView){
+        cell.textLabel.text = [NSString stringWithFormat:@"%@(%@)",self.alldataArr[indexPath.row][@"name"],self.alldataArr[indexPath.row][@"nums"]];
+        }
     if(tableView == self.quTableView)
         cell.textLabel.text = self.quDataArr[indexPath.row][@"name"];
     }
@@ -87,12 +88,15 @@
         return;
     }
     if(tableView == self.quTableView){
+        if(![self.quDataArr[indexPath.row][@"name"] isEqualToString:@"市辖区"])
+        areaId = [self.quDataArr[indexPath.row][@"id"] integerValue];
         if(self.tableCellBlock){
             self.tableCellBlock(indexPath.row,self.quDataArr[indexPath.row][@"id"]);
         }
         return;
     }
     if(tableView == self.allTableView){
+        areaId = [self.alldataArr[indexPath.row][@"id"] integerValue];
         SetFrameByWidth(self.allTableView.frame, Screen_Width/2);
         SetFrameByXPos(self.quTableView.frame, Screen_Width/2);
         SetFrameByWidth(self.quTableView.frame, Screen_Width/2);

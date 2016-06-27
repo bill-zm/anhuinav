@@ -223,8 +223,8 @@ DEFINE_SINGLETON_FOR_CLASS(CAppService);
 - (AFHTTPRequestOperation *)getAllAddress_request:(void (^)(NSDictionary *model))success
                                      failure:(AppServiceErrorRespondBlock)failure
 {
-    NSString *url = @"/?app=warehouse&act=indexAll";
-//    url = [NSString stringWithFormat:url,distance,glolongitude,glolatitude];
+    NSString *url = @"/?app=warehouse&act=indexAll&city_id=%d";
+    url = [NSString stringWithFormat:url,areaId];
     return [self.client getHttpRequestWithURL:url
                                    parameters:nil
                                       success:^(id responseObject) {

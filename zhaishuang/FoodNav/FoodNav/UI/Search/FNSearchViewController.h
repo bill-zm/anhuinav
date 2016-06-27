@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MLSearchBar.h"
 @interface FNSearchViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,weak) IBOutlet UITableView *resultTable;
 @end
