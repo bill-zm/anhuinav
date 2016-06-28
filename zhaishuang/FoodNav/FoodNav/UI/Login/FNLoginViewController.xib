@@ -59,16 +59,6 @@
                     </subviews>
                     <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fnloginicon" id="TDH-Zf-qzd">
-                    <rect key="frame" x="311" y="185" width="128" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="安徽省粮食局应急导航系统v1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TbO-6p-2Yj">
-                    <rect key="frame" x="0.0" y="326" width="768" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KT9-bs-glM">
                     <rect key="frame" x="200" y="610" width="350" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
@@ -81,6 +71,16 @@
                         <action selector="btnClick:" destination="-1" eventType="touchUpInside" id="ogu-Dj-XXl"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="安徽省粮食局“智慧皖粮”应急导航系统" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TbO-6p-2Yj">
+                    <rect key="frame" x="0.0" y="326" width="749" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Backup_of_logo" id="TDH-Zf-qzd">
+                    <rect key="frame" x="311" y="185" width="128" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -88,9 +88,9 @@
         </view>
     </objects>
     <resources>
+        <image name="Backup_of_logo" width="750" height="750"/>
         <image name="fnaccounticon" width="32" height="32"/>
         <image name="fnlogin_background" width="384" height="512"/>
-        <image name="fnloginicon" width="57" height="57"/>
         <image name="fnpasswordicon" width="32" height="32"/>
     </resources>
 </document>
